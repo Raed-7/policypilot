@@ -87,7 +87,9 @@ class PolicyPilot:
         for existing in self.store.documents():
             if existing["source"] == document.source:
                 self.store.delete_document(existing["doc_id"])
-        chunks = chunk_document(document, self.settings.chunk_size, self.settings.chunk_overlap)
+        chunks = chunk_document(
+            document, self.settings.chunk_size, self.settings.chunk_overlap, self.settings.chunk_strategy
+        )
         embeddings = self.embedder.embed_documents([c.text for c in chunks])
         self.store.add(chunks, embeddings)
         if refresh:
@@ -124,13 +126,18 @@ class PolicyPilot:
         top_k: int | None = None,
         threshold: float | None = None,
         mode: Mode | None = None,
+        evidence_threshold: float | None = None,
     ) -> Answer:
         started = time.perf_counter()
         contexts = self.search(question, top_k, threshold, mode)
         retrieved_at = time.perf_counter()
         warnings: list[str] = []
 
-        if not contexts:
+        analysis = self.extractive.analyse(question, contexts) if contexts else None
+        evidence = analysis.best_similarity if analysis else 0.0
+        min_evidence = self.settings.evidence_threshold if evidence_threshold is None else evidence_threshold
+
+        if not contexts or evidence < min_evidence:
             text, provider, model = REFUSAL, self.provider_name, self.model_name
         elif self.llm_generator:
             try:
@@ -138,10 +145,10 @@ class PolicyPilot:
             except LLMError as exc:
                 logger.warning("LLM generation failed, using extractive answer: %s", exc)
                 warnings.append(f"{self.llm_generator.provider.name} unavailable ({exc}); showing extractive answer.")
-                result = self.extractive.generate(question, contexts)
+                result = self.extractive.generate(question, contexts, analysis)
             text, provider, model = result.text, result.provider, result.model
         else:
-            result = self.extractive.generate(question, contexts)
+            result = self.extractive.generate(question, contexts, analysis)
             text, provider, model = result.text, result.provider, result.model
 
         answerable = bool(contexts) and not is_refusal(text)
@@ -167,7 +174,7 @@ class PolicyPilot:
             contexts=contexts,
             provider=provider,
             model=model,
-            confidence=round(max((c.dense_score for c in contexts), default=0.0), 4),
+            confidence=round(evidence, 4),
             latency_ms={
                 "retrieval": round((retrieved_at - started) * 1000, 1),
                 "generation": round((finished - retrieved_at) * 1000, 1),

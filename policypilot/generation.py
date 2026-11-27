@@ -51,23 +51,37 @@ class LLMGenerator:
         return Generation(text, self.provider.name, self.provider.model)
 
 
+@dataclass
+class EvidenceAnalysis:
+    candidates: list[tuple[int, int, str]]
+    semantic: np.ndarray
+    scores: np.ndarray
+    vectors: np.ndarray
+
+    @property
+    def best_similarity(self) -> float:
+        return float(self.semantic.max()) if len(self.semantic) else 0.0
+
+
 class ExtractiveGenerator:
     """Answers by selecting the retrieved sentences most similar to the question.
 
     Deterministic and key-free: every sentence it returns is verbatim from a source,
-    so the output is grounded by construction.
+    so the output is grounded by construction. The same sentence scores drive the
+    pipeline's answerability check.
     """
 
     name = "extractive"
     model = "sentence-selection"
 
-    def __init__(self, embedder: Embedder, max_sentences: int = 3, margin: float = 0.06, lexical_weight: float = 0.25):
+    def __init__(self, embedder: Embedder, max_sentences: int = 3, margin: float = 0.15, lexical_weight: float = 0.25):
         self.embedder = embedder
         self.max_sentences = max_sentences
         self.margin = margin
         self.lexical_weight = lexical_weight
 
-    def _candidates(self, contexts: list[RetrievedChunk]) -> list[tuple[int, int, str]]:
+    @staticmethod
+    def _candidates(contexts: list[RetrievedChunk]) -> list[tuple[int, int, str]]:
         candidates = []
         for ctx_index, item in enumerate(contexts, start=1):
             text = item.chunk.text
@@ -78,28 +92,36 @@ class ExtractiveGenerator:
                     candidates.append((ctx_index, pos, sentence))
         return candidates
 
-    def generate(self, question: str, contexts: list[RetrievedChunk]) -> Generation:
+    def analyse(self, question: str, contexts: list[RetrievedChunk]) -> EvidenceAnalysis:
         candidates = self._candidates(contexts)
         if not candidates:
-            return Generation(REFUSAL, self.name, self.model)
-
+            empty = np.zeros(0, dtype=np.float32)
+            return EvidenceAnalysis([], empty, empty, np.zeros((0, self.embedder.dimension), dtype=np.float32))
         query_vec = self.embedder.embed_query(question)
-        sentence_vecs = self.embedder.embed_documents([s for _, _, s in candidates])
-        semantic = sentence_vecs @ query_vec
+        vectors = self.embedder.embed_documents([s for _, _, s in candidates])
+        semantic = vectors @ query_vec
         query_terms = set(tokenize(question))
         lexical = np.array(
             [len(query_terms & set(tokenize(s))) / len(query_terms) if query_terms else 0.0 for _, _, s in candidates]
         )
         rank_prior = np.array([0.02 * (len(contexts) - ctx) / len(contexts) for ctx, _, _ in candidates])
-        scores = semantic + self.lexical_weight * lexical + rank_prior
+        return EvidenceAnalysis(candidates, semantic, semantic + self.lexical_weight * lexical + rank_prior, vectors)
 
+    def generate(
+        self, question: str, contexts: list[RetrievedChunk], analysis: EvidenceAnalysis | None = None
+    ) -> Generation:
+        analysis = analysis or self.analyse(question, contexts)
+        if not analysis.candidates:
+            return Generation(REFUSAL, self.name, self.model)
+
+        scores, vectors, candidates = analysis.scores, analysis.vectors, analysis.candidates
         order = np.argsort(-scores)
         best = scores[order[0]]
         chosen: list[int] = []
         for idx in order:
             if len(chosen) >= self.max_sentences or scores[idx] < best - self.margin:
                 break
-            if any(float(sentence_vecs[idx] @ sentence_vecs[j]) > 0.92 for j in chosen):
+            if any(float(vectors[idx] @ vectors[j]) > 0.92 for j in chosen):
                 continue
             chosen.append(int(idx))
 
