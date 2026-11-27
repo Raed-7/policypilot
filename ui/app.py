@@ -206,17 +206,16 @@ tab_ask, tab_search, tab_eval = st.tabs(["💬 Ask", "🔎 Explore retrieval", "
 
 with tab_ask:
     st.session_state.setdefault("messages", [])
-    if not st.session_state.messages and "pending" not in st.session_state:
-        st.markdown("**Try one of these:**")
-        cols = st.columns(3)
+    chat_box = st.container()
+    question = st.chat_input("Ask about leave, expenses, remote work, security…")
+    question = question or st.session_state.pop("pending", None)
+    if not st.session_state.messages and not question:
+        chat_box.markdown("**Try one of these:**")
+        cols = chat_box.columns(3)
         for i, q in enumerate(SUGGESTIONS):
             if cols[i % 3].button(q, key=f"sugg-{i}", use_container_width=True):
                 st.session_state.pending = q
                 st.rerun()
-
-    chat_box = st.container()
-    question = st.chat_input("Ask about leave, expenses, remote work, security…")
-    question = question or st.session_state.pop("pending", None)
 
     for m in st.session_state.messages:
         with chat_box.chat_message(m["role"], avatar="🧑" if m["role"] == "user" else "🧭"):
