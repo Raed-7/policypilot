@@ -20,13 +20,15 @@ class Settings(BaseSettings):
     llm_timeout: float = 60.0
     llm_temperature: float = 0.0
 
-    embedding_model: str = "BAAI/bge-small-en-v1.5"
+    embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
     embedding_batch_size: int = 32
 
-    chunk_size: int = 160
-    chunk_overlap: int = 32
+    chunk_strategy: Literal["section", "fixed"] = "fixed"
+    chunk_size: int = 256
+    chunk_overlap: int = 64
     top_k: int = 5
-    score_threshold: float = 0.45
+    score_threshold: float = 0.2
+    evidence_threshold: float = 0.56
     retrieval_mode: Literal["dense", "hybrid"] = "hybrid"
 
     chroma_dir: Path = ROOT_DIR / "data" / "chroma"
