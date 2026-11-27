@@ -1,0 +1,49 @@
+# Halden Analytics Employee Handbook
+Version 4.2 - effective 1 January 2026. Owner: People Team.
+
+## About this handbook
+This handbook summarises the terms, policies and procedures that apply to all employees of Halden Analytics Ltd in the United Kingdom. It should be read alongside your contract of employment. Where the handbook and your contract differ, your contract takes precedence. Questions about any section can be raised with your manager or with the People Team at people@haldenanalytics.co.uk.
+
+## Working hours
+The standard working week is 37.5 hours, Monday to Friday. Halden operates flexible working hours: you may start at any time between 07:30 and 10:00, provided you are available during core hours of 10:00 to 16:00. Lunch breaks are one hour and are unpaid.
+
+Salaried employees do not receive paid overtime. Where your manager has approved in advance that you work more than 40 hours in a week, you may record the additional hours as time off in lieu (TOIL). TOIL must be taken within three months of being earned, otherwise it lapses.
+<<PAGE>>
+## Probation
+All new employees complete a probationary period of six months. Your manager will hold check-in meetings at the end of months one, three and five. Probation may be extended once, by up to three months, if more time is needed to assess performance. During probation, either party may end employment by giving one week's notice.
+
+## Pay and payroll
+Salaries are paid monthly by bank transfer on the 25th of each month. If the 25th falls on a weekend or bank holiday, you will be paid on the last working day before it. Payslips are published on the PeopleHub portal two working days before payday.
+
+Salaries are reviewed once a year, with any changes taking effect from 1 April. Pay reviews take account of performance, market data and the company's financial position.
+
+## Pension
+Halden auto-enrols eligible employees into the company pension scheme. If you contribute at least 4% of your qualifying earnings, the company contributes 6%. Employees who contribute less than 4% receive the statutory minimum employer contribution of 3%.
+<<PAGE>>
+## Annual leave
+Full-time employees receive 25 days of annual leave per leave year, plus the eight UK bank holidays. After two full years of service, you receive one additional day of leave for each further full year of service, up to a maximum of 30 days. Part-time entitlements are calculated pro rata.
+
+The leave year runs from 1 January to 31 December. You may carry over up to five unused days into the next leave year; carried-over days must be used by 31 March or they are lost.
+
+Leave is requested through PeopleHub. Requests for more than three consecutive days should be submitted at least two weeks in advance. Requests for more than ten consecutive working days require approval from both your manager and your department head.
+
+## Christmas closure
+The company closes between 24 December and 1 January. Employees should reserve three days of their annual leave entitlement to cover the closure period; the remaining closure days are granted as additional paid leave.
+<<PAGE>>
+## Sickness absence
+If you are unable to work because of illness, you must tell your manager by 09:30 on your first day of absence by phone call or a Slack call. A text message or email is not sufficient unless you are unable to speak. Keep your manager updated if your absence lasts longer than expected.
+
+You can self-certify sickness for up to seven calendar days. From the eighth calendar day of absence, you must provide a fit note from a doctor.
+
+Company sick pay: during your first year of service you receive full pay for up to 10 working days of sickness in any rolling 12-month period. After one year of service this increases to 20 working days of full pay. Once company sick pay is exhausted, Statutory Sick Pay applies. After any period of sickness absence, your manager will hold a short return-to-work conversation with you.
+
+## Performance reviews
+Performance is reviewed twice a year: a mid-year review in October and an annual review in April. Each review covers objectives, behaviours and development goals. The annual review produces an overall rating on a four-point scale: Exceptional, Strong, Developing and Below Expectations.
+<<PAGE>>
+## Grievances and disciplinary matters
+If you have a concern about your work, colleagues or working conditions, try to resolve it informally with your manager first. If that is not possible, raise a formal grievance in writing to your manager or the People Team within 20 working days of the issue arising. At any formal grievance or disciplinary meeting you have the right to be accompanied by a colleague or a trade union representative.
+
+## Leaving Halden
+After probation, the notice period you must give is one month for employees below Senior grade and three months for employees at Senior grade and above. Your contract will confirm your grade and notice period.
+
+All company equipment, including laptops, security keys and access passes, must be returned within five working days of your last day. Any accrued but unused annual leave will be paid in your final salary. Every leaver is offered an exit interview with the People Team.
