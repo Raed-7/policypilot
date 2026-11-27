@@ -5,7 +5,7 @@ _LIGATURES = {"ﬁ": "fi", "ﬂ": "fl", "ﬀ": "ff", "ﬃ": "ffi", "ﬄ": "ffl"}
 _QUOTES = {"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", " ": " "}
 _HYPHEN_BREAK = re.compile(r"(\w)-\n(\w)")
 _SOFT_WRAP = re.compile(r"(?<![.!?\n])\n(?!\n|\s*[-*•]\s|\s*\d+[.)]\s)")
-_PAGE_FOOTER = re.compile(r"^\s*(page\s+\d+(\s+of\s+\d+)?|\d+\s*/\s*\d+)\s*$", re.IGNORECASE | re.MULTILINE)
+_PAGE_FOOTER = re.compile(r"^[ \t]*(page\s+\d+(\s+of\s+\d+)?|\d+\s*/\s*\d+)[ \t]*(\n|$)", re.IGNORECASE | re.MULTILINE)
 _MULTI_SPACE = re.compile(r"[ \t]+")
 _MULTI_NEWLINE = re.compile(r"\n{3,}")
 

@@ -45,6 +45,7 @@ def chunk_text(text: str, size: int, overlap: int) -> list[str]:
     chunks: list[str] = []
     window: list[str] = []
     window_words = 0
+    fresh = 0
     for sentence in sentences:
         n = word_count(sentence)
         if window and window_words + n > size:
@@ -57,13 +58,12 @@ def chunk_text(text: str, size: int, overlap: int) -> list[str]:
                     break
                 carried.insert(0, prev)
                 carried_words += w
-            window, window_words = carried, carried_words
+            window, window_words, fresh = carried, carried_words, 0
         window.append(sentence)
         window_words += n
-    if window:
-        tail = " ".join(window)
-        if not chunks or tail not in chunks[-1]:
-            chunks.append(tail)
+        fresh += 1
+    if window and fresh:
+        chunks.append(" ".join(window))
     return chunks
 
 
