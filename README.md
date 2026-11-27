@@ -1,5 +1,9 @@
 # PolicyPilot
 
+[![CI](https://github.com/Raed-7/policypilot/actions/workflows/ci.yml/badge.svg)](https://github.com/Raed-7/policypilot/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-3.11%2B-blue)
+![License: MIT](https://img.shields.io/badge/license-MIT-green)
+
 **Grounded answers to employee policy questions, with page-level citations and honest refusals.**
 
 Staff lose time hunting through handbooks, expense rules and IT policies, and HR teams answer the same questions every week. PolicyPilot indexes a company's policy documents (PDF, Markdown or plain text) and answers questions in plain English. Every answer quotes the source document and page, and when the documents don't cover a question it says so instead of guessing.
