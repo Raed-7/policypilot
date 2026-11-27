@@ -88,7 +88,7 @@ class ExtractiveGenerator:
             if item.chunk.heading and text.startswith(item.chunk.heading + ": "):
                 text = text[len(item.chunk.heading) + 2 :]
             for pos, sentence in enumerate(split_sentences(text)):
-                if len(sentence.split()) >= 4:
+                if len(sentence.split()) >= 4 and sentence.rstrip()[-1] in ".!?:;)\"'":
                     candidates.append((ctx_index, pos, sentence))
         return candidates
 

@@ -64,7 +64,7 @@ def test_fixed_strategy_merges_sections_per_page():
     doc.sections.insert(1, Section("Book through PeopleHub.", page=1, heading="Requests"))
     chunks = chunk_document(doc, size=100, overlap=0, strategy="fixed")
     assert [c.page for c in chunks] == [1, 2]
-    assert "Requests. Book through PeopleHub." in chunks[0].text
+    assert "Requests Book through PeopleHub." in chunks[0].text
 
 
 def test_chunk_ids_are_unique_and_stable():

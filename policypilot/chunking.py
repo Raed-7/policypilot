@@ -76,7 +76,7 @@ def _merge_sections(document: Document) -> list[Section]:
     """Collapse sections into one span per page (PDF) or per document, keeping headings inline."""
     merged: dict[int | None, list[str]] = {}
     for section in document.sections:
-        text = f"{section.heading}. {section.text}" if section.heading else section.text
+        text = f"{section.heading}\n{section.text}" if section.heading else section.text
         merged.setdefault(section.page, []).append(text)
     return [Section(text="\n".join(parts), page=page) for page, parts in merged.items()]
 
