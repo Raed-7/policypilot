@@ -10,6 +10,7 @@ from policypilot.models import Document, Section
 
 SUPPORTED_EXTENSIONS = {".pdf", ".md", ".markdown", ".txt"}
 _MD_HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*#*\s*$")
+_DIGITS = re.compile(r"\d+")
 _TXT_HEADING = re.compile(r"^(?:\d+(?:\.\d+)*[.)]?\s+)?[A-Z][A-Za-z0-9 ,&'()/-]{2,80}$")
 
 
@@ -26,13 +27,49 @@ def _title_from_filename(name: str) -> str:
     return re.sub(r"[-_]+", " ", stem).strip().title()
 
 
+def _boilerplate_lines(pages: list[list[str]]) -> set[str]:
+    """Lines (ignoring digits) that repeat on most pages, such as running headers and footers."""
+    if len(pages) < 2:
+        return set()
+    counts: dict[str, int] = {}
+    for lines in pages:
+        for key in {_DIGITS.sub("#", line.strip()) for line in lines if line.strip()}:
+            counts[key] = counts.get(key, 0) + 1
+    return {key for key, n in counts.items() if n >= max(2, int(0.6 * len(pages)))}
+
+
+def _looks_like_pdf_heading(lines: list[str], i: int) -> bool:
+    line = lines[i].strip()
+    if not line or len(line.split()) > 8 or line[-1] in ".,;:!?" or not line[0].isupper():
+        return False
+    prev_ok = i == 0 or lines[i - 1].rstrip().endswith((".", ":", "!", "?")) or not lines[i - 1].strip()
+    next_ok = i + 1 < len(lines) and lines[i + 1].strip()[:1].isupper()
+    return prev_ok and next_ok
+
+
 def _load_pdf(data: bytes) -> tuple[list[Section], str | None]:
     reader = PdfReader(io.BytesIO(data))
-    sections = []
-    for number, page in enumerate(reader.pages, start=1):
-        text = clean_text(page.extract_text() or "")
-        if text:
-            sections.append(Section(text=text, page=number))
+    pages = [(page.extract_text() or "").splitlines() for page in reader.pages]
+    boilerplate = _boilerplate_lines(pages)
+    sections: list[Section] = []
+    heading = ""
+    for number, raw_lines in enumerate(pages, start=1):
+        lines = [l for l in raw_lines if _DIGITS.sub("#", l.strip()) not in boilerplate]
+        buffer: list[str] = []
+
+        def flush():
+            body = clean_text("\n".join(buffer))
+            if body:
+                sections.append(Section(text=body, page=number, heading=heading))
+            buffer.clear()
+
+        for i, line in enumerate(lines):
+            if _looks_like_pdf_heading(lines, i):
+                flush()
+                heading = line.strip()
+            else:
+                buffer.append(line)
+        flush()
     title = None
     if reader.metadata and reader.metadata.title:
         title = str(reader.metadata.title).strip() or None

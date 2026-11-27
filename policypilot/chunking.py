@@ -1,7 +1,10 @@
 import hashlib
 import re
+from typing import Literal
 
-from policypilot.models import Chunk, Document
+from policypilot.models import Chunk, Document, Section
+
+Strategy = Literal["section", "fixed"]
 
 _SENTENCE_END = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(\[])|\n+")
 _WORD = re.compile(r"\S+")
@@ -69,10 +72,25 @@ def _chunk_id(doc_id: str, position: int, text: str) -> str:
     return f"{doc_id}-{position:04d}-{digest}"
 
 
-def chunk_document(document: Document, size: int, overlap: int) -> list[Chunk]:
-    """Chunk each section independently so every chunk maps to one page or heading."""
-    chunks: list[Chunk] = []
+def _merge_sections(document: Document) -> list[Section]:
+    """Collapse sections into one span per page (PDF) or per document, keeping headings inline."""
+    merged: dict[int | None, list[str]] = {}
     for section in document.sections:
+        text = f"{section.heading}. {section.text}" if section.heading else section.text
+        merged.setdefault(section.page, []).append(text)
+    return [Section(text="\n".join(parts), page=page) for page, parts in merged.items()]
+
+
+def chunk_document(document: Document, size: int, overlap: int, strategy: Strategy = "section") -> list[Chunk]:
+    """Split a document into chunks.
+
+    "section" chunks each heading-delimited section independently, so every chunk maps to
+    exactly one page and heading. "fixed" ignores section boundaries and slides a window
+    over each page (or the whole document for formats without pages).
+    """
+    sections = document.sections if strategy == "section" else _merge_sections(document)
+    chunks: list[Chunk] = []
+    for section in sections:
         body = section.text
         for piece in chunk_text(body, size, overlap):
             position = len(chunks)
