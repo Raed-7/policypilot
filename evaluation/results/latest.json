@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T00:54:59+00:00",
+  "generated_at": "2026-11-27T01:17:01+00:00",
   "environment": {
     "python": "3.13.18",
     "machine": "x86_64",
@@ -19,12 +19,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 78,
-      "index_seconds": 0.67,
+      "index_seconds": 3.56,
       "recall@1": 0.8518518518518519,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.9135802469135803,
-      "latency_ms_p50": 12.915126500047336,
+      "latency_ms_p50": 13.707064000044511,
       "misses@5": [
         "q020",
         "q050"
@@ -37,12 +37,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 78,
-      "index_seconds": 0.67,
+      "index_seconds": 3.56,
       "recall@1": 0.8518518518518519,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9444444444444444,
       "mrr@10": 0.9038800705467372,
-      "latency_ms_p50": 15.9880725000221,
+      "latency_ms_p50": 15.951434000015752,
       "misses@5": [
         "q010",
         "q021",
@@ -56,12 +56,12 @@
       "overlap": 16,
       "mode": "dense",
       "chunks": 78,
-      "index_seconds": 0.6,
+      "index_seconds": 0.67,
       "recall@1": 0.7962962962962963,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.8791887125220458,
-      "latency_ms_p50": 15.420240500020554,
+      "latency_ms_p50": 17.51575549997142,
       "misses@5": [
         "q020",
         "q050"
@@ -74,12 +74,12 @@
       "overlap": 16,
       "mode": "hybrid",
       "chunks": 78,
-      "index_seconds": 0.6,
+      "index_seconds": 0.67,
       "recall@1": 0.8333333333333334,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.904320987654321,
-      "latency_ms_p50": 15.718148999894765,
+      "latency_ms_p50": 15.070582500015917,
       "misses@5": [
         "q021",
         "q047"
@@ -92,12 +92,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 63,
-      "index_seconds": 0.69,
+      "index_seconds": 0.94,
       "recall@1": 0.8333333333333334,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9444444444444444,
       "mrr@10": 0.8941798941798942,
-      "latency_ms_p50": 14.651985499881448,
+      "latency_ms_p50": 15.619708999992099,
       "misses@5": [
         "q010",
         "q041",
@@ -111,12 +111,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 63,
-      "index_seconds": 0.69,
+      "index_seconds": 0.94,
       "recall@1": 0.8703703703703703,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.9193121693121694,
-      "latency_ms_p50": 15.632421500072269,
+      "latency_ms_p50": 18.019318999989764,
       "misses@5": [
         "q021",
         "q047"
@@ -129,12 +129,12 @@
       "overlap": 32,
       "mode": "dense",
       "chunks": 63,
-      "index_seconds": 0.76,
+      "index_seconds": 0.84,
       "recall@1": 0.8333333333333334,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9444444444444444,
       "mrr@10": 0.8910934744268078,
-      "latency_ms_p50": 15.41143099996134,
+      "latency_ms_p50": 15.803151999989495,
       "misses@5": [
         "q010",
         "q041",
@@ -148,12 +148,12 @@
       "overlap": 32,
       "mode": "hybrid",
       "chunks": 63,
-      "index_seconds": 0.76,
+      "index_seconds": 0.84,
       "recall@1": 0.8703703703703703,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.9193121693121694,
-      "latency_ms_p50": 13.244592999967608,
+      "latency_ms_p50": 12.216626000025599,
       "misses@5": [
         "q021",
         "q047"
@@ -166,12 +166,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 62,
-      "index_seconds": 0.95,
+      "index_seconds": 0.82,
       "recall@1": 0.8333333333333334,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9444444444444444,
       "mrr@10": 0.8941798941798942,
-      "latency_ms_p50": 19.277096999985588,
+      "latency_ms_p50": 11.628206499977978,
       "misses@5": [
         "q010",
         "q041",
@@ -185,12 +185,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 62,
-      "index_seconds": 0.95,
+      "index_seconds": 0.82,
       "recall@1": 0.8703703703703703,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.9193121693121694,
-      "latency_ms_p50": 16.51948950006954,
+      "latency_ms_p50": 11.859036499998865,
       "misses@5": [
         "q021",
         "q047"
@@ -203,12 +203,12 @@
       "overlap": 64,
       "mode": "dense",
       "chunks": 62,
-      "index_seconds": 0.87,
+      "index_seconds": 0.84,
       "recall@1": 0.8333333333333334,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9444444444444444,
       "mrr@10": 0.8941798941798942,
-      "latency_ms_p50": 17.00071199991271,
+      "latency_ms_p50": 16.421280499997692,
       "misses@5": [
         "q010",
         "q041",
@@ -222,12 +222,12 @@
       "overlap": 64,
       "mode": "hybrid",
       "chunks": 62,
-      "index_seconds": 0.87,
+      "index_seconds": 0.84,
       "recall@1": 0.8703703703703703,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.9193121693121694,
-      "latency_ms_p50": 18.248368500053402,
+      "latency_ms_p50": 18.69010999999432,
       "misses@5": [
         "q021",
         "q047"
@@ -240,12 +240,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 61,
-      "index_seconds": 0.6,
-      "recall@1": 0.8148148148148148,
-      "recall@3": 0.9444444444444444,
+      "index_seconds": 0.79,
+      "recall@1": 0.7962962962962963,
+      "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
-      "mrr@10": 0.886904761904762,
-      "latency_ms_p50": 16.058596499988198,
+      "mrr@10": 0.8822751322751323,
+      "latency_ms_p50": 11.80133599999067,
       "misses@5": [
         "q020",
         "q050"
@@ -258,12 +258,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 61,
-      "index_seconds": 0.6,
+      "index_seconds": 0.79,
       "recall@1": 0.7777777777777778,
-      "recall@3": 0.9814814814814815,
+      "recall@3": 0.9629629629629629,
       "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8724279835390946,
-      "latency_ms_p50": 18.02004950002356,
+      "mrr@10": 0.8708847736625515,
+      "latency_ms_p50": 12.391101000019944,
       "misses@5": [
         "q021"
       ]
@@ -275,12 +275,12 @@
       "overlap": 16,
       "mode": "dense",
       "chunks": 70,
-      "index_seconds": 0.63,
-      "recall@1": 0.7037037037037037,
+      "index_seconds": 0.62,
+      "recall@1": 0.7222222222222222,
       "recall@3": 0.9259259259259259,
       "recall@5": 0.9629629629629629,
-      "mrr@10": 0.819620811287478,
-      "latency_ms_p50": 18.07145949999267,
+      "mrr@10": 0.8328924162257495,
+      "latency_ms_p50": 12.87177300000053,
       "misses@5": [
         "q041",
         "q050"
@@ -293,12 +293,12 @@
       "overlap": 16,
       "mode": "hybrid",
       "chunks": 70,
-      "index_seconds": 0.63,
-      "recall@1": 0.7777777777777778,
+      "index_seconds": 0.62,
+      "recall@1": 0.7962962962962963,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8728395061728395,
-      "latency_ms_p50": 20.5153805000009,
+      "mrr@10": 0.8823045267489712,
+      "latency_ms_p50": 12.117649999993318,
       "misses@5": [
         "q021"
       ]
@@ -310,12 +310,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 34,
-      "index_seconds": 0.67,
+      "index_seconds": 0.7,
       "recall@1": 0.7407407407407407,
-      "recall@3": 0.9259259259259259,
+      "recall@3": 0.9444444444444444,
       "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8427689594356261,
-      "latency_ms_p50": 15.976849500134449,
+      "mrr@10": 0.8447530864197531,
+      "latency_ms_p50": 11.59204900000077,
       "misses@5": [
         "q010"
       ]
@@ -327,12 +327,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 34,
-      "index_seconds": 0.67,
+      "index_seconds": 0.7,
       "recall@1": 0.8333333333333334,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9814814814814815,
       "mrr@10": 0.9041666666666667,
-      "latency_ms_p50": 11.23241700008748,
+      "latency_ms_p50": 11.892214999988937,
       "misses@5": [
         "q021"
       ]
@@ -344,12 +344,12 @@
       "overlap": 32,
       "mode": "dense",
       "chunks": 36,
-      "index_seconds": 0.73,
+      "index_seconds": 0.68,
       "recall@1": 0.7777777777777778,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9814814814814815,
       "mrr@10": 0.8773148148148148,
-      "latency_ms_p50": 17.367742000033104,
+      "latency_ms_p50": 17.19271749999507,
       "misses@5": [
         "q050"
       ]
@@ -361,15 +361,13 @@
       "overlap": 32,
       "mode": "hybrid",
       "chunks": 36,
-      "index_seconds": 0.73,
-      "recall@1": 0.8703703703703703,
+      "index_seconds": 0.68,
+      "recall@1": 0.8518518518518519,
       "recall@3": 0.9814814814814815,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.925925925925926,
-      "latency_ms_p50": 18.171253999980763,
-      "misses@5": [
-        "q047"
-      ]
+      "recall@5": 1.0,
+      "mrr@10": 0.9141975308641975,
+      "latency_ms_p50": 17.942231999995784,
+      "misses@5": []
     },
     {
       "embedding_model": "BAAI/bge-small-en-v1.5",
@@ -378,12 +376,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 16,
-      "index_seconds": 0.65,
-      "recall@1": 0.7777777777777778,
+      "index_seconds": 0.7,
+      "recall@1": 0.7592592592592593,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8719135802469137,
-      "latency_ms_p50": 9.741778000034174,
+      "mrr@10": 0.8626543209876544,
+      "latency_ms_p50": 18.764395000005152,
       "misses@5": [
         "q047"
       ]
@@ -395,12 +393,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 16,
-      "index_seconds": 0.65,
-      "recall@1": 0.8888888888888888,
+      "index_seconds": 0.7,
+      "recall@1": 0.8703703703703703,
       "recall@3": 0.9814814814814815,
       "recall@5": 0.9814814814814815,
-      "mrr@10": 0.9372427983539096,
-      "latency_ms_p50": 9.828434000041852,
+      "mrr@10": 0.9279835390946503,
+      "latency_ms_p50": 11.87913850003497,
       "misses@5": [
         "q047"
       ]
@@ -412,12 +410,12 @@
       "overlap": 64,
       "mode": "dense",
       "chunks": 19,
-      "index_seconds": 0.78,
-      "recall@1": 0.7407407407407407,
+      "index_seconds": 0.84,
+      "recall@1": 0.7962962962962963,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8521825396825397,
-      "latency_ms_p50": 9.688724999932674,
+      "mrr@10": 0.8772045855379189,
+      "latency_ms_p50": 14.089207000012038,
       "misses@5": [
         "q018",
         "q047"
@@ -430,12 +428,12 @@
       "overlap": 64,
       "mode": "hybrid",
       "chunks": 19,
-      "index_seconds": 0.78,
+      "index_seconds": 0.84,
       "recall@1": 0.8888888888888888,
       "recall@3": 0.9814814814814815,
       "recall@5": 0.9814814814814815,
       "mrr@10": 0.9351851851851852,
-      "latency_ms_p50": 10.031283999978768,
+      "latency_ms_p50": 12.198647999980494,
       "misses@5": [
         "q047"
       ]
@@ -447,12 +445,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 78,
-      "index_seconds": 0.29,
+      "index_seconds": 0.42,
       "recall@1": 0.8333333333333334,
       "recall@3": 0.9259259259259259,
       "recall@5": 0.9444444444444444,
       "mrr@10": 0.8918430335097001,
-      "latency_ms_p50": 11.087479000025269,
+      "latency_ms_p50": 13.441934500008301,
       "misses@5": [
         "q020",
         "q021",
@@ -466,12 +464,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 78,
-      "index_seconds": 0.29,
+      "index_seconds": 0.42,
       "recall@1": 0.8703703703703703,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9444444444444444,
       "mrr@10": 0.9043209876543209,
-      "latency_ms_p50": 6.494054499967206,
+      "latency_ms_p50": 14.964402000003929,
       "misses@5": [
         "q010",
         "q021",
@@ -485,12 +483,12 @@
       "overlap": 16,
       "mode": "dense",
       "chunks": 78,
-      "index_seconds": 0.29,
+      "index_seconds": 0.35,
       "recall@1": 0.7962962962962963,
       "recall@3": 0.9259259259259259,
       "recall@5": 0.9444444444444444,
       "mrr@10": 0.8640652557319224,
-      "latency_ms_p50": 11.388277500032018,
+      "latency_ms_p50": 15.077413499994918,
       "misses@5": [
         "q020",
         "q021",
@@ -504,12 +502,12 @@
       "overlap": 16,
       "mode": "hybrid",
       "chunks": 78,
-      "index_seconds": 0.29,
+      "index_seconds": 0.35,
       "recall@1": 0.8888888888888888,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.9246913580246914,
-      "latency_ms_p50": 11.430131499992058,
+      "latency_ms_p50": 15.49777750000203,
       "misses@5": [
         "q021",
         "q047"
@@ -522,12 +520,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 63,
-      "index_seconds": 0.4,
+      "index_seconds": 0.44,
       "recall@1": 0.8148148148148148,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.8844135802469134,
-      "latency_ms_p50": 11.236990000043079,
+      "latency_ms_p50": 13.048220500024854,
       "misses@5": [
         "q021",
         "q041"
@@ -540,12 +538,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 63,
-      "index_seconds": 0.4,
+      "index_seconds": 0.44,
       "recall@1": 0.9074074074074074,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.9372427983539096,
-      "latency_ms_p50": 11.757437500023116,
+      "latency_ms_p50": 13.377768500021148,
       "misses@5": [
         "q021",
         "q047"
@@ -558,12 +556,12 @@
       "overlap": 32,
       "mode": "dense",
       "chunks": 63,
-      "index_seconds": 0.48,
+      "index_seconds": 0.42,
       "recall@1": 0.8148148148148148,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.8813271604938271,
-      "latency_ms_p50": 12.910125499956848,
+      "latency_ms_p50": 12.696862500007455,
       "misses@5": [
         "q021",
         "q041"
@@ -576,12 +574,12 @@
       "overlap": 32,
       "mode": "hybrid",
       "chunks": 63,
-      "index_seconds": 0.48,
+      "index_seconds": 0.42,
       "recall@1": 0.9074074074074074,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.9372427983539096,
-      "latency_ms_p50": 13.330423000070368,
+      "latency_ms_p50": 12.709401999984493,
       "misses@5": [
         "q021",
         "q047"
@@ -594,12 +592,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 62,
-      "index_seconds": 0.48,
+      "index_seconds": 0.49,
       "recall@1": 0.8148148148148148,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.8844135802469134,
-      "latency_ms_p50": 13.129702000014731,
+      "latency_ms_p50": 13.620572500002481,
       "misses@5": [
         "q021",
         "q041"
@@ -612,12 +610,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 62,
-      "index_seconds": 0.48,
+      "index_seconds": 0.49,
       "recall@1": 0.9074074074074074,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.9372427983539096,
-      "latency_ms_p50": 13.906146000067565,
+      "latency_ms_p50": 14.585836999998492,
       "misses@5": [
         "q021",
         "q047"
@@ -630,12 +628,12 @@
       "overlap": 64,
       "mode": "dense",
       "chunks": 62,
-      "index_seconds": 0.52,
+      "index_seconds": 0.65,
       "recall@1": 0.8148148148148148,
       "recall@3": 0.9444444444444444,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.8844135802469134,
-      "latency_ms_p50": 12.115109999967899,
+      "latency_ms_p50": 15.865133000005471,
       "misses@5": [
         "q021",
         "q041"
@@ -648,12 +646,12 @@
       "overlap": 64,
       "mode": "hybrid",
       "chunks": 62,
-      "index_seconds": 0.52,
+      "index_seconds": 0.65,
       "recall@1": 0.9074074074074074,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
       "mrr@10": 0.9372427983539096,
-      "latency_ms_p50": 12.648212000044623,
+      "latency_ms_p50": 16.3859375000186,
       "misses@5": [
         "q021",
         "q047"
@@ -666,12 +664,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 61,
-      "index_seconds": 0.32,
+      "index_seconds": 0.37,
       "recall@1": 0.7592592592592593,
-      "recall@3": 0.9444444444444444,
+      "recall@3": 0.9259259259259259,
       "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8540123456790122,
-      "latency_ms_p50": 14.068345499936186,
+      "mrr@10": 0.8551146384479716,
+      "latency_ms_p50": 13.994340500005364,
       "misses@5": [
         "q045"
       ]
@@ -683,12 +681,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 61,
-      "index_seconds": 0.32,
+      "index_seconds": 0.37,
       "recall@1": 0.8148148148148148,
-      "recall@3": 0.9629629629629629,
+      "recall@3": 0.9814814814814815,
       "recall@5": 0.9814814814814815,
-      "mrr@10": 0.886111111111111,
-      "latency_ms_p50": 8.850513500078705,
+      "mrr@10": 0.8888888888888888,
+      "latency_ms_p50": 15.360214499992253,
       "misses@5": [
         "q021"
       ]
@@ -701,11 +699,11 @@
       "mode": "dense",
       "chunks": 70,
       "index_seconds": 0.46,
-      "recall@1": 0.7962962962962963,
-      "recall@3": 0.9074074074074074,
+      "recall@1": 0.7777777777777778,
+      "recall@3": 0.8888888888888888,
       "recall@5": 0.9259259259259259,
-      "mrr@10": 0.8564814814814815,
-      "latency_ms_p50": 15.01477549993524,
+      "mrr@10": 0.8501763668430335,
+      "latency_ms_p50": 14.292547500019737,
       "misses@5": [
         "q001",
         "q021",
@@ -722,10 +720,10 @@
       "chunks": 70,
       "index_seconds": 0.46,
       "recall@1": 0.8333333333333334,
-      "recall@3": 0.9629629629629629,
+      "recall@3": 0.9814814814814815,
       "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8996913580246912,
-      "latency_ms_p50": 15.902171499988071,
+      "mrr@10": 0.9043209876543209,
+      "latency_ms_p50": 13.73937899998623,
       "misses@5": [
         "q021"
       ]
@@ -737,12 +735,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 34,
-      "index_seconds": 0.42,
-      "recall@1": 0.7592592592592593,
-      "recall@3": 0.9444444444444444,
+      "index_seconds": 0.59,
+      "recall@1": 0.7777777777777778,
+      "recall@3": 0.9629629629629629,
       "recall@5": 1.0,
-      "mrr@10": 0.8617283950617284,
-      "latency_ms_p50": 9.512695499893198,
+      "mrr@10": 0.8725308641975308,
+      "latency_ms_p50": 14.376748500012582,
       "misses@5": []
     },
     {
@@ -752,12 +750,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 34,
-      "index_seconds": 0.42,
-      "recall@1": 0.8148148148148148,
+      "index_seconds": 0.59,
+      "recall@1": 0.8333333333333334,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9814814814814815,
-      "mrr@10": 0.892283950617284,
-      "latency_ms_p50": 6.651085500038789,
+      "mrr@10": 0.9046296296296297,
+      "latency_ms_p50": 12.22175850003282,
       "misses@5": [
         "q021"
       ]
@@ -769,15 +767,13 @@
       "overlap": 32,
       "mode": "dense",
       "chunks": 36,
-      "index_seconds": 0.41,
+      "index_seconds": 0.37,
       "recall@1": 0.7777777777777778,
       "recall@3": 0.9629629629629629,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8719135802469137,
-      "latency_ms_p50": 12.082135999889942,
-      "misses@5": [
-        "q041"
-      ]
+      "recall@5": 1.0,
+      "mrr@10": 0.8725308641975309,
+      "latency_ms_p50": 7.108821499997475,
+      "misses@5": []
     },
     {
       "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
@@ -786,12 +782,12 @@
       "overlap": 32,
       "mode": "hybrid",
       "chunks": 36,
-      "index_seconds": 0.41,
+      "index_seconds": 0.37,
       "recall@1": 0.8333333333333334,
-      "recall@3": 1.0,
+      "recall@3": 0.9814814814814815,
       "recall@5": 1.0,
-      "mrr@10": 0.9074074074074074,
-      "latency_ms_p50": 12.22718449992044,
+      "mrr@10": 0.9049382716049382,
+      "latency_ms_p50": 6.878616499989221,
       "misses@5": []
     },
     {
@@ -801,12 +797,12 @@
       "overlap": 0,
       "mode": "dense",
       "chunks": 16,
-      "index_seconds": 0.3,
+      "index_seconds": 0.26,
       "recall@1": 0.7592592592592593,
       "recall@3": 0.9629629629629629,
       "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8572530864197531,
-      "latency_ms_p50": 7.263586500016572,
+      "mrr@10": 0.8541666666666666,
+      "latency_ms_p50": 11.77060099999494,
       "misses@5": [
         "q043",
         "q044"
@@ -819,12 +815,12 @@
       "overlap": 0,
       "mode": "hybrid",
       "chunks": 16,
-      "index_seconds": 0.3,
-      "recall@1": 0.8703703703703703,
-      "recall@3": 0.9444444444444444,
+      "index_seconds": 0.26,
+      "recall@1": 0.8518518518518519,
+      "recall@3": 0.9629629629629629,
       "recall@5": 1.0,
-      "mrr@10": 0.9212962962962963,
-      "latency_ms_p50": 6.895284999927753,
+      "mrr@10": 0.9135802469135802,
+      "latency_ms_p50": 11.291717000005974,
       "misses@5": []
     },
     {
@@ -834,12 +830,12 @@
       "overlap": 64,
       "mode": "dense",
       "chunks": 19,
-      "index_seconds": 0.33,
-      "recall@1": 0.8518518518518519,
-      "recall@3": 0.9814814814814815,
+      "index_seconds": 0.32,
+      "recall@1": 0.8703703703703703,
+      "recall@3": 1.0,
       "recall@5": 1.0,
-      "mrr@10": 0.9182098765432097,
-      "latency_ms_p50": 11.528978499995901,
+      "mrr@10": 0.9290123456790125,
+      "latency_ms_p50": 12.49353799997266,
       "misses@5": []
     },
     {
@@ -849,12 +845,12 @@
       "overlap": 64,
       "mode": "hybrid",
       "chunks": 19,
-      "index_seconds": 0.33,
+      "index_seconds": 0.32,
       "recall@1": 0.9444444444444444,
       "recall@3": 0.9814814814814815,
       "recall@5": 0.9814814814814815,
-      "mrr@10": 0.9660493827160495,
-      "latency_ms_p50": 11.679535999974178,
+      "mrr@10": 0.9656084656084656,
+      "latency_ms_p50": 7.046141500012482,
       "misses@5": [
         "q047"
       ]
@@ -870,19 +866,19 @@
   "threshold_calibration": {
     "chunk": {
       "best": {
-        "threshold": 0.37,
-        "answer_rate": 0.7962962962962963,
+        "threshold": 0.38,
+        "answer_rate": 0.8148148148148148,
         "refusal_rate": 0.9,
-        "balanced_accuracy": 0.8481481481481481
+        "balanced_accuracy": 0.8574074074074074
       },
-      "auc": 0.8833333333333333,
+      "auc": 0.8759259259259259,
       "answerable": {
-        "min": 0.22676533460617065,
-        "mean": 0.4684352532581047
+        "min": 0.22917109727859497,
+        "mean": 0.47185732589827645
       },
       "unanswerable": {
-        "max": 0.4428213834762573,
-        "mean": 0.32070520520210266
+        "max": 0.45292603969573975,
+        "mean": 0.3270639002323151
       },
       "sweep": [
         {
@@ -990,20 +986,20 @@
         {
           "threshold": 0.27,
           "answer_rate": 0.9814814814814815,
-          "refusal_rate": 0.2,
-          "balanced_accuracy": 0.5907407407407408
+          "refusal_rate": 0.1,
+          "balanced_accuracy": 0.5407407407407407
         },
         {
           "threshold": 0.28,
-          "answer_rate": 0.9629629629629629,
+          "answer_rate": 0.9814814814814815,
           "refusal_rate": 0.3,
-          "balanced_accuracy": 0.6314814814814814
+          "balanced_accuracy": 0.6407407407407407
         },
         {
           "threshold": 0.29,
           "answer_rate": 0.9629629629629629,
-          "refusal_rate": 0.4,
-          "balanced_accuracy": 0.6814814814814815
+          "refusal_rate": 0.3,
+          "balanced_accuracy": 0.6314814814814814
         },
         {
           "threshold": 0.3,
@@ -1019,15 +1015,15 @@
         },
         {
           "threshold": 0.32,
-          "answer_rate": 0.9074074074074074,
-          "refusal_rate": 0.5,
-          "balanced_accuracy": 0.7037037037037037
+          "answer_rate": 0.9259259259259259,
+          "refusal_rate": 0.4,
+          "balanced_accuracy": 0.662962962962963
         },
         {
           "threshold": 0.33,
-          "answer_rate": 0.9074074074074074,
+          "answer_rate": 0.9259259259259259,
           "refusal_rate": 0.5,
-          "balanced_accuracy": 0.7037037037037037
+          "balanced_accuracy": 0.712962962962963
         },
         {
           "threshold": 0.34,
@@ -1043,45 +1039,45 @@
         },
         {
           "threshold": 0.36,
-          "answer_rate": 0.8518518518518519,
-          "refusal_rate": 0.8,
-          "balanced_accuracy": 0.825925925925926
+          "answer_rate": 0.8333333333333334,
+          "refusal_rate": 0.7,
+          "balanced_accuracy": 0.7666666666666666
         },
         {
           "threshold": 0.37,
-          "answer_rate": 0.7962962962962963,
-          "refusal_rate": 0.9,
-          "balanced_accuracy": 0.8481481481481481
+          "answer_rate": 0.8148148148148148,
+          "refusal_rate": 0.8,
+          "balanced_accuracy": 0.8074074074074074
         },
         {
           "threshold": 0.38,
-          "answer_rate": 0.7962962962962963,
+          "answer_rate": 0.8148148148148148,
           "refusal_rate": 0.9,
-          "balanced_accuracy": 0.8481481481481481
+          "balanced_accuracy": 0.8574074074074074
         },
         {
           "threshold": 0.39,
-          "answer_rate": 0.7777777777777778,
+          "answer_rate": 0.8148148148148148,
           "refusal_rate": 0.9,
-          "balanced_accuracy": 0.8388888888888889
+          "balanced_accuracy": 0.8574074074074074
         },
         {
           "threshold": 0.4,
+          "answer_rate": 0.7592592592592593,
+          "refusal_rate": 0.9,
+          "balanced_accuracy": 0.8296296296296297
+        },
+        {
+          "threshold": 0.41,
           "answer_rate": 0.7222222222222222,
           "refusal_rate": 0.9,
           "balanced_accuracy": 0.8111111111111111
         },
         {
-          "threshold": 0.41,
+          "threshold": 0.42,
           "answer_rate": 0.7037037037037037,
           "refusal_rate": 0.9,
           "balanced_accuracy": 0.8018518518518518
-        },
-        {
-          "threshold": 0.42,
-          "answer_rate": 0.6481481481481481,
-          "refusal_rate": 0.9,
-          "balanced_accuracy": 0.7740740740740741
         },
         {
           "threshold": 0.43,
@@ -1098,32 +1094,32 @@
         {
           "threshold": 0.45,
           "answer_rate": 0.5555555555555556,
-          "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7777777777777778
+          "refusal_rate": 0.9,
+          "balanced_accuracy": 0.7277777777777779
         },
         {
           "threshold": 0.46,
-          "answer_rate": 0.5185185185185185,
+          "answer_rate": 0.5370370370370371,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7592592592592593
+          "balanced_accuracy": 0.7685185185185186
         },
         {
           "threshold": 0.47,
-          "answer_rate": 0.46296296296296297,
+          "answer_rate": 0.5,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7314814814814815
+          "balanced_accuracy": 0.75
         },
         {
           "threshold": 0.48,
-          "answer_rate": 0.46296296296296297,
+          "answer_rate": 0.48148148148148145,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7314814814814815
+          "balanced_accuracy": 0.7407407407407407
         },
         {
           "threshold": 0.49,
-          "answer_rate": 0.46296296296296297,
+          "answer_rate": 0.42592592592592593,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7314814814814815
+          "balanced_accuracy": 0.712962962962963
         },
         {
           "threshold": 0.5,
@@ -1145,51 +1141,51 @@
         },
         {
           "threshold": 0.53,
-          "answer_rate": 0.3333333333333333,
+          "answer_rate": 0.3148148148148148,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6666666666666666
+          "balanced_accuracy": 0.6574074074074074
         },
         {
           "threshold": 0.54,
+          "answer_rate": 0.3148148148148148,
+          "refusal_rate": 1.0,
+          "balanced_accuracy": 0.6574074074074074
+        },
+        {
+          "threshold": 0.55,
           "answer_rate": 0.2962962962962963,
           "refusal_rate": 1.0,
           "balanced_accuracy": 0.6481481481481481
         },
         {
-          "threshold": 0.55,
-          "answer_rate": 0.25925925925925924,
-          "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6296296296296297
-        },
-        {
           "threshold": 0.56,
-          "answer_rate": 0.2222222222222222,
+          "answer_rate": 0.24074074074074073,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6111111111111112
+          "balanced_accuracy": 0.6203703703703703
         },
         {
           "threshold": 0.57,
+          "answer_rate": 0.2037037037037037,
+          "refusal_rate": 1.0,
+          "balanced_accuracy": 0.6018518518518519
+        },
+        {
+          "threshold": 0.58,
           "answer_rate": 0.16666666666666666,
           "refusal_rate": 1.0,
           "balanced_accuracy": 0.5833333333333334
         },
         {
-          "threshold": 0.58,
-          "answer_rate": 0.14814814814814814,
-          "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5740740740740741
-        },
-        {
           "threshold": 0.59,
-          "answer_rate": 0.12962962962962962,
-          "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5648148148148148
-        },
-        {
-          "threshold": 0.6,
           "answer_rate": 0.1111111111111111,
           "refusal_rate": 1.0,
           "balanced_accuracy": 0.5555555555555556
+        },
+        {
+          "threshold": 0.6,
+          "answer_rate": 0.09259259259259259,
+          "refusal_rate": 1.0,
+          "balanced_accuracy": 0.5462962962962963
         },
         {
           "threshold": 0.61,
@@ -1205,9 +1201,9 @@
         },
         {
           "threshold": 0.63,
-          "answer_rate": 0.018518518518518517,
+          "answer_rate": 0.037037037037037035,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5092592592592593
+          "balanced_accuracy": 0.5185185185185185
         },
         {
           "threshold": 0.64,
@@ -1247,9 +1243,9 @@
         },
         {
           "threshold": 0.7,
-          "answer_rate": 0.0,
+          "answer_rate": 0.018518518518518517,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5
+          "balanced_accuracy": 0.5092592592592593
         },
         {
           "threshold": 0.71,
@@ -1369,19 +1365,19 @@
     },
     "sentence": {
       "best": {
-        "threshold": 0.56,
-        "answer_rate": 0.7777777777777778,
+        "threshold": 0.54,
+        "answer_rate": 0.7962962962962963,
         "refusal_rate": 1.0,
-        "balanced_accuracy": 0.8888888888888888
+        "balanced_accuracy": 0.8981481481481481
       },
-      "auc": 0.9296296296296296,
+      "auc": 0.9351851851851852,
       "answerable": {
-        "min": 0.3368963599205017,
-        "mean": 0.6377359711461597
+        "min": 0.30327826738357544,
+        "mean": 0.6324415758804038
       },
       "unanswerable": {
-        "max": 0.550153374671936,
-        "mean": 0.42029242515563964
+        "max": 0.5345811247825623,
+        "mean": 0.40823341310024264
       },
       "sweep": [
         {
@@ -1512,39 +1508,39 @@
         },
         {
           "threshold": 0.31,
-          "answer_rate": 1.0,
+          "answer_rate": 0.9814814814814815,
           "refusal_rate": 0.1,
-          "balanced_accuracy": 0.55
+          "balanced_accuracy": 0.5407407407407407
         },
         {
           "threshold": 0.32,
-          "answer_rate": 1.0,
-          "refusal_rate": 0.1,
-          "balanced_accuracy": 0.55
+          "answer_rate": 0.9814814814814815,
+          "refusal_rate": 0.2,
+          "balanced_accuracy": 0.5907407407407408
         },
         {
           "threshold": 0.33,
-          "answer_rate": 1.0,
+          "answer_rate": 0.9814814814814815,
           "refusal_rate": 0.3,
-          "balanced_accuracy": 0.65
+          "balanced_accuracy": 0.6407407407407407
         },
         {
           "threshold": 0.34,
-          "answer_rate": 0.9814814814814815,
+          "answer_rate": 0.9629629629629629,
           "refusal_rate": 0.3,
-          "balanced_accuracy": 0.6407407407407407
+          "balanced_accuracy": 0.6314814814814814
         },
         {
           "threshold": 0.35,
-          "answer_rate": 0.9814814814814815,
-          "refusal_rate": 0.3,
-          "balanced_accuracy": 0.6407407407407407
+          "answer_rate": 0.9629629629629629,
+          "refusal_rate": 0.4,
+          "balanced_accuracy": 0.6814814814814815
         },
         {
           "threshold": 0.36,
-          "answer_rate": 0.9814814814814815,
-          "refusal_rate": 0.3,
-          "balanced_accuracy": 0.6407407407407407
+          "answer_rate": 0.9629629629629629,
+          "refusal_rate": 0.4,
+          "balanced_accuracy": 0.6814814814814815
         },
         {
           "threshold": 0.37,
@@ -1614,105 +1610,105 @@
         },
         {
           "threshold": 0.48,
-          "answer_rate": 0.9444444444444444,
-          "refusal_rate": 0.7,
-          "balanced_accuracy": 0.8222222222222222
+          "answer_rate": 0.9074074074074074,
+          "refusal_rate": 0.8,
+          "balanced_accuracy": 0.8537037037037037
         },
         {
           "threshold": 0.49,
-          "answer_rate": 0.9074074074074074,
-          "refusal_rate": 0.7,
-          "balanced_accuracy": 0.8037037037037037
+          "answer_rate": 0.8888888888888888,
+          "refusal_rate": 0.8,
+          "balanced_accuracy": 0.8444444444444444
         },
         {
           "threshold": 0.5,
           "answer_rate": 0.8888888888888888,
-          "refusal_rate": 0.7,
-          "balanced_accuracy": 0.7944444444444444
+          "refusal_rate": 0.8,
+          "balanced_accuracy": 0.8444444444444444
         },
         {
           "threshold": 0.51,
-          "answer_rate": 0.8888888888888888,
-          "refusal_rate": 0.7,
-          "balanced_accuracy": 0.7944444444444444
+          "answer_rate": 0.8703703703703703,
+          "refusal_rate": 0.8,
+          "balanced_accuracy": 0.8351851851851853
         },
         {
           "threshold": 0.52,
-          "answer_rate": 0.8703703703703703,
-          "refusal_rate": 0.7,
-          "balanced_accuracy": 0.7851851851851852
+          "answer_rate": 0.8518518518518519,
+          "refusal_rate": 0.8,
+          "balanced_accuracy": 0.825925925925926
         },
         {
           "threshold": 0.53,
-          "answer_rate": 0.8703703703703703,
-          "refusal_rate": 0.7,
-          "balanced_accuracy": 0.7851851851851852
+          "answer_rate": 0.8518518518518519,
+          "refusal_rate": 0.8,
+          "balanced_accuracy": 0.825925925925926
         },
         {
           "threshold": 0.54,
-          "answer_rate": 0.8333333333333334,
-          "refusal_rate": 0.8,
-          "balanced_accuracy": 0.8166666666666667
+          "answer_rate": 0.7962962962962963,
+          "refusal_rate": 1.0,
+          "balanced_accuracy": 0.8981481481481481
         },
         {
           "threshold": 0.55,
-          "answer_rate": 0.7962962962962963,
-          "refusal_rate": 0.9,
-          "balanced_accuracy": 0.8481481481481481
-        },
-        {
-          "threshold": 0.56,
           "answer_rate": 0.7777777777777778,
           "refusal_rate": 1.0,
           "balanced_accuracy": 0.8888888888888888
         },
         {
-          "threshold": 0.57,
-          "answer_rate": 0.7592592592592593,
-          "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8796296296296297
-        },
-        {
-          "threshold": 0.58,
-          "answer_rate": 0.7592592592592593,
-          "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8796296296296297
-        },
-        {
-          "threshold": 0.59,
+          "threshold": 0.56,
           "answer_rate": 0.7407407407407407,
           "refusal_rate": 1.0,
           "balanced_accuracy": 0.8703703703703703
         },
         {
-          "threshold": 0.6,
+          "threshold": 0.57,
           "answer_rate": 0.7222222222222222,
           "refusal_rate": 1.0,
           "balanced_accuracy": 0.8611111111111112
         },
         {
-          "threshold": 0.61,
-          "answer_rate": 0.6666666666666666,
+          "threshold": 0.58,
+          "answer_rate": 0.7222222222222222,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8333333333333333
+          "balanced_accuracy": 0.8611111111111112
         },
         {
-          "threshold": 0.62,
+          "threshold": 0.59,
+          "answer_rate": 0.7222222222222222,
+          "refusal_rate": 1.0,
+          "balanced_accuracy": 0.8611111111111112
+        },
+        {
+          "threshold": 0.6,
+          "answer_rate": 0.6851851851851852,
+          "refusal_rate": 1.0,
+          "balanced_accuracy": 0.8425925925925926
+        },
+        {
+          "threshold": 0.61,
           "answer_rate": 0.6481481481481481,
           "refusal_rate": 1.0,
           "balanced_accuracy": 0.8240740740740741
         },
         {
-          "threshold": 0.63,
+          "threshold": 0.62,
           "answer_rate": 0.6111111111111112,
           "refusal_rate": 1.0,
           "balanced_accuracy": 0.8055555555555556
         },
         {
-          "threshold": 0.64,
-          "answer_rate": 0.5370370370370371,
+          "threshold": 0.63,
+          "answer_rate": 0.5740740740740741,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7685185185185186
+          "balanced_accuracy": 0.787037037037037
+        },
+        {
+          "threshold": 0.64,
+          "answer_rate": 0.5,
+          "refusal_rate": 1.0,
+          "balanced_accuracy": 0.75
         },
         {
           "threshold": 0.65,
@@ -1722,9 +1718,9 @@
         },
         {
           "threshold": 0.66,
-          "answer_rate": 0.3888888888888889,
+          "answer_rate": 0.4074074074074074,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6944444444444444
+          "balanced_accuracy": 0.7037037037037037
         },
         {
           "threshold": 0.67,
@@ -1746,15 +1742,15 @@
         },
         {
           "threshold": 0.7,
-          "answer_rate": 0.24074074074074073,
+          "answer_rate": 0.2777777777777778,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6203703703703703
+          "balanced_accuracy": 0.6388888888888888
         },
         {
           "threshold": 0.71,
-          "answer_rate": 0.2222222222222222,
+          "answer_rate": 0.25925925925925924,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6111111111111112
+          "balanced_accuracy": 0.6296296296296297
         },
         {
           "threshold": 0.72,
@@ -1776,27 +1772,27 @@
         },
         {
           "threshold": 0.75,
-          "answer_rate": 0.1111111111111111,
+          "answer_rate": 0.09259259259259259,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5555555555555556
+          "balanced_accuracy": 0.5462962962962963
         },
         {
           "threshold": 0.76,
-          "answer_rate": 0.09259259259259259,
+          "answer_rate": 0.07407407407407407,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5462962962962963
+          "balanced_accuracy": 0.537037037037037
         },
         {
           "threshold": 0.77,
-          "answer_rate": 0.09259259259259259,
+          "answer_rate": 0.07407407407407407,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5462962962962963
+          "balanced_accuracy": 0.537037037037037
         },
         {
           "threshold": 0.78,
-          "answer_rate": 0.09259259259259259,
+          "answer_rate": 0.07407407407407407,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5462962962962963
+          "balanced_accuracy": 0.537037037037037
         },
         {
           "threshold": 0.79,
@@ -1806,15 +1802,15 @@
         },
         {
           "threshold": 0.8,
-          "answer_rate": 0.05555555555555555,
+          "answer_rate": 0.07407407407407407,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5277777777777778
+          "balanced_accuracy": 0.537037037037037
         },
         {
           "threshold": 0.81,
-          "answer_rate": 0.05555555555555555,
+          "answer_rate": 0.07407407407407407,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5277777777777778
+          "balanced_accuracy": 0.537037037037037
         },
         {
           "threshold": 0.82,
@@ -1872,15 +1868,15 @@
       "provider": "extractive",
       "model": "sentence-selection",
       "summary": {
-        "answer_rate": 0.7592592592592593,
+        "answer_rate": 0.7962962962962963,
         "correct_refusal_rate": 1.0,
-        "fact_recall": 0.8658536585365854,
-        "fact_recall_all": 0.6574074074074074,
+        "fact_recall": 0.872093023255814,
+        "fact_recall_all": 0.6944444444444444,
         "citation_accuracy": 1.0,
         "sentence_support": 1.0,
         "token_precision": 1.0,
-        "latency_ms_p50": 136.35,
-        "latency_ms_p95": 193.10999999999999
+        "latency_ms_p50": 139.55,
+        "latency_ms_p95": 191.70499999999998
       },
       "rows": [
         {
@@ -1890,7 +1886,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 138.1,
+          "latency_ms": 135.8,
           "citations": []
         },
         {
@@ -1900,7 +1896,7 @@
           "predicted_answerable": true,
           "answer": "Where your manager has approved in advance that you work more than 40 hours in a week, you may record the additional hours as time off in lieu (TOIL). [1]",
           "provider": "extractive",
-          "latency_ms": 156.1,
+          "latency_ms": 130.6,
           "citations": [
             "employee-handbook.pdf p.1"
           ],
@@ -1914,13 +1910,11 @@
           "question": "How long is the probation period for new hires?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "All new employees complete a probationary period of six months. [1] After probation, the notice period you must give is one month for employees below Senior grade and three months for employees at Senior grade and above. [2] During probation, new starters are expected to work from the office at least three days per week so they can get to know their team. [3]",
+          "answer": "Probation All new employees complete a probationary period of six months. [1]",
           "provider": "extractive",
-          "latency_ms": 118.4,
+          "latency_ms": 129.1,
           "citations": [
-            "employee-handbook.pdf p.2",
-            "employee-handbook.pdf p.5",
-            "remote-work-policy.md"
+            "employee-handbook.pdf p.2"
           ],
           "fact_recall": 1.0,
           "sentence_support": 1.0,
@@ -1932,9 +1926,9 @@
           "question": "What notice do I need to give if I quit during probation?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "After probation, the notice period you must give is one month for employees below Senior grade and three months for employees at Senior grade and above. [1] During probation, either party may end employment by giving one week's notice. [2]",
+          "answer": "Leaving Halden After probation, the notice period you must give is one month for employees below Senior grade and three months for employees at Senior grade and above. [1] During probation, either party may end employment by giving one week's notice. [2]",
           "provider": "extractive",
-          "latency_ms": 108.5,
+          "latency_ms": 132.3,
           "citations": [
             "employee-handbook.pdf p.5",
             "employee-handbook.pdf p.2"
@@ -1949,9 +1943,9 @@
           "question": "Which day of the month do we get paid?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Salaries are paid monthly by bank transfer on the 25th of each month. [1] If the 25th falls on a weekend or bank holiday, you will be paid on the last working day before it. [1]",
+          "answer": "Pay and payroll Salaries are paid monthly by bank transfer on the 25th of each month. [1] If the 25th falls on a weekend or bank holiday, you will be paid on the last working day before it. [1]",
           "provider": "extractive",
-          "latency_ms": 101.1,
+          "latency_ms": 128.2,
           "citations": [
             "employee-handbook.pdf p.2"
           ],
@@ -1965,9 +1959,9 @@
           "question": "How much does Halden put into my pension?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Halden auto-enrols eligible employees into the company pension scheme. [1] Halden pays up to three days of emergency dependant leave per calendar year at full pay; further time off is unpaid. [3]",
+          "answer": "Pension Halden auto-enrols eligible employees into the company pension scheme. [1] Halden pays up to three days of emergency dependant leave per calendar year at full pay; further time off is unpaid. [4]",
           "provider": "extractive",
-          "latency_ms": 112.1,
+          "latency_ms": 139.7,
           "citations": [
             "employee-handbook.pdf p.2",
             "parental-and-family-leave.txt"
@@ -1984,7 +1978,7 @@
           "predicted_answerable": true,
           "answer": "Salaries are reviewed once a year, with any changes taking effect from 1 April. [1] After one year of service this increases to 20 working days of full pay. [2]",
           "provider": "extractive",
-          "latency_ms": 132.7,
+          "latency_ms": 138.8,
           "citations": [
             "employee-handbook.pdf p.2",
             "employee-handbook.pdf p.4"
@@ -1999,9 +1993,9 @@
           "question": "How many holiday days do full-time staff get?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Full-time employees receive 25 days of annual leave per leave year, plus the eight UK bank holidays. [1] After two full years of service, you receive one additional day of leave for each further full year of service, up to a maximum of 30 days. [1] After one year of service this increases to 20 working days of full pay. [4]",
+          "answer": "Annual leave Full-time employees receive 25 days of annual leave per leave year, plus the eight UK bank holidays. [1] After two full years of service, you receive one additional day of leave for each further full year of service, up to a maximum of 30 days. [1] After one year of service this increases to 20 working days of full pay. [4]",
           "provider": "extractive",
-          "latency_ms": 124.3,
+          "latency_ms": 144.4,
           "citations": [
             "employee-handbook.pdf p.3",
             "employee-handbook.pdf p.4"
@@ -2018,7 +2012,7 @@
           "predicted_answerable": true,
           "answer": "You may carry over up to five unused days into the next leave year; carried-over days must be used by 31 March or they are lost. [1]",
           "provider": "extractive",
-          "latency_ms": 144.4,
+          "latency_ms": 396.7,
           "citations": [
             "employee-handbook.pdf p.3"
           ],
@@ -2034,27 +2028,33 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 132.0,
+          "latency_ms": 174.0,
           "citations": []
         },
         {
           "id": "q011",
           "question": "Do I have to use my own leave for the Christmas shutdown?",
           "answerable": true,
-          "predicted_answerable": false,
-          "answer": "I couldn't find this in the provided policy documents.",
+          "predicted_answerable": true,
+          "answer": "You may carry over up to five unused days into the next leave year; carried-over days must be used by 31 March or they are lost. [1] Christmas closure The company closes between 24 December and 1 January. [1] Employees should reserve three days of their annual leave entitlement to cover the closure period; the remaining closure days are granted as additional paid leave. [1]",
           "provider": "extractive",
-          "latency_ms": 127.1,
-          "citations": []
+          "latency_ms": 171.7,
+          "citations": [
+            "employee-handbook.pdf p.3"
+          ],
+          "fact_recall": 1.0,
+          "sentence_support": 1.0,
+          "token_precision": 1.0,
+          "citation_correct": true
         },
         {
           "id": "q012",
           "question": "By what time should I call in sick?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "If you are unable to work because of illness, you must tell your manager by 09:30 on your first day of absence by phone call or a Slack call. [1]",
+          "answer": "Sickness absence If you are unable to work because of illness, you must tell your manager by 09:30 on your first day of absence by phone call or a Slack call. [1]",
           "provider": "extractive",
-          "latency_ms": 102.8,
+          "latency_ms": 139.4,
           "citations": [
             "employee-handbook.pdf p.4"
           ],
@@ -2068,9 +2068,9 @@
           "question": "When do I need a doctor's note for sick leave?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "If you are unable to work because of illness, you must tell your manager by 09:30 on your first day of absence by phone call or a Slack call. [1] From the eighth calendar day of absence, you must provide a fit note from a doctor. [1]",
+          "answer": "Sickness absence If you are unable to work because of illness, you must tell your manager by 09:30 on your first day of absence by phone call or a Slack call. [1] From the eighth calendar day of absence, you must provide a fit note from a doctor. [1]",
           "provider": "extractive",
-          "latency_ms": 137.2,
+          "latency_ms": 165.2,
           "citations": [
             "employee-handbook.pdf p.4"
           ],
@@ -2086,7 +2086,7 @@
           "predicted_answerable": true,
           "answer": "Company sick pay: during your first year of service you receive full pay for up to 10 working days of sickness in any rolling 12-month period. [1]",
           "provider": "extractive",
-          "latency_ms": 126.7,
+          "latency_ms": 139.2,
           "citations": [
             "employee-handbook.pdf p.4"
           ],
@@ -2100,12 +2100,11 @@
           "question": "How often are performance reviews held?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Performance is reviewed twice a year: a mid-year review in October and an annual review in April. [1] Pay reviews take account of performance, market data and the company's financial position. [2]",
+          "answer": "Performance reviews Performance is reviewed twice a year: a mid-year review in October and an annual review in April. [1]",
           "provider": "extractive",
-          "latency_ms": 110.7,
+          "latency_ms": 116.7,
           "citations": [
-            "employee-handbook.pdf p.4",
-            "employee-handbook.pdf p.2"
+            "employee-handbook.pdf p.4"
           ],
           "fact_recall": 1.0,
           "sentence_support": 1.0,
@@ -2116,26 +2115,20 @@
           "id": "q016",
           "question": "What is the deadline for raising a formal grievance?",
           "answerable": true,
-          "predicted_answerable": true,
-          "answer": "Grievances and disciplinary matters. [1] If that is not possible, raise a formal grievance in writing to your manager or the People Team within 20 working days of the issue arising. [1] At any formal grievance or disciplinary meeting you have the right to be accompanied by a colleague or a trade union representative. [1]",
+          "predicted_answerable": false,
+          "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 128.5,
-          "citations": [
-            "employee-handbook.pdf p.5"
-          ],
-          "fact_recall": 1.0,
-          "sentence_support": 1.0,
-          "token_precision": 1.0,
-          "citation_correct": true
+          "latency_ms": 133.7,
+          "citations": []
         },
         {
           "id": "q017",
           "question": "What is the notice period for a senior employee who resigns?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "After probation, the notice period you must give is one month for employees below Senior grade and three months for employees at Senior grade and above. [1]",
+          "answer": "Leaving Halden After probation, the notice period you must give is one month for employees below Senior grade and three months for employees at Senior grade and above. [1]",
           "provider": "extractive",
-          "latency_ms": 127.1,
+          "latency_ms": 145.8,
           "citations": [
             "employee-handbook.pdf p.5"
           ],
@@ -2151,7 +2144,7 @@
           "predicted_answerable": true,
           "answer": "All company equipment, including laptops, security keys and access passes, must be returned within five working days of your last day. [1] After two full years of service, you receive one additional day of leave for each further full year of service, up to a maximum of 30 days. [2] You may carry over up to five unused days into the next leave year; carried-over days must be used by 31 March or they are lost. [2]",
           "provider": "extractive",
-          "latency_ms": 114.5,
+          "latency_ms": 122.9,
           "citations": [
             "employee-handbook.pdf p.5",
             "employee-handbook.pdf p.3"
@@ -2166,9 +2159,9 @@
           "question": "How long do I have to submit an expense claim?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Claims are submitted through the Ledgerly expenses app within 30 days of the expense being incurred. [1] Claims submitted more than 90 days after the expense will not be reimbursed. [1]",
+          "answer": "Submitting a claim Claims are submitted through the Ledgerly expenses app within 30 days of the expense being incurred. [1] Claims submitted more than 90 days after the expense will not be reimbursed. [1]",
           "provider": "extractive",
-          "latency_ms": 166.9,
+          "latency_ms": 171.8,
           "citations": [
             "expenses-and-travel-policy.pdf p.1"
           ],
@@ -2184,7 +2177,7 @@
           "predicted_answerable": true,
           "answer": "An itemised receipt is required for every expense over \u00a310. [1] If a receipt is lost, complete a missing receipt declaration in Ledgerly; this is permitted at most twice per year. [1]",
           "provider": "extractive",
-          "latency_ms": 200.6,
+          "latency_ms": 185.5,
           "citations": [
             "expenses-and-travel-policy.pdf p.1"
           ],
@@ -2200,7 +2193,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 163.8,
+          "latency_ms": 155.8,
           "citations": []
         },
         {
@@ -2210,7 +2203,7 @@
           "predicted_answerable": true,
           "answer": "Claims submitted more than 90 days after the expense will not be reimbursed. [1] Claims approved by the 15th of the month are reimbursed in that month's payroll. [1] Claims approved after the 15th are paid in the following month's payroll. [1]",
           "provider": "extractive",
-          "latency_ms": 162.1,
+          "latency_ms": 183.0,
           "citations": [
             "expenses-and-travel-policy.pdf p.1"
           ],
@@ -2226,7 +2219,7 @@
           "predicted_answerable": true,
           "answer": "Rail travel is in standard class. [1] First class is permitted only when the fare is cheaper than standard class, or for journeys over four hours with prior approval from a director. [1]",
           "provider": "extractive",
-          "latency_ms": 61.6,
+          "latency_ms": 65.0,
           "citations": [
             "expenses-and-travel-policy.pdf p.2"
           ],
@@ -2242,7 +2235,7 @@
           "predicted_answerable": true,
           "answer": "Premium economy is permitted for flights of six hours or longer. [1]",
           "provider": "extractive",
-          "latency_ms": 148.3,
+          "latency_ms": 164.7,
           "citations": [
             "expenses-and-travel-policy.pdf p.2"
           ],
@@ -2258,7 +2251,7 @@
           "predicted_answerable": true,
           "answer": "The maximum nightly rate, including breakfast, is \u00a3150 in London and \u00a3110 elsewhere in the UK. [1]",
           "provider": "extractive",
-          "latency_ms": 161.1,
+          "latency_ms": 161.2,
           "citations": [
             "expenses-and-travel-policy.pdf p.2"
           ],
@@ -2272,9 +2265,9 @@
           "question": "What is the mileage rate for using my own car?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "If you use your own car for business travel, you can claim 45p per mile for the first 10,000 business miles in a tax year and 25p per mile after that. [1]",
+          "answer": "Mileage and taxis If you use your own car for business travel, you can claim 45p per mile for the first 10,000 business miles in a tax year and 25p per mile after that. [1]",
           "provider": "extractive",
-          "latency_ms": 55.8,
+          "latency_ms": 60.3,
           "citations": [
             "expenses-and-travel-policy.pdf p.2"
           ],
@@ -2290,7 +2283,7 @@
           "predicted_answerable": true,
           "answer": "Taxis may be claimed only when no reasonable public transport is available, when travelling with heavy equipment, or for journeys starting after 21:00. [2]",
           "provider": "extractive",
-          "latency_ms": 168.6,
+          "latency_ms": 177.2,
           "citations": [
             "expenses-and-travel-policy.pdf p.2"
           ],
@@ -2304,9 +2297,9 @@
           "question": "What is the dinner allowance on an overnight trip?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "When travelling overnight on business in the UK, you may claim meals up to the following limits: breakfast \u00a310, lunch \u00a312 and dinner \u00a330. [1]",
+          "answer": "Meals and subsistence When travelling overnight on business in the UK, you may claim meals up to the following limits: breakfast \u00a310, lunch \u00a312 and dinner \u00a330. [1]",
           "provider": "extractive",
-          "latency_ms": 164.2,
+          "latency_ms": 180.9,
           "citations": [
             "expenses-and-travel-policy.pdf p.3"
           ],
@@ -2322,7 +2315,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 167.7,
+          "latency_ms": 191.9,
           "citations": []
         },
         {
@@ -2332,7 +2325,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 150.2,
+          "latency_ms": 160.1,
           "citations": []
         },
         {
@@ -2342,7 +2335,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 148.1,
+          "latency_ms": 171.8,
           "citations": []
         },
         {
@@ -2350,9 +2343,9 @@
           "question": "How many days a week do I need to be in the office?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Hybrid employees spend a minimum of two days per week in the office. [1]",
+          "answer": "Office attendance Hybrid employees spend a minimum of two days per week in the office. [1]",
           "provider": "extractive",
-          "latency_ms": 139.6,
+          "latency_ms": 141.2,
           "citations": [
             "remote-work-policy.md"
           ],
@@ -2366,9 +2359,9 @@
           "question": "How much can I claim for a home desk and chair?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Hybrid and fully remote employees can claim a one-off home office allowance of up to \u00a3300 towards a desk, chair or other ergonomic equipment. [1]",
+          "answer": "Equipment and allowances > Home office allowance Hybrid and fully remote employees can claim a one-off home office allowance of up to \u00a3300 towards a desk, chair or other ergonomic equipment. [1]",
           "provider": "extractive",
-          "latency_ms": 150.1,
+          "latency_ms": 152.4,
           "citations": [
             "remote-work-policy.md"
           ],
@@ -2384,7 +2377,7 @@
           "predicted_answerable": true,
           "answer": "Hybrid employees are not eligible for the monthly allowance, and home internet costs are not otherwise reimbursed. [1]",
           "provider": "extractive",
-          "latency_ms": 162.1,
+          "latency_ms": 154.2,
           "citations": [
             "remote-work-policy.md"
           ],
@@ -2398,9 +2391,9 @@
           "question": "How long can I work from another country?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "You may work from outside the UK for up to 20 working days in each calendar year. [1] Days spent working abroad cannot be combined with another employee's allowance or carried over to the next year. [1]",
+          "answer": "Working from abroad You may work from outside the UK for up to 20 working days in each calendar year. [1]",
           "provider": "extractive",
-          "latency_ms": 122.8,
+          "latency_ms": 107.4,
           "citations": [
             "remote-work-policy.md"
           ],
@@ -2414,12 +2407,11 @@
           "question": "How far in advance must I request to work abroad?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "You may work from outside the UK for up to 20 working days in each calendar year. [1] Business travel should be booked through the TripDesk travel portal at least 14 days in advance wherever possible. [5]",
+          "answer": "Working from abroad You may work from outside the UK for up to 20 working days in each calendar year. [1]",
           "provider": "extractive",
-          "latency_ms": 126.2,
+          "latency_ms": 337.3,
           "citations": [
-            "remote-work-policy.md",
-            "expenses-and-travel-policy.pdf p.2"
+            "remote-work-policy.md"
           ],
           "fact_recall": 0.0,
           "sentence_support": 1.0,
@@ -2430,20 +2422,28 @@
           "id": "q037",
           "question": "How do I book a desk in the office?",
           "answerable": true,
-          "predicted_answerable": false,
-          "answer": "I couldn't find this in the provided policy documents.",
+          "predicted_answerable": true,
+          "answer": "Desks are booked through the DeskFlow app; unbooked desks are first come, first served. [1] Equipment and allowances > Home office allowance Hybrid and fully remote employees can claim a one-off home office allowance of up to \u00a3300 towards a desk, chair or other ergonomic equipment. [2] Physical security Keep a clear desk: lock away papers and devices at the end of each day. [3]",
           "provider": "extractive",
-          "latency_ms": 184.2,
-          "citations": []
+          "latency_ms": 175.8,
+          "citations": [
+            "remote-work-policy.md",
+            "remote-work-policy.md",
+            "information-security-policy.md"
+          ],
+          "fact_recall": 1.0,
+          "sentence_support": 1.0,
+          "token_precision": 1.0,
+          "citation_correct": true
         },
         {
           "id": "q038",
           "question": "What is the minimum password length?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Passwords for company accounts must be at least 14 characters long and must not be reused across services. [1]",
+          "answer": "Passwords and authentication Passwords for company accounts must be at least 14 characters long and must not be reused across services. [1]",
           "provider": "extractive",
-          "latency_ms": 209.6,
+          "latency_ms": 190.0,
           "citations": [
             "information-security-policy.md"
           ],
@@ -2459,7 +2459,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 53.7,
+          "latency_ms": 50.5,
           "citations": []
         },
         {
@@ -2469,7 +2469,7 @@
           "predicted_answerable": true,
           "answer": "A lost or stolen device must be reported within one hour of discovering the loss, so it can be wiped remotely. [1] All company equipment, including laptops, security keys and access passes, must be returned within five working days of your last day. [5]",
           "provider": "extractive",
-          "latency_ms": 194.4,
+          "latency_ms": 192.9,
           "citations": [
             "information-security-policy.md",
             "employee-handbook.pdf p.5"
@@ -2483,11 +2483,17 @@
           "id": "q041",
           "question": "Can I copy client personal data onto my laptop?",
           "answerable": true,
-          "predicted_answerable": false,
-          "answer": "I couldn't find this in the provided policy documents.",
+          "predicted_answerable": true,
+          "answer": "Personal laptops must never be used to access client data. [1] Restricted data must only be stored and processed in approved client environments and must never be copied to laptops, email or chat. [1]",
           "provider": "extractive",
-          "latency_ms": 190.9,
-          "citations": []
+          "latency_ms": 190.6,
+          "citations": [
+            "information-security-policy.md"
+          ],
+          "fact_recall": 1.0,
+          "sentence_support": 1.0,
+          "token_precision": 1.0,
+          "citation_correct": true
         },
         {
           "id": "q042",
@@ -2496,7 +2502,7 @@
           "predicted_answerable": true,
           "answer": "Confidential or Restricted information must never be entered into tools that are not on the approved list, including online translators, file converters and chatbots. [1]",
           "provider": "extractive",
-          "latency_ms": 89.8,
+          "latency_ms": 94.2,
           "citations": [
             "information-security-policy.md"
           ],
@@ -2510,9 +2516,9 @@
           "question": "When must new starters finish security training?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "All new joiners must complete security awareness training within 30 days of starting. [1]",
+          "answer": "Training All new joiners must complete security awareness training within 30 days of starting. [1]",
           "provider": "extractive",
-          "latency_ms": 119.1,
+          "latency_ms": 113.6,
           "citations": [
             "information-security-policy.md"
           ],
@@ -2528,7 +2534,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 83.6,
+          "latency_ms": 76.5,
           "citations": []
         },
         {
@@ -2536,9 +2542,9 @@
           "question": "Can I accept a \u00a340 gift from a supplier?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "You may accept occasional gifts or hospitality worth up to \u00a350 from a client or supplier without approval. [1]",
+          "answer": "Gifts and hospitality You may accept occasional gifts or hospitality worth up to \u00a350 from a client or supplier without approval. [1] You must not accept any gift or hospitality from a supplier taking part in an active tender with Halden. [1]",
           "provider": "extractive",
-          "latency_ms": 146.3,
+          "latency_ms": 166.1,
           "citations": [
             "code-of-conduct.md"
           ],
@@ -2554,7 +2560,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 86.7,
+          "latency_ms": 92.4,
           "citations": []
         },
         {
@@ -2564,7 +2570,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 135.5,
+          "latency_ms": 120.0,
           "citations": []
         },
         {
@@ -2572,9 +2578,9 @@
           "question": "How can I report wrongdoing anonymously?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "If you suspect wrongdoing, such as fraud, a safety risk or a breach of law, you can raise it with the Head of Compliance or through the independent Speak Up line, which allows anonymous reports. [1]",
+          "answer": "Speaking up If you suspect wrongdoing, such as fraud, a safety risk or a breach of law, you can raise it with the Head of Compliance or through the independent Speak Up line, which allows anonymous reports. [1]",
           "provider": "extractive",
-          "latency_ms": 61.9,
+          "latency_ms": 61.6,
           "citations": [
             "code-of-conduct.md"
           ],
@@ -2590,7 +2596,7 @@
           "predicted_answerable": true,
           "answer": "When meeting clients, dress in business attire unless the client has indicated otherwise. [1]",
           "provider": "extractive",
-          "latency_ms": 79.8,
+          "latency_ms": 82.5,
           "citations": [
             "code-of-conduct.md"
           ],
@@ -2606,7 +2612,7 @@
           "predicted_answerable": true,
           "answer": "Halden enhances shared parental pay to match the enhanced maternity pay scheme, so that parents receive the same total enhanced pay whichever parent takes the leave. [1]",
           "provider": "extractive",
-          "latency_ms": 144.0,
+          "latency_ms": 144.3,
           "citations": [
             "parental-and-family-leave.txt"
           ],
@@ -2620,9 +2626,9 @@
           "question": "How long is paternity leave?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Paternity And Partner Leave. [1] Partners are entitled to four weeks of paternity leave at full pay. [1] Paternity leave can be taken as a single block or as two separate blocks of two weeks, and must be completed within 52 weeks of the birth or placement. [1]",
+          "answer": "Paternity And Partner Leave Partners are entitled to four weeks of paternity leave at full pay. [1] Paternity leave can be taken as a single block or as two separate blocks of two weeks, and must be completed within 52 weeks of the birth or placement. [1]",
           "provider": "extractive",
-          "latency_ms": 113.5,
+          "latency_ms": 135.7,
           "citations": [
             "parental-and-family-leave.txt"
           ],
@@ -2636,9 +2642,9 @@
           "question": "How much paid time off is there if a close relative dies?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Employees can take five days of paid bereavement leave following the death of a close family member, such as a partner, parent, sibling or grandparent. [1] Parents who lose a child, including through stillbirth after 24 weeks of pregnancy, are entitled to two weeks of paid leave. [1] One day of paid leave is available to attend the funeral of another relative or friend. [1]",
+          "answer": "Bereavement Leave Employees can take five days of paid bereavement leave following the death of a close family member, such as a partner, parent, sibling or grandparent. [1] Parents who lose a child, including through stillbirth after 24 weeks of pregnancy, are entitled to two weeks of paid leave. [1] One day of paid leave is available to attend the funeral of another relative or friend. [1]",
           "provider": "extractive",
-          "latency_ms": 124.5,
+          "latency_ms": 154.7,
           "citations": [
             "parental-and-family-leave.txt"
           ],
@@ -2652,11 +2658,10 @@
           "question": "How many paid days do I get when my child is suddenly ill?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Parents who lose a child, including through stillbirth after 24 weeks of pregnancy, are entitled to two weeks of paid leave. [1] You can take a reasonable amount of time off to deal with an emergency involving a dependant, such as a child's sudden illness or a breakdown in care arrangements. [2] Company sick pay: during your first year of service you receive full pay for up to 10 working days of sickness in any rolling 12-month period. [5]",
+          "answer": "Parents who lose a child, including through stillbirth after 24 weeks of pregnancy, are entitled to two weeks of paid leave. [1] You can self-certify sickness for up to seven calendar days. [5] Company sick pay: during your first year of service you receive full pay for up to 10 working days of sickness in any rolling 12-month period. [5]",
           "provider": "extractive",
-          "latency_ms": 121.3,
+          "latency_ms": 122.2,
           "citations": [
-            "parental-and-family-leave.txt",
             "parental-and-family-leave.txt",
             "employee-handbook.pdf p.4"
           ],
@@ -2672,7 +2677,7 @@
           "predicted_answerable": true,
           "answer": "Employees undergoing fertility treatment can take up to five days of paid leave per year for appointments. [1]",
           "provider": "extractive",
-          "latency_ms": 120.9,
+          "latency_ms": 113.3,
           "citations": [
             "parental-and-family-leave.txt"
           ],
@@ -2688,7 +2693,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 141.5,
+          "latency_ms": 133.4,
           "citations": []
         },
         {
@@ -2698,7 +2703,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 151.5,
+          "latency_ms": 133.4,
           "citations": []
         },
         {
@@ -2708,7 +2713,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 133.5,
+          "latency_ms": 120.6,
           "citations": []
         },
         {
@@ -2718,7 +2723,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 140.2,
+          "latency_ms": 131.3,
           "citations": []
         },
         {
@@ -2728,7 +2733,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 193.5,
+          "latency_ms": 152.4,
           "citations": []
         },
         {
@@ -2738,7 +2743,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 146.7,
+          "latency_ms": 130.2,
           "citations": []
         },
         {
@@ -2748,7 +2753,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 122.7,
+          "latency_ms": 124.5,
           "citations": []
         },
         {
@@ -2758,7 +2763,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 151.4,
+          "latency_ms": 87.8,
           "citations": []
         },
         {
@@ -2768,7 +2773,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 145.9,
+          "latency_ms": 168.7,
           "citations": []
         },
         {
@@ -2778,7 +2783,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 149.2,
+          "latency_ms": 161.1,
           "citations": []
         }
       ]

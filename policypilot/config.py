@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     chunk_overlap: int = 64
     top_k: int = 5
     score_threshold: float = 0.2
-    evidence_threshold: float = 0.56
+    evidence_threshold: float = 0.54
     retrieval_mode: Literal["dense", "hybrid"] = "hybrid"
 
     chroma_dir: Path = ROOT_DIR / "data" / "chroma"
