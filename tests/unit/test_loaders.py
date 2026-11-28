@@ -61,5 +61,5 @@ def test_rejects_unsupported_extension():
 
 def test_load_directory_reads_all_supported_files():
     docs = load_directory(SAMPLE_DOCS)
-    assert len(docs) == 6
-    assert {d.file_type for d in docs} == {"pdf", "markdown", "text"}
+    assert len(docs) == 7
+    assert {d.file_type for d in docs} == {"pdf", "markdown", "text", "docx"}

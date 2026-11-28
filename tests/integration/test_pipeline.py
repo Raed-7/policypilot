@@ -8,7 +8,7 @@ from tests.conftest import SAMPLE_DOCS
 
 def test_ingest_directory_indexes_all_documents(indexed_pipeline):
     docs = indexed_pipeline.documents()
-    assert len(docs) == 6
+    assert len(docs) == 7
     assert all(d["chunks"] > 0 for d in docs)
     handbook = next(d for d in docs if d["source"] == "employee-handbook.pdf")
     assert handbook["pages"] == 5

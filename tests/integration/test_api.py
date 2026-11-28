@@ -15,7 +15,7 @@ def test_health(client):
     body = client.get("/health").json()
     assert body["status"] == "ok"
     assert body["provider"] == "extractive"
-    assert body["documents"] == 6
+    assert body["documents"] == 7
     assert body["chunks"] > 0
 
 
