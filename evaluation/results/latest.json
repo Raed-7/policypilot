@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-27T01:17:01+00:00",
+  "generated_at": "2026-11-28T02:28:51+00:00",
   "environment": {
     "python": "3.13.18",
     "machine": "x86_64",
     "processor": "x86_64"
   },
   "dataset": {
-    "questions": 64,
-    "answerable": 54,
+    "questions": 70,
+    "answerable": 60,
     "unanswerable": 10,
-    "documents": 6
+    "documents": 7
   },
   "retrieval_grid": [
     {
@@ -18,304 +18,619 @@
       "chunk_size": 64,
       "overlap": 0,
       "mode": "dense",
-      "chunks": 78,
-      "index_seconds": 3.56,
-      "recall@1": 0.8518518518518519,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.9135802469135803,
-      "latency_ms_p50": 13.707064000044511,
-      "misses@5": [
-        "q020",
-        "q050"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 64,
-      "overlap": 0,
-      "mode": "hybrid",
-      "chunks": 78,
-      "index_seconds": 3.56,
-      "recall@1": 0.8518518518518519,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9444444444444444,
-      "mrr@10": 0.9038800705467372,
-      "latency_ms_p50": 15.951434000015752,
-      "misses@5": [
-        "q010",
-        "q021",
-        "q047"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 64,
-      "overlap": 16,
-      "mode": "dense",
-      "chunks": 78,
-      "index_seconds": 0.67,
-      "recall@1": 0.7962962962962963,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8791887125220458,
-      "latency_ms_p50": 17.51575549997142,
-      "misses@5": [
-        "q020",
-        "q050"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 64,
-      "overlap": 16,
-      "mode": "hybrid",
-      "chunks": 78,
-      "index_seconds": 0.67,
-      "recall@1": 0.8333333333333334,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.904320987654321,
-      "latency_ms_p50": 15.070582500015917,
-      "misses@5": [
-        "q021",
-        "q047"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 128,
-      "overlap": 0,
-      "mode": "dense",
-      "chunks": 63,
-      "index_seconds": 0.94,
-      "recall@1": 0.8333333333333334,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9444444444444444,
-      "mrr@10": 0.8941798941798942,
-      "latency_ms_p50": 15.619708999992099,
-      "misses@5": [
-        "q010",
-        "q041",
-        "q050"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 128,
-      "overlap": 0,
-      "mode": "hybrid",
-      "chunks": 63,
-      "index_seconds": 0.94,
-      "recall@1": 0.8703703703703703,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.9193121693121694,
-      "latency_ms_p50": 18.019318999989764,
-      "misses@5": [
-        "q021",
-        "q047"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 128,
-      "overlap": 32,
-      "mode": "dense",
-      "chunks": 63,
-      "index_seconds": 0.84,
-      "recall@1": 0.8333333333333334,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9444444444444444,
-      "mrr@10": 0.8910934744268078,
-      "latency_ms_p50": 15.803151999989495,
-      "misses@5": [
-        "q010",
-        "q041",
-        "q050"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 128,
-      "overlap": 32,
-      "mode": "hybrid",
-      "chunks": 63,
-      "index_seconds": 0.84,
-      "recall@1": 0.8703703703703703,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.9193121693121694,
-      "latency_ms_p50": 12.216626000025599,
-      "misses@5": [
-        "q021",
-        "q047"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 256,
-      "overlap": 0,
-      "mode": "dense",
-      "chunks": 62,
-      "index_seconds": 0.82,
-      "recall@1": 0.8333333333333334,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9444444444444444,
-      "mrr@10": 0.8941798941798942,
-      "latency_ms_p50": 11.628206499977978,
-      "misses@5": [
-        "q010",
-        "q041",
-        "q050"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 256,
-      "overlap": 0,
-      "mode": "hybrid",
-      "chunks": 62,
-      "index_seconds": 0.82,
-      "recall@1": 0.8703703703703703,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.9193121693121694,
-      "latency_ms_p50": 11.859036499998865,
-      "misses@5": [
-        "q021",
-        "q047"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 256,
-      "overlap": 64,
-      "mode": "dense",
-      "chunks": 62,
-      "index_seconds": 0.84,
-      "recall@1": 0.8333333333333334,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9444444444444444,
-      "mrr@10": 0.8941798941798942,
-      "latency_ms_p50": 16.421280499997692,
-      "misses@5": [
-        "q010",
-        "q041",
-        "q050"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "section",
-      "chunk_size": 256,
-      "overlap": 64,
-      "mode": "hybrid",
-      "chunks": 62,
-      "index_seconds": 0.84,
-      "recall@1": 0.8703703703703703,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.9193121693121694,
-      "latency_ms_p50": 18.69010999999432,
-      "misses@5": [
-        "q021",
-        "q047"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "fixed",
-      "chunk_size": 64,
-      "overlap": 0,
-      "mode": "dense",
-      "chunks": 61,
-      "index_seconds": 0.79,
-      "recall@1": 0.7962962962962963,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8822751322751323,
-      "latency_ms_p50": 11.80133599999067,
-      "misses@5": [
-        "q020",
-        "q050"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "fixed",
-      "chunk_size": 64,
-      "overlap": 0,
-      "mode": "hybrid",
-      "chunks": 61,
-      "index_seconds": 0.79,
-      "recall@1": 0.7777777777777778,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8708847736625515,
-      "latency_ms_p50": 12.391101000019944,
-      "misses@5": [
-        "q021"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "fixed",
-      "chunk_size": 64,
-      "overlap": 16,
-      "mode": "dense",
-      "chunks": 70,
-      "index_seconds": 0.62,
-      "recall@1": 0.7222222222222222,
-      "recall@3": 0.9259259259259259,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8328924162257495,
-      "latency_ms_p50": 12.87177300000053,
-      "misses@5": [
-        "q041",
-        "q050"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "fixed",
-      "chunk_size": 64,
-      "overlap": 16,
-      "mode": "hybrid",
-      "chunks": 70,
-      "index_seconds": 0.62,
-      "recall@1": 0.7962962962962963,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8823045267489712,
-      "latency_ms_p50": 12.117649999993318,
-      "misses@5": [
-        "q021"
-      ]
-    },
-    {
-      "embedding_model": "BAAI/bge-small-en-v1.5",
-      "strategy": "fixed",
-      "chunk_size": 128,
-      "overlap": 0,
-      "mode": "dense",
-      "chunks": 34,
+      "reranker": "none",
+      "chunks": 86,
       "index_seconds": 0.7,
-      "recall@1": 0.7407407407407407,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8447530864197531,
-      "latency_ms_p50": 11.59204900000077,
+      "recall@1": 0.8666666666666667,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9194444444444445,
+      "latency_ms_p50": 14.865912499999467,
+      "misses@5": [
+        "q020",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 64,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 86,
+      "index_seconds": 0.7,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9366666666666668,
+      "latency_ms_p50": 111.20497899997872,
+      "misses@5": [
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 64,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 86,
+      "index_seconds": 0.7,
+      "recall@1": 0.8666666666666667,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.9130952380952381,
+      "latency_ms_p50": 16.655484499978,
+      "misses@5": [
+        "q010",
+        "q021",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 64,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 86,
+      "index_seconds": 0.7,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9366666666666668,
+      "latency_ms_p50": 122.14831099998946,
+      "misses@5": [
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 64,
+      "overlap": 16,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 86,
+      "index_seconds": 2.5,
+      "recall@1": 0.8166666666666667,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.8884920634920636,
+      "latency_ms_p50": 16.624499499982903,
+      "misses@5": [
+        "q020",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 64,
+      "overlap": 16,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 86,
+      "index_seconds": 2.5,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9283333333333333,
+      "latency_ms_p50": 111.79884700001708,
+      "misses@5": [
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 64,
+      "overlap": 16,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 86,
+      "index_seconds": 2.5,
+      "recall@1": 0.85,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9134920634920635,
+      "latency_ms_p50": 13.47427550001612,
+      "misses@5": [
+        "q021",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 64,
+      "overlap": 16,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 86,
+      "index_seconds": 2.5,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9283333333333333,
+      "latency_ms_p50": 112.5412380000057,
+      "misses@5": [
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 71,
+      "index_seconds": 0.82,
+      "recall@1": 0.85,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.901984126984127,
+      "latency_ms_p50": 16.547596500004147,
+      "misses@5": [
+        "q010",
+        "q041",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 71,
+      "index_seconds": 0.82,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9305555555555556,
+      "latency_ms_p50": 165.38365299999214,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 71,
+      "index_seconds": 0.82,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9277777777777778,
+      "latency_ms_p50": 12.765774000001784,
+      "misses@5": [
+        "q021",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 71,
+      "index_seconds": 0.82,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9301587301587302,
+      "latency_ms_p50": 177.05659149999065,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 71,
+      "index_seconds": 0.78,
+      "recall@1": 0.85,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.8992063492063491,
+      "latency_ms_p50": 17.27080149998983,
+      "misses@5": [
+        "q010",
+        "q041",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 71,
+      "index_seconds": 0.78,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9305555555555556,
+      "latency_ms_p50": 171.79797199997893,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 71,
+      "index_seconds": 0.78,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9277777777777778,
+      "latency_ms_p50": 12.964425999996365,
+      "misses@5": [
+        "q021",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 71,
+      "index_seconds": 0.78,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9301587301587302,
+      "latency_ms_p50": 169.67021050004405,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 70,
+      "index_seconds": 0.87,
+      "recall@1": 0.85,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.901984126984127,
+      "latency_ms_p50": 15.592549000018607,
+      "misses@5": [
+        "q010",
+        "q041",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 70,
+      "index_seconds": 0.87,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9305555555555556,
+      "latency_ms_p50": 185.3585209999551,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 70,
+      "index_seconds": 0.87,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9273809523809523,
+      "latency_ms_p50": 13.006233999988126,
+      "misses@5": [
+        "q021",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 70,
+      "index_seconds": 0.87,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9301587301587302,
+      "latency_ms_p50": 189.72097699997903,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 64,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 70,
+      "index_seconds": 0.87,
+      "recall@1": 0.85,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.901984126984127,
+      "latency_ms_p50": 14.19373449999739,
+      "misses@5": [
+        "q010",
+        "q041",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 64,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 70,
+      "index_seconds": 0.87,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9305555555555556,
+      "latency_ms_p50": 189.40336300005356,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 64,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 70,
+      "index_seconds": 0.87,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9273809523809523,
+      "latency_ms_p50": 18.13298849998546,
+      "misses@5": [
+        "q021",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 64,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 70,
+      "index_seconds": 0.87,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9301587301587302,
+      "latency_ms_p50": 191.5047164999919,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 67,
+      "index_seconds": 0.57,
+      "recall@1": 0.8166666666666667,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.8940476190476191,
+      "latency_ms_p50": 16.048087999990912,
+      "misses@5": [
+        "q020",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 67,
+      "index_seconds": 0.57,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9381944444444446,
+      "latency_ms_p50": 105.41565749997517,
+      "misses@5": [
+        "q001",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 67,
+      "index_seconds": 0.57,
+      "recall@1": 0.8,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.8837962962962962,
+      "latency_ms_p50": 17.216964499993992,
+      "misses@5": [
+        "q021"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 67,
+      "index_seconds": 0.57,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9381944444444446,
+      "latency_ms_p50": 106.31304650001994,
+      "misses@5": [
+        "q001",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 16,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 76,
+      "index_seconds": 0.61,
+      "recall@1": 0.75,
+      "recall@3": 0.9333333333333333,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.8496031746031746,
+      "latency_ms_p50": 17.60336299997789,
+      "misses@5": [
+        "q041",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 16,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 76,
+      "index_seconds": 0.61,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.939047619047619,
+      "latency_ms_p50": 107.27910200000679,
+      "misses@5": [
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 16,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 76,
+      "index_seconds": 0.61,
+      "recall@1": 0.8166666666666667,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.8940740740740741,
+      "latency_ms_p50": 13.461316999951123,
+      "misses@5": [
+        "q021"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 16,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 76,
+      "index_seconds": 0.61,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.939047619047619,
+      "latency_ms_p50": 106.03109700002733,
+      "misses@5": [
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 37,
+      "index_seconds": 0.69,
+      "recall@1": 0.7333333333333333,
+      "recall@3": 0.9333333333333333,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.8366666666666668,
+      "latency_ms_p50": 15.152224000019032,
       "misses@5": [
         "q010"
       ]
@@ -325,14 +640,33 @@
       "strategy": "fixed",
       "chunk_size": 128,
       "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 37,
+      "index_seconds": 0.69,
+      "recall@1": 0.9166666666666666,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9475,
+      "latency_ms_p50": 208.6014354999861,
+      "misses@5": [
+        "q001"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 0,
       "mode": "hybrid",
-      "chunks": 34,
-      "index_seconds": 0.7,
-      "recall@1": 0.8333333333333334,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.9041666666666667,
-      "latency_ms_p50": 11.892214999988937,
+      "reranker": "none",
+      "chunks": 37,
+      "index_seconds": 0.69,
+      "recall@1": 0.85,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9137500000000001,
+      "latency_ms_p50": 12.940391499967063,
       "misses@5": [
         "q021"
       ]
@@ -341,15 +675,34 @@
       "embedding_model": "BAAI/bge-small-en-v1.5",
       "strategy": "fixed",
       "chunk_size": 128,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 37,
+      "index_seconds": 0.69,
+      "recall@1": 0.9166666666666666,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9475,
+      "latency_ms_p50": 216.2270614999784,
+      "misses@5": [
+        "q001"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 128,
       "overlap": 32,
       "mode": "dense",
-      "chunks": 36,
-      "index_seconds": 0.68,
-      "recall@1": 0.7777777777777778,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8773148148148148,
-      "latency_ms_p50": 17.19271749999507,
+      "reranker": "none",
+      "chunks": 39,
+      "index_seconds": 0.76,
+      "recall@1": 0.8,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.8895833333333333,
+      "latency_ms_p50": 17.606003500020506,
       "misses@5": [
         "q050"
       ]
@@ -359,15 +712,56 @@
       "strategy": "fixed",
       "chunk_size": 128,
       "overlap": 32,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 39,
+      "index_seconds": 0.76,
+      "recall@1": 0.9333333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9523809523809523,
+      "latency_ms_p50": 214.14546350001729,
+      "misses@5": [
+        "q001",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 32,
       "mode": "hybrid",
-      "chunks": 36,
-      "index_seconds": 0.68,
-      "recall@1": 0.8518518518518519,
-      "recall@3": 0.9814814814814815,
-      "recall@5": 1.0,
-      "mrr@10": 0.9141975308641975,
-      "latency_ms_p50": 17.942231999995784,
-      "misses@5": []
+      "reranker": "none",
+      "chunks": 39,
+      "index_seconds": 0.76,
+      "recall@1": 0.8666666666666667,
+      "recall@3": 0.9833333333333333,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9222222222222222,
+      "latency_ms_p50": 17.316445999995267,
+      "misses@5": [
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 39,
+      "index_seconds": 0.76,
+      "recall@1": 0.9333333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9542328042328042,
+      "latency_ms_p50": 209.38153199995213,
+      "misses@5": [
+        "q001",
+        "q050"
+      ]
     },
     {
       "embedding_model": "BAAI/bge-small-en-v1.5",
@@ -375,14 +769,36 @@
       "chunk_size": 256,
       "overlap": 0,
       "mode": "dense",
-      "chunks": 16,
-      "index_seconds": 0.7,
-      "recall@1": 0.7592592592592593,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8626543209876544,
-      "latency_ms_p50": 18.764395000005152,
+      "reranker": "none",
+      "chunks": 18,
+      "index_seconds": 0.74,
+      "recall@1": 0.7333333333333333,
+      "recall@3": 0.9333333333333333,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.8388888888888889,
+      "latency_ms_p50": 13.933151499998075,
       "misses@5": [
+        "q047",
+        "q058"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 256,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 18,
+      "index_seconds": 0.74,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.9246031746031746,
+      "latency_ms_p50": 387.1357809999836,
+      "misses@5": [
+        "q001",
+        "q002",
         "q047"
       ]
     },
@@ -392,14 +808,36 @@
       "chunk_size": 256,
       "overlap": 0,
       "mode": "hybrid",
-      "chunks": 16,
-      "index_seconds": 0.7,
-      "recall@1": 0.8703703703703703,
-      "recall@3": 0.9814814814814815,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.9279835390946503,
-      "latency_ms_p50": 11.87913850003497,
+      "reranker": "none",
+      "chunks": 18,
+      "index_seconds": 0.74,
+      "recall@1": 0.8666666666666667,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9212962962962963,
+      "latency_ms_p50": 16.336949000049117,
       "misses@5": [
+        "q047",
+        "q058"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 256,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 18,
+      "index_seconds": 0.74,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.9246031746031746,
+      "latency_ms_p50": 370.53067500005454,
+      "misses@5": [
+        "q001",
+        "q002",
         "q047"
       ]
     },
@@ -409,13 +847,14 @@
       "chunk_size": 256,
       "overlap": 64,
       "mode": "dense",
-      "chunks": 19,
-      "index_seconds": 0.84,
-      "recall@1": 0.7962962962962963,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8772045855379189,
-      "latency_ms_p50": 14.089207000012038,
+      "reranker": "none",
+      "chunks": 21,
+      "index_seconds": 0.88,
+      "recall@1": 0.8166666666666667,
+      "recall@3": 0.95,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.8886507936507936,
+      "latency_ms_p50": 12.252219000004061,
       "misses@5": [
         "q018",
         "q047"
@@ -426,15 +865,56 @@
       "strategy": "fixed",
       "chunk_size": 256,
       "overlap": 64,
-      "mode": "hybrid",
-      "chunks": 19,
-      "index_seconds": 0.84,
-      "recall@1": 0.8888888888888888,
-      "recall@3": 0.9814814814814815,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.9351851851851852,
-      "latency_ms_p50": 12.198647999980494,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 21,
+      "index_seconds": 0.88,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.8965277777777778,
+      "latency_ms_p50": 438.59899450001194,
       "misses@5": [
+        "q001",
+        "q002",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 256,
+      "overlap": 64,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 21,
+      "index_seconds": 0.88,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9833333333333333,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9305555555555556,
+      "latency_ms_p50": 14.323555000032684,
+      "misses@5": [
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 256,
+      "overlap": 64,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 21,
+      "index_seconds": 0.88,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.8965277777777778,
+      "latency_ms_p50": 434.6417359999464,
+      "misses@5": [
+        "q001",
+        "q002",
         "q047"
       ]
     },
@@ -444,13 +924,14 @@
       "chunk_size": 64,
       "overlap": 0,
       "mode": "dense",
-      "chunks": 78,
-      "index_seconds": 0.42,
-      "recall@1": 0.8333333333333334,
-      "recall@3": 0.9259259259259259,
-      "recall@5": 0.9444444444444444,
-      "mrr@10": 0.8918430335097001,
-      "latency_ms_p50": 13.441934500008301,
+      "reranker": "none",
+      "chunks": 86,
+      "index_seconds": 0.35,
+      "recall@1": 0.85,
+      "recall@3": 0.9333333333333333,
+      "recall@5": 0.95,
+      "mrr@10": 0.9018253968253968,
+      "latency_ms_p50": 12.95963649999976,
       "misses@5": [
         "q020",
         "q021",
@@ -462,14 +943,33 @@
       "strategy": "section",
       "chunk_size": 64,
       "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 86,
+      "index_seconds": 0.35,
+      "recall@1": 0.9,
+      "recall@3": 0.95,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9361111111111112,
+      "latency_ms_p50": 103.11125450004965,
+      "misses@5": [
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 64,
+      "overlap": 0,
       "mode": "hybrid",
-      "chunks": 78,
-      "index_seconds": 0.42,
-      "recall@1": 0.8703703703703703,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9444444444444444,
-      "mrr@10": 0.9043209876543209,
-      "latency_ms_p50": 14.964402000003929,
+      "reranker": "none",
+      "chunks": 86,
+      "index_seconds": 0.35,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.9138888888888889,
+      "latency_ms_p50": 7.958116999986942,
       "misses@5": [
         "q010",
         "q021",
@@ -480,15 +980,35 @@
       "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
       "strategy": "section",
       "chunk_size": 64,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 86,
+      "index_seconds": 0.35,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9361111111111112,
+      "latency_ms_p50": 104.99611100004813,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 64,
       "overlap": 16,
       "mode": "dense",
-      "chunks": 78,
-      "index_seconds": 0.35,
-      "recall@1": 0.7962962962962963,
-      "recall@3": 0.9259259259259259,
-      "recall@5": 0.9444444444444444,
-      "mrr@10": 0.8640652557319224,
-      "latency_ms_p50": 15.077413499994918,
+      "reranker": "none",
+      "chunks": 86,
+      "index_seconds": 0.37,
+      "recall@1": 0.8166666666666667,
+      "recall@3": 0.9166666666666666,
+      "recall@5": 0.95,
+      "mrr@10": 0.8762698412698413,
+      "latency_ms_p50": 13.283055499982765,
       "misses@5": [
         "q020",
         "q021",
@@ -500,16 +1020,51 @@
       "strategy": "section",
       "chunk_size": 64,
       "overlap": 16,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 86,
+      "index_seconds": 0.37,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.95,
+      "recall@5": 1.0,
+      "mrr@10": 0.9275,
+      "latency_ms_p50": 101.8495040000289,
+      "misses@5": []
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 64,
+      "overlap": 16,
       "mode": "hybrid",
-      "chunks": 78,
-      "index_seconds": 0.35,
-      "recall@1": 0.8888888888888888,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.9246913580246914,
-      "latency_ms_p50": 15.49777750000203,
+      "reranker": "none",
+      "chunks": 86,
+      "index_seconds": 0.37,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9305555555555555,
+      "latency_ms_p50": 13.057946499998252,
       "misses@5": [
         "q021",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 64,
+      "overlap": 16,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 86,
+      "index_seconds": 0.37,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9283333333333333,
+      "latency_ms_p50": 104.95150149995425,
+      "misses@5": [
         "q047"
       ]
     },
@@ -519,13 +1074,14 @@
       "chunk_size": 128,
       "overlap": 0,
       "mode": "dense",
-      "chunks": 63,
-      "index_seconds": 0.44,
-      "recall@1": 0.8148148148148148,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8844135802469134,
-      "latency_ms_p50": 13.048220500024854,
+      "reranker": "none",
+      "chunks": 71,
+      "index_seconds": 0.43,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.95,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.8931944444444444,
+      "latency_ms_p50": 12.642635000020164,
       "misses@5": [
         "q021",
         "q041"
@@ -536,14 +1092,108 @@
       "strategy": "section",
       "chunk_size": 128,
       "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 71,
+      "index_seconds": 0.43,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.939047619047619,
+      "latency_ms_p50": 187.52069200007782,
+      "misses@5": [
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 0,
       "mode": "hybrid",
-      "chunks": 63,
-      "index_seconds": 0.44,
-      "recall@1": 0.9074074074074074,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.9372427983539096,
-      "latency_ms_p50": 13.377768500021148,
+      "reranker": "none",
+      "chunks": 71,
+      "index_seconds": 0.43,
+      "recall@1": 0.9166666666666666,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9416666666666667,
+      "latency_ms_p50": 8.393527000009726,
+      "misses@5": [
+        "q021",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 71,
+      "index_seconds": 0.43,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9301587301587302,
+      "latency_ms_p50": 182.3804164999956,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 71,
+      "index_seconds": 0.43,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.95,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.8904166666666666,
+      "latency_ms_p50": 12.077543500026877,
+      "misses@5": [
+        "q021",
+        "q041"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 71,
+      "index_seconds": 0.43,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.939047619047619,
+      "latency_ms_p50": 181.12809249993234,
+      "misses@5": [
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 71,
+      "index_seconds": 0.43,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9333333333333333,
+      "latency_ms_p50": 9.828573499930826,
       "misses@5": [
         "q021",
         "q047"
@@ -554,35 +1204,18 @@
       "strategy": "section",
       "chunk_size": 128,
       "overlap": 32,
-      "mode": "dense",
-      "chunks": 63,
-      "index_seconds": 0.42,
-      "recall@1": 0.8148148148148148,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8813271604938271,
-      "latency_ms_p50": 12.696862500007455,
-      "misses@5": [
-        "q021",
-        "q041"
-      ]
-    },
-    {
-      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
-      "strategy": "section",
-      "chunk_size": 128,
-      "overlap": 32,
       "mode": "hybrid",
-      "chunks": 63,
-      "index_seconds": 0.42,
-      "recall@1": 0.9074074074074074,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.9372427983539096,
-      "latency_ms_p50": 12.709401999984493,
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 71,
+      "index_seconds": 0.43,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9297619047619048,
+      "latency_ms_p50": 174.98287149999214,
       "misses@5": [
-        "q021",
-        "q047"
+        "q047",
+        "q050"
       ]
     },
     {
@@ -591,13 +1224,14 @@
       "chunk_size": 256,
       "overlap": 0,
       "mode": "dense",
-      "chunks": 62,
-      "index_seconds": 0.49,
-      "recall@1": 0.8148148148148148,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8844135802469134,
-      "latency_ms_p50": 13.620572500002481,
+      "reranker": "none",
+      "chunks": 70,
+      "index_seconds": 0.46,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.95,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.8931944444444444,
+      "latency_ms_p50": 12.46135100001311,
       "misses@5": [
         "q021",
         "q041"
@@ -608,14 +1242,33 @@
       "strategy": "section",
       "chunk_size": 256,
       "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 70,
+      "index_seconds": 0.46,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.939047619047619,
+      "latency_ms_p50": 212.5338984999985,
+      "misses@5": [
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 0,
       "mode": "hybrid",
-      "chunks": 62,
-      "index_seconds": 0.49,
-      "recall@1": 0.9074074074074074,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.9372427983539096,
-      "latency_ms_p50": 14.585836999998492,
+      "reranker": "none",
+      "chunks": 70,
+      "index_seconds": 0.46,
+      "recall@1": 0.9166666666666666,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9433333333333334,
+      "latency_ms_p50": 8.671611000011126,
       "misses@5": [
         "q021",
         "q047"
@@ -625,15 +1278,35 @@
       "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
       "strategy": "section",
       "chunk_size": 256,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 70,
+      "index_seconds": 0.46,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9297619047619048,
+      "latency_ms_p50": 211.51014399998758,
+      "misses@5": [
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 256,
       "overlap": 64,
       "mode": "dense",
-      "chunks": 62,
-      "index_seconds": 0.65,
-      "recall@1": 0.8148148148148148,
-      "recall@3": 0.9444444444444444,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8844135802469134,
-      "latency_ms_p50": 15.865133000005471,
+      "reranker": "none",
+      "chunks": 70,
+      "index_seconds": 0.44,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.95,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.8931944444444444,
+      "latency_ms_p50": 12.10513149999315,
       "misses@5": [
         "q021",
         "q041"
@@ -644,17 +1317,55 @@
       "strategy": "section",
       "chunk_size": 256,
       "overlap": 64,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 70,
+      "index_seconds": 0.44,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.939047619047619,
+      "latency_ms_p50": 208.69513350004354,
+      "misses@5": [
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 64,
       "mode": "hybrid",
-      "chunks": 62,
-      "index_seconds": 0.65,
-      "recall@1": 0.9074074074074074,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.9372427983539096,
-      "latency_ms_p50": 16.3859375000186,
+      "reranker": "none",
+      "chunks": 70,
+      "index_seconds": 0.44,
+      "recall@1": 0.9166666666666666,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9433333333333334,
+      "latency_ms_p50": 7.883508500015068,
       "misses@5": [
         "q021",
         "q047"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "section",
+      "chunk_size": 256,
+      "overlap": 64,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 70,
+      "index_seconds": 0.44,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9297619047619048,
+      "latency_ms_p50": 205.1612865000152,
+      "misses@5": [
+        "q047",
+        "q050"
       ]
     },
     {
@@ -663,13 +1374,14 @@
       "chunk_size": 64,
       "overlap": 0,
       "mode": "dense",
-      "chunks": 61,
-      "index_seconds": 0.37,
-      "recall@1": 0.7592592592592593,
-      "recall@3": 0.9259259259259259,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8551146384479716,
-      "latency_ms_p50": 13.994340500005364,
+      "reranker": "none",
+      "chunks": 67,
+      "index_seconds": 0.33,
+      "recall@1": 0.7833333333333333,
+      "recall@3": 0.9333333333333333,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.8696031746031745,
+      "latency_ms_p50": 12.884550500018577,
       "misses@5": [
         "q045"
       ]
@@ -679,14 +1391,34 @@
       "strategy": "fixed",
       "chunk_size": 64,
       "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 67,
+      "index_seconds": 0.33,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9377976190476189,
+      "latency_ms_p50": 104.35607949995074,
+      "misses@5": [
+        "q001",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 0,
       "mode": "hybrid",
-      "chunks": 61,
-      "index_seconds": 0.37,
-      "recall@1": 0.8148148148148148,
-      "recall@3": 0.9814814814814815,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.8888888888888888,
-      "latency_ms_p50": 15.360214499992253,
+      "reranker": "none",
+      "chunks": 67,
+      "index_seconds": 0.33,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.898611111111111,
+      "latency_ms_p50": 6.978242499997123,
       "misses@5": [
         "q021"
       ]
@@ -695,15 +1427,34 @@
       "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
       "strategy": "fixed",
       "chunk_size": 64,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 67,
+      "index_seconds": 0.33,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9387500000000001,
+      "latency_ms_p50": 101.3212674999977,
+      "misses@5": [
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 64,
       "overlap": 16,
       "mode": "dense",
-      "chunks": 70,
-      "index_seconds": 0.46,
-      "recall@1": 0.7777777777777778,
-      "recall@3": 0.8888888888888888,
-      "recall@5": 0.9259259259259259,
-      "mrr@10": 0.8501763668430335,
-      "latency_ms_p50": 14.292547500019737,
+      "reranker": "none",
+      "chunks": 76,
+      "index_seconds": 0.34,
+      "recall@1": 0.7833333333333333,
+      "recall@3": 0.9,
+      "recall@5": 0.9333333333333333,
+      "mrr@10": 0.8568253968253968,
+      "latency_ms_p50": 12.045919000001959,
       "misses@5": [
         "q001",
         "q021",
@@ -716,14 +1467,103 @@
       "strategy": "fixed",
       "chunk_size": 64,
       "overlap": 16,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 76,
+      "index_seconds": 0.34,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.939047619047619,
+      "latency_ms_p50": 102.76756199993997,
+      "misses@5": [
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 16,
       "mode": "hybrid",
-      "chunks": 70,
-      "index_seconds": 0.46,
+      "reranker": "none",
+      "chunks": 76,
+      "index_seconds": 0.34,
       "recall@1": 0.8333333333333334,
-      "recall@3": 0.9814814814814815,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.9043209876543209,
-      "latency_ms_p50": 13.73937899998623,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9041666666666667,
+      "latency_ms_p50": 7.19518450000578,
+      "misses@5": [
+        "q021"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 64,
+      "overlap": 16,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 76,
+      "index_seconds": 0.34,
+      "recall@1": 0.9,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9398809523809523,
+      "latency_ms_p50": 101.67387999996436,
+      "misses@5": [
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 37,
+      "index_seconds": 0.37,
+      "recall@1": 0.7833333333333333,
+      "recall@3": 0.9333333333333333,
+      "recall@5": 1.0,
+      "mrr@10": 0.8705555555555555,
+      "latency_ms_p50": 12.778463500012549,
+      "misses@5": []
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 37,
+      "index_seconds": 0.37,
+      "recall@1": 0.9166666666666666,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9458333333333333,
+      "latency_ms_p50": 209.59604600000148,
+      "misses@5": [
+        "q001"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 37,
+      "index_seconds": 0.37,
+      "recall@1": 0.85,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9133333333333333,
+      "latency_ms_p50": 7.489752500021041,
       "misses@5": [
         "q021"
       ]
@@ -733,31 +1573,17 @@
       "strategy": "fixed",
       "chunk_size": 128,
       "overlap": 0,
-      "mode": "dense",
-      "chunks": 34,
-      "index_seconds": 0.59,
-      "recall@1": 0.7777777777777778,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 1.0,
-      "mrr@10": 0.8725308641975308,
-      "latency_ms_p50": 14.376748500012582,
-      "misses@5": []
-    },
-    {
-      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
-      "strategy": "fixed",
-      "chunk_size": 128,
-      "overlap": 0,
       "mode": "hybrid",
-      "chunks": 34,
-      "index_seconds": 0.59,
-      "recall@1": 0.8333333333333334,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.9046296296296297,
-      "latency_ms_p50": 12.22175850003282,
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 37,
+      "index_seconds": 0.37,
+      "recall@1": 0.9166666666666666,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9475,
+      "latency_ms_p50": 201.36090500000137,
       "misses@5": [
-        "q021"
+        "q001"
       ]
     },
     {
@@ -766,13 +1592,49 @@
       "chunk_size": 128,
       "overlap": 32,
       "mode": "dense",
-      "chunks": 36,
-      "index_seconds": 0.37,
-      "recall@1": 0.7777777777777778,
-      "recall@3": 0.9629629629629629,
+      "reranker": "none",
+      "chunks": 39,
+      "index_seconds": 0.39,
+      "recall@1": 0.7833333333333333,
+      "recall@3": 0.9666666666666667,
       "recall@5": 1.0,
-      "mrr@10": 0.8725308641975309,
-      "latency_ms_p50": 7.108821499997475,
+      "mrr@10": 0.8769444444444444,
+      "latency_ms_p50": 12.65117699995244,
+      "misses@5": []
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 39,
+      "index_seconds": 0.39,
+      "recall@1": 0.9333333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9523809523809523,
+      "latency_ms_p50": 205.71349599998712,
+      "misses@5": [
+        "q001",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "hybrid",
+      "reranker": "none",
+      "chunks": 39,
+      "index_seconds": 0.39,
+      "recall@1": 0.85,
+      "recall@3": 0.9833333333333333,
+      "recall@5": 1.0,
+      "mrr@10": 0.9152777777777777,
+      "latency_ms_p50": 7.997997500012843,
       "misses@5": []
     },
     {
@@ -781,14 +1643,18 @@
       "chunk_size": 128,
       "overlap": 32,
       "mode": "hybrid",
-      "chunks": 36,
-      "index_seconds": 0.37,
-      "recall@1": 0.8333333333333334,
-      "recall@3": 0.9814814814814815,
-      "recall@5": 1.0,
-      "mrr@10": 0.9049382716049382,
-      "latency_ms_p50": 6.878616499989221,
-      "misses@5": []
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 39,
+      "index_seconds": 0.39,
+      "recall@1": 0.9333333333333333,
+      "recall@3": 0.9666666666666667,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9542328042328042,
+      "latency_ms_p50": 207.12561650003636,
+      "misses@5": [
+        "q001",
+        "q050"
+      ]
     },
     {
       "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
@@ -796,16 +1662,38 @@
       "chunk_size": 256,
       "overlap": 0,
       "mode": "dense",
-      "chunks": 16,
+      "reranker": "none",
+      "chunks": 18,
       "index_seconds": 0.26,
-      "recall@1": 0.7592592592592593,
-      "recall@3": 0.9629629629629629,
-      "recall@5": 0.9629629629629629,
-      "mrr@10": 0.8541666666666666,
-      "latency_ms_p50": 11.77060099999494,
+      "recall@1": 0.75,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.8377777777777777,
+      "latency_ms_p50": 5.5383889999802705,
       "misses@5": [
         "q043",
-        "q044"
+        "q044",
+        "q058"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 256,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 18,
+      "index_seconds": 0.26,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.9246031746031746,
+      "latency_ms_p50": 347.489934500004,
+      "misses@5": [
+        "q001",
+        "q002",
+        "q047"
       ]
     },
     {
@@ -814,13 +1702,53 @@
       "chunk_size": 256,
       "overlap": 0,
       "mode": "hybrid",
-      "chunks": 16,
+      "reranker": "none",
+      "chunks": 18,
       "index_seconds": 0.26,
-      "recall@1": 0.8518518518518519,
-      "recall@3": 0.9629629629629629,
+      "recall@1": 0.85,
+      "recall@3": 0.95,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9054166666666668,
+      "latency_ms_p50": 10.081334000005882,
+      "misses@5": [
+        "q047",
+        "q058"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 256,
+      "overlap": 0,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 18,
+      "index_seconds": 0.26,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.9246031746031746,
+      "latency_ms_p50": 361.7161204999775,
+      "misses@5": [
+        "q001",
+        "q002",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 256,
+      "overlap": 64,
+      "mode": "dense",
+      "reranker": "none",
+      "chunks": 21,
+      "index_seconds": 0.32,
+      "recall@1": 0.85,
+      "recall@3": 0.9833333333333333,
       "recall@5": 1.0,
-      "mrr@10": 0.9135802469135802,
-      "latency_ms_p50": 11.291717000005974,
+      "mrr@10": 0.9152777777777779,
+      "latency_ms_p50": 11.248740500150234,
       "misses@5": []
     },
     {
@@ -829,14 +1757,19 @@
       "chunk_size": 256,
       "overlap": 64,
       "mode": "dense",
-      "chunks": 19,
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 21,
       "index_seconds": 0.32,
-      "recall@1": 0.8703703703703703,
-      "recall@3": 1.0,
-      "recall@5": 1.0,
-      "mrr@10": 0.9290123456790125,
-      "latency_ms_p50": 12.49353799997266,
-      "misses@5": []
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.8965277777777778,
+      "latency_ms_p50": 423.3984640000017,
+      "misses@5": [
+        "q001",
+        "q002",
+        "q047"
+      ]
     },
     {
       "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
@@ -844,15 +1777,160 @@
       "chunk_size": 256,
       "overlap": 64,
       "mode": "hybrid",
-      "chunks": 19,
+      "reranker": "none",
+      "chunks": 21,
       "index_seconds": 0.32,
-      "recall@1": 0.9444444444444444,
-      "recall@3": 0.9814814814814815,
-      "recall@5": 0.9814814814814815,
-      "mrr@10": 0.9656084656084656,
-      "latency_ms_p50": 7.046141500012482,
+      "recall@1": 0.95,
+      "recall@3": 0.9833333333333333,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9690476190476189,
+      "latency_ms_p50": 11.925212000051033,
       "misses@5": [
         "q047"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 256,
+      "overlap": 64,
+      "mode": "hybrid",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "chunks": 21,
+      "index_seconds": 0.32,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.95,
+      "recall@5": 0.95,
+      "mrr@10": 0.8965277777777778,
+      "latency_ms_p50": 424.6673399999281,
+      "misses@5": [
+        "q001",
+        "q002",
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 256,
+      "overlap": 64,
+      "mode": "hybrid",
+      "reranker": "BAAI/bge-reranker-base",
+      "chunks": 21,
+      "index_seconds": 0.32,
+      "recall@1": 0.8833333333333333,
+      "recall@3": 0.95,
+      "recall@5": 0.9833333333333333,
+      "mrr@10": 0.9230555555555555,
+      "latency_ms_p50": 2878.8588144999494,
+      "misses@5": [
+        "q047"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "hybrid",
+      "reranker": "BAAI/bge-reranker-base",
+      "chunks": 39,
+      "index_seconds": 0.76,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.9,
+      "recall@5": 0.9166666666666666,
+      "mrr@10": 0.8761111111111111,
+      "latency_ms_p50": 1435.7782695000196,
+      "misses@5": [
+        "q001",
+        "q021",
+        "q032",
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "hybrid",
+      "reranker": "BAAI/bge-reranker-base",
+      "chunks": 39,
+      "index_seconds": 0.39,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.9,
+      "recall@5": 0.9333333333333333,
+      "mrr@10": 0.8775,
+      "latency_ms_p50": 1379.500572500092,
+      "misses@5": [
+        "q021",
+        "q032",
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "dense",
+      "reranker": "BAAI/bge-reranker-base",
+      "chunks": 39,
+      "index_seconds": 0.76,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.9,
+      "recall@5": 0.9166666666666666,
+      "mrr@10": 0.8727777777777778,
+      "latency_ms_p50": 1423.266099999978,
+      "misses@5": [
+        "q001",
+        "q021",
+        "q032",
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 32,
+      "mode": "dense",
+      "reranker": "BAAI/bge-reranker-base",
+      "chunks": 39,
+      "index_seconds": 0.39,
+      "recall@1": 0.8333333333333334,
+      "recall@3": 0.9,
+      "recall@5": 0.9166666666666666,
+      "mrr@10": 0.8736111111111112,
+      "latency_ms_p50": 1435.472548000007,
+      "misses@5": [
+        "q001",
+        "q021",
+        "q032",
+        "q047",
+        "q050"
+      ]
+    },
+    {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "strategy": "fixed",
+      "chunk_size": 128,
+      "overlap": 0,
+      "mode": "dense",
+      "reranker": "BAAI/bge-reranker-base",
+      "chunks": 37,
+      "index_seconds": 0.69,
+      "recall@1": 0.85,
+      "recall@3": 0.9333333333333333,
+      "recall@5": 0.9666666666666667,
+      "mrr@10": 0.9027777777777779,
+      "latency_ms_p50": 1409.3848869999874,
+      "misses@5": [
+        "q001",
+        "q021"
       ]
     }
   ],
@@ -861,24 +1939,25 @@
     "strategy": "fixed",
     "chunk_size": 256,
     "overlap": 64,
-    "mode": "hybrid"
+    "mode": "hybrid",
+    "reranker": "none"
   },
   "threshold_calibration": {
     "chunk": {
       "best": {
-        "threshold": 0.38,
-        "answer_rate": 0.8148148148148148,
+        "threshold": 0.4,
+        "answer_rate": 0.7666666666666667,
         "refusal_rate": 0.9,
-        "balanced_accuracy": 0.8574074074074074
+        "balanced_accuracy": 0.8333333333333334
       },
-      "auc": 0.8759259259259259,
+      "auc": 0.8833333333333333,
       "answerable": {
-        "min": 0.22917109727859497,
-        "mean": 0.47185732589827645
+        "min": 0.2888525724411011,
+        "mean": 0.47692764600118004
       },
       "unanswerable": {
         "max": 0.45292603969573975,
-        "mean": 0.3270639002323151
+        "mean": 0.3315247118473053
       },
       "sweep": [
         {
@@ -961,147 +2040,147 @@
         },
         {
           "threshold": 0.23,
-          "answer_rate": 0.9814814814814815,
+          "answer_rate": 1.0,
           "refusal_rate": 0.1,
-          "balanced_accuracy": 0.5407407407407407
+          "balanced_accuracy": 0.55
         },
         {
           "threshold": 0.24,
-          "answer_rate": 0.9814814814814815,
+          "answer_rate": 1.0,
           "refusal_rate": 0.1,
-          "balanced_accuracy": 0.5407407407407407
+          "balanced_accuracy": 0.55
         },
         {
           "threshold": 0.25,
-          "answer_rate": 0.9814814814814815,
+          "answer_rate": 1.0,
           "refusal_rate": 0.1,
-          "balanced_accuracy": 0.5407407407407407
+          "balanced_accuracy": 0.55
         },
         {
           "threshold": 0.26,
-          "answer_rate": 0.9814814814814815,
+          "answer_rate": 1.0,
           "refusal_rate": 0.1,
-          "balanced_accuracy": 0.5407407407407407
+          "balanced_accuracy": 0.55
         },
         {
           "threshold": 0.27,
-          "answer_rate": 0.9814814814814815,
+          "answer_rate": 1.0,
           "refusal_rate": 0.1,
-          "balanced_accuracy": 0.5407407407407407
+          "balanced_accuracy": 0.55
         },
         {
           "threshold": 0.28,
-          "answer_rate": 0.9814814814814815,
-          "refusal_rate": 0.3,
-          "balanced_accuracy": 0.6407407407407407
+          "answer_rate": 1.0,
+          "refusal_rate": 0.2,
+          "balanced_accuracy": 0.6
         },
         {
           "threshold": 0.29,
-          "answer_rate": 0.9629629629629629,
-          "refusal_rate": 0.3,
-          "balanced_accuracy": 0.6314814814814814
+          "answer_rate": 0.9833333333333333,
+          "refusal_rate": 0.2,
+          "balanced_accuracy": 0.5916666666666667
         },
         {
           "threshold": 0.3,
-          "answer_rate": 0.9629629629629629,
+          "answer_rate": 0.9666666666666667,
           "refusal_rate": 0.4,
-          "balanced_accuracy": 0.6814814814814815
+          "balanced_accuracy": 0.6833333333333333
         },
         {
           "threshold": 0.31,
-          "answer_rate": 0.9259259259259259,
+          "answer_rate": 0.9333333333333333,
           "refusal_rate": 0.4,
-          "balanced_accuracy": 0.662962962962963
+          "balanced_accuracy": 0.6666666666666667
         },
         {
           "threshold": 0.32,
-          "answer_rate": 0.9259259259259259,
+          "answer_rate": 0.9333333333333333,
           "refusal_rate": 0.4,
-          "balanced_accuracy": 0.662962962962963
+          "balanced_accuracy": 0.6666666666666667
         },
         {
           "threshold": 0.33,
-          "answer_rate": 0.9259259259259259,
+          "answer_rate": 0.9333333333333333,
           "refusal_rate": 0.5,
-          "balanced_accuracy": 0.712962962962963
+          "balanced_accuracy": 0.7166666666666667
         },
         {
           "threshold": 0.34,
-          "answer_rate": 0.9074074074074074,
+          "answer_rate": 0.9166666666666666,
           "refusal_rate": 0.5,
-          "balanced_accuracy": 0.7037037037037037
+          "balanced_accuracy": 0.7083333333333333
         },
         {
           "threshold": 0.35,
-          "answer_rate": 0.8703703703703703,
+          "answer_rate": 0.8833333333333333,
           "refusal_rate": 0.6,
-          "balanced_accuracy": 0.7351851851851852
+          "balanced_accuracy": 0.7416666666666667
         },
         {
           "threshold": 0.36,
-          "answer_rate": 0.8333333333333334,
+          "answer_rate": 0.85,
           "refusal_rate": 0.7,
-          "balanced_accuracy": 0.7666666666666666
+          "balanced_accuracy": 0.7749999999999999
         },
         {
           "threshold": 0.37,
-          "answer_rate": 0.8148148148148148,
+          "answer_rate": 0.8333333333333334,
           "refusal_rate": 0.8,
-          "balanced_accuracy": 0.8074074074074074
+          "balanced_accuracy": 0.8166666666666667
         },
         {
           "threshold": 0.38,
-          "answer_rate": 0.8148148148148148,
-          "refusal_rate": 0.9,
-          "balanced_accuracy": 0.8574074074074074
+          "answer_rate": 0.8333333333333334,
+          "refusal_rate": 0.8,
+          "balanced_accuracy": 0.8166666666666667
         },
         {
           "threshold": 0.39,
-          "answer_rate": 0.8148148148148148,
-          "refusal_rate": 0.9,
-          "balanced_accuracy": 0.8574074074074074
+          "answer_rate": 0.8166666666666667,
+          "refusal_rate": 0.8,
+          "balanced_accuracy": 0.8083333333333333
         },
         {
           "threshold": 0.4,
-          "answer_rate": 0.7592592592592593,
+          "answer_rate": 0.7666666666666667,
           "refusal_rate": 0.9,
-          "balanced_accuracy": 0.8296296296296297
+          "balanced_accuracy": 0.8333333333333334
         },
         {
           "threshold": 0.41,
-          "answer_rate": 0.7222222222222222,
+          "answer_rate": 0.7333333333333333,
           "refusal_rate": 0.9,
-          "balanced_accuracy": 0.8111111111111111
+          "balanced_accuracy": 0.8166666666666667
         },
         {
           "threshold": 0.42,
-          "answer_rate": 0.7037037037037037,
+          "answer_rate": 0.7166666666666667,
           "refusal_rate": 0.9,
-          "balanced_accuracy": 0.8018518518518518
+          "balanced_accuracy": 0.8083333333333333
         },
         {
           "threshold": 0.43,
-          "answer_rate": 0.6296296296296297,
+          "answer_rate": 0.65,
           "refusal_rate": 0.9,
-          "balanced_accuracy": 0.7648148148148148
+          "balanced_accuracy": 0.775
         },
         {
           "threshold": 0.44,
-          "answer_rate": 0.5740740740740741,
+          "answer_rate": 0.6,
           "refusal_rate": 0.9,
-          "balanced_accuracy": 0.737037037037037
+          "balanced_accuracy": 0.75
         },
         {
           "threshold": 0.45,
-          "answer_rate": 0.5555555555555556,
+          "answer_rate": 0.5666666666666667,
           "refusal_rate": 0.9,
-          "balanced_accuracy": 0.7277777777777779
+          "balanced_accuracy": 0.7333333333333334
         },
         {
           "threshold": 0.46,
-          "answer_rate": 0.5370370370370371,
+          "answer_rate": 0.55,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7685185185185186
+          "balanced_accuracy": 0.775
         },
         {
           "threshold": 0.47,
@@ -1111,141 +2190,141 @@
         },
         {
           "threshold": 0.48,
-          "answer_rate": 0.48148148148148145,
+          "answer_rate": 0.48333333333333334,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7407407407407407
+          "balanced_accuracy": 0.7416666666666667
         },
         {
           "threshold": 0.49,
-          "answer_rate": 0.42592592592592593,
+          "answer_rate": 0.43333333333333335,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.712962962962963
+          "balanced_accuracy": 0.7166666666666667
         },
         {
           "threshold": 0.5,
-          "answer_rate": 0.4074074074074074,
+          "answer_rate": 0.4166666666666667,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7037037037037037
+          "balanced_accuracy": 0.7083333333333334
         },
         {
           "threshold": 0.51,
-          "answer_rate": 0.37037037037037035,
+          "answer_rate": 0.38333333333333336,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6851851851851851
+          "balanced_accuracy": 0.6916666666666667
         },
         {
           "threshold": 0.52,
-          "answer_rate": 0.35185185185185186,
+          "answer_rate": 0.35,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6759259259259259
+          "balanced_accuracy": 0.675
         },
         {
           "threshold": 0.53,
-          "answer_rate": 0.3148148148148148,
+          "answer_rate": 0.31666666666666665,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6574074074074074
+          "balanced_accuracy": 0.6583333333333333
         },
         {
           "threshold": 0.54,
-          "answer_rate": 0.3148148148148148,
+          "answer_rate": 0.31666666666666665,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6574074074074074
+          "balanced_accuracy": 0.6583333333333333
         },
         {
           "threshold": 0.55,
-          "answer_rate": 0.2962962962962963,
+          "answer_rate": 0.3,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6481481481481481
+          "balanced_accuracy": 0.65
         },
         {
           "threshold": 0.56,
-          "answer_rate": 0.24074074074074073,
+          "answer_rate": 0.25,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6203703703703703
+          "balanced_accuracy": 0.625
         },
         {
           "threshold": 0.57,
-          "answer_rate": 0.2037037037037037,
+          "answer_rate": 0.21666666666666667,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6018518518518519
+          "balanced_accuracy": 0.6083333333333334
         },
         {
           "threshold": 0.58,
-          "answer_rate": 0.16666666666666666,
+          "answer_rate": 0.18333333333333332,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5833333333333334
+          "balanced_accuracy": 0.5916666666666667
         },
         {
           "threshold": 0.59,
-          "answer_rate": 0.1111111111111111,
+          "answer_rate": 0.11666666666666667,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5555555555555556
+          "balanced_accuracy": 0.5583333333333333
         },
         {
           "threshold": 0.6,
-          "answer_rate": 0.09259259259259259,
+          "answer_rate": 0.1,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5462962962962963
+          "balanced_accuracy": 0.55
         },
         {
           "threshold": 0.61,
-          "answer_rate": 0.05555555555555555,
+          "answer_rate": 0.06666666666666667,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5277777777777778
+          "balanced_accuracy": 0.5333333333333333
         },
         {
           "threshold": 0.62,
-          "answer_rate": 0.037037037037037035,
+          "answer_rate": 0.05,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5185185185185185
+          "balanced_accuracy": 0.525
         },
         {
           "threshold": 0.63,
-          "answer_rate": 0.037037037037037035,
+          "answer_rate": 0.05,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5185185185185185
+          "balanced_accuracy": 0.525
         },
         {
           "threshold": 0.64,
-          "answer_rate": 0.018518518518518517,
+          "answer_rate": 0.03333333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5092592592592593
+          "balanced_accuracy": 0.5166666666666667
         },
         {
           "threshold": 0.65,
-          "answer_rate": 0.018518518518518517,
+          "answer_rate": 0.03333333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5092592592592593
+          "balanced_accuracy": 0.5166666666666667
         },
         {
           "threshold": 0.66,
-          "answer_rate": 0.018518518518518517,
+          "answer_rate": 0.03333333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5092592592592593
+          "balanced_accuracy": 0.5166666666666667
         },
         {
           "threshold": 0.67,
-          "answer_rate": 0.018518518518518517,
+          "answer_rate": 0.03333333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5092592592592593
+          "balanced_accuracy": 0.5166666666666667
         },
         {
           "threshold": 0.68,
-          "answer_rate": 0.018518518518518517,
+          "answer_rate": 0.016666666666666666,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5092592592592593
+          "balanced_accuracy": 0.5083333333333333
         },
         {
           "threshold": 0.69,
-          "answer_rate": 0.018518518518518517,
+          "answer_rate": 0.016666666666666666,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5092592592592593
+          "balanced_accuracy": 0.5083333333333333
         },
         {
           "threshold": 0.7,
-          "answer_rate": 0.018518518518518517,
+          "answer_rate": 0.016666666666666666,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5092592592592593
+          "balanced_accuracy": 0.5083333333333333
         },
         {
           "threshold": 0.71,
@@ -1366,18 +2445,18 @@
     "sentence": {
       "best": {
         "threshold": 0.54,
-        "answer_rate": 0.7962962962962963,
+        "answer_rate": 0.8166666666666667,
         "refusal_rate": 1.0,
-        "balanced_accuracy": 0.8981481481481481
+        "balanced_accuracy": 0.9083333333333333
       },
-      "auc": 0.9351851851851852,
+      "auc": 0.9366666666666666,
       "answerable": {
-        "min": 0.30327826738357544,
-        "mean": 0.6324415758804038
+        "min": 0.3035493493080139,
+        "mean": 0.6398041725158692
       },
       "unanswerable": {
         "max": 0.5345811247825623,
-        "mean": 0.40823341310024264
+        "mean": 0.4181800127029419
       },
       "sweep": [
         {
@@ -1508,231 +2587,231 @@
         },
         {
           "threshold": 0.31,
-          "answer_rate": 0.9814814814814815,
+          "answer_rate": 0.9833333333333333,
           "refusal_rate": 0.1,
-          "balanced_accuracy": 0.5407407407407407
+          "balanced_accuracy": 0.5416666666666666
         },
         {
           "threshold": 0.32,
-          "answer_rate": 0.9814814814814815,
-          "refusal_rate": 0.2,
-          "balanced_accuracy": 0.5907407407407408
+          "answer_rate": 0.9833333333333333,
+          "refusal_rate": 0.1,
+          "balanced_accuracy": 0.5416666666666666
         },
         {
           "threshold": 0.33,
-          "answer_rate": 0.9814814814814815,
-          "refusal_rate": 0.3,
-          "balanced_accuracy": 0.6407407407407407
+          "answer_rate": 0.9833333333333333,
+          "refusal_rate": 0.2,
+          "balanced_accuracy": 0.5916666666666667
         },
         {
           "threshold": 0.34,
-          "answer_rate": 0.9629629629629629,
-          "refusal_rate": 0.3,
-          "balanced_accuracy": 0.6314814814814814
+          "answer_rate": 0.9666666666666667,
+          "refusal_rate": 0.2,
+          "balanced_accuracy": 0.5833333333333334
         },
         {
           "threshold": 0.35,
-          "answer_rate": 0.9629629629629629,
-          "refusal_rate": 0.4,
-          "balanced_accuracy": 0.6814814814814815
+          "answer_rate": 0.9666666666666667,
+          "refusal_rate": 0.3,
+          "balanced_accuracy": 0.6333333333333333
         },
         {
           "threshold": 0.36,
-          "answer_rate": 0.9629629629629629,
-          "refusal_rate": 0.4,
-          "balanced_accuracy": 0.6814814814814815
+          "answer_rate": 0.9666666666666667,
+          "refusal_rate": 0.3,
+          "balanced_accuracy": 0.6333333333333333
         },
         {
           "threshold": 0.37,
-          "answer_rate": 0.9629629629629629,
-          "refusal_rate": 0.4,
-          "balanced_accuracy": 0.6814814814814815
+          "answer_rate": 0.9666666666666667,
+          "refusal_rate": 0.3,
+          "balanced_accuracy": 0.6333333333333333
         },
         {
           "threshold": 0.38,
-          "answer_rate": 0.9629629629629629,
-          "refusal_rate": 0.4,
-          "balanced_accuracy": 0.6814814814814815
+          "answer_rate": 0.9666666666666667,
+          "refusal_rate": 0.3,
+          "balanced_accuracy": 0.6333333333333333
         },
         {
           "threshold": 0.39,
-          "answer_rate": 0.9629629629629629,
+          "answer_rate": 0.9666666666666667,
           "refusal_rate": 0.4,
-          "balanced_accuracy": 0.6814814814814815
+          "balanced_accuracy": 0.6833333333333333
         },
         {
           "threshold": 0.4,
-          "answer_rate": 0.9629629629629629,
+          "answer_rate": 0.9666666666666667,
           "refusal_rate": 0.5,
-          "balanced_accuracy": 0.7314814814814814
+          "balanced_accuracy": 0.7333333333333334
         },
         {
           "threshold": 0.41,
-          "answer_rate": 0.9629629629629629,
+          "answer_rate": 0.9666666666666667,
           "refusal_rate": 0.6,
-          "balanced_accuracy": 0.7814814814814814
+          "balanced_accuracy": 0.7833333333333333
         },
         {
           "threshold": 0.42,
-          "answer_rate": 0.9629629629629629,
+          "answer_rate": 0.9666666666666667,
           "refusal_rate": 0.6,
-          "balanced_accuracy": 0.7814814814814814
+          "balanced_accuracy": 0.7833333333333333
         },
         {
           "threshold": 0.43,
-          "answer_rate": 0.9444444444444444,
+          "answer_rate": 0.95,
           "refusal_rate": 0.6,
-          "balanced_accuracy": 0.7722222222222221
+          "balanced_accuracy": 0.7749999999999999
         },
         {
           "threshold": 0.44,
-          "answer_rate": 0.9444444444444444,
+          "answer_rate": 0.95,
           "refusal_rate": 0.6,
-          "balanced_accuracy": 0.7722222222222221
+          "balanced_accuracy": 0.7749999999999999
         },
         {
           "threshold": 0.45,
-          "answer_rate": 0.9444444444444444,
+          "answer_rate": 0.95,
           "refusal_rate": 0.6,
-          "balanced_accuracy": 0.7722222222222221
+          "balanced_accuracy": 0.7749999999999999
         },
         {
           "threshold": 0.46,
-          "answer_rate": 0.9444444444444444,
+          "answer_rate": 0.95,
           "refusal_rate": 0.7,
-          "balanced_accuracy": 0.8222222222222222
+          "balanced_accuracy": 0.825
         },
         {
           "threshold": 0.47,
-          "answer_rate": 0.9444444444444444,
+          "answer_rate": 0.95,
           "refusal_rate": 0.7,
-          "balanced_accuracy": 0.8222222222222222
+          "balanced_accuracy": 0.825
         },
         {
           "threshold": 0.48,
-          "answer_rate": 0.9074074074074074,
-          "refusal_rate": 0.8,
-          "balanced_accuracy": 0.8537037037037037
+          "answer_rate": 0.9166666666666666,
+          "refusal_rate": 0.7,
+          "balanced_accuracy": 0.8083333333333333
         },
         {
           "threshold": 0.49,
-          "answer_rate": 0.8888888888888888,
-          "refusal_rate": 0.8,
-          "balanced_accuracy": 0.8444444444444444
+          "answer_rate": 0.9,
+          "refusal_rate": 0.7,
+          "balanced_accuracy": 0.8
         },
         {
           "threshold": 0.5,
-          "answer_rate": 0.8888888888888888,
-          "refusal_rate": 0.8,
-          "balanced_accuracy": 0.8444444444444444
+          "answer_rate": 0.9,
+          "refusal_rate": 0.7,
+          "balanced_accuracy": 0.8
         },
         {
           "threshold": 0.51,
-          "answer_rate": 0.8703703703703703,
-          "refusal_rate": 0.8,
-          "balanced_accuracy": 0.8351851851851853
+          "answer_rate": 0.8833333333333333,
+          "refusal_rate": 0.7,
+          "balanced_accuracy": 0.7916666666666666
         },
         {
           "threshold": 0.52,
-          "answer_rate": 0.8518518518518519,
+          "answer_rate": 0.8666666666666667,
           "refusal_rate": 0.8,
-          "balanced_accuracy": 0.825925925925926
+          "balanced_accuracy": 0.8333333333333334
         },
         {
           "threshold": 0.53,
-          "answer_rate": 0.8518518518518519,
+          "answer_rate": 0.8666666666666667,
           "refusal_rate": 0.8,
-          "balanced_accuracy": 0.825925925925926
+          "balanced_accuracy": 0.8333333333333334
         },
         {
           "threshold": 0.54,
-          "answer_rate": 0.7962962962962963,
+          "answer_rate": 0.8166666666666667,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8981481481481481
+          "balanced_accuracy": 0.9083333333333333
         },
         {
           "threshold": 0.55,
-          "answer_rate": 0.7777777777777778,
+          "answer_rate": 0.8,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8888888888888888
+          "balanced_accuracy": 0.9
         },
         {
           "threshold": 0.56,
-          "answer_rate": 0.7407407407407407,
+          "answer_rate": 0.7666666666666667,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8703703703703703
+          "balanced_accuracy": 0.8833333333333333
         },
         {
           "threshold": 0.57,
-          "answer_rate": 0.7222222222222222,
+          "answer_rate": 0.75,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8611111111111112
+          "balanced_accuracy": 0.875
         },
         {
           "threshold": 0.58,
-          "answer_rate": 0.7222222222222222,
+          "answer_rate": 0.75,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8611111111111112
+          "balanced_accuracy": 0.875
         },
         {
           "threshold": 0.59,
-          "answer_rate": 0.7222222222222222,
+          "answer_rate": 0.75,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8611111111111112
+          "balanced_accuracy": 0.875
         },
         {
           "threshold": 0.6,
-          "answer_rate": 0.6851851851851852,
+          "answer_rate": 0.7166666666666667,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8425925925925926
+          "balanced_accuracy": 0.8583333333333334
         },
         {
           "threshold": 0.61,
-          "answer_rate": 0.6481481481481481,
+          "answer_rate": 0.6833333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8240740740740741
+          "balanced_accuracy": 0.8416666666666667
         },
         {
           "threshold": 0.62,
-          "answer_rate": 0.6111111111111112,
+          "answer_rate": 0.6333333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.8055555555555556
+          "balanced_accuracy": 0.8166666666666667
         },
         {
           "threshold": 0.63,
-          "answer_rate": 0.5740740740740741,
+          "answer_rate": 0.6,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.787037037037037
+          "balanced_accuracy": 0.8
         },
         {
           "threshold": 0.64,
-          "answer_rate": 0.5,
+          "answer_rate": 0.5333333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.75
+          "balanced_accuracy": 0.7666666666666666
         },
         {
           "threshold": 0.65,
-          "answer_rate": 0.4444444444444444,
+          "answer_rate": 0.4666666666666667,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7222222222222222
+          "balanced_accuracy": 0.7333333333333334
         },
         {
           "threshold": 0.66,
-          "answer_rate": 0.4074074074074074,
+          "answer_rate": 0.43333333333333335,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.7037037037037037
+          "balanced_accuracy": 0.7166666666666667
         },
         {
           "threshold": 0.67,
-          "answer_rate": 0.37037037037037035,
+          "answer_rate": 0.4,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6851851851851851
+          "balanced_accuracy": 0.7
         },
         {
           "threshold": 0.68,
-          "answer_rate": 0.37037037037037035,
+          "answer_rate": 0.4,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6851851851851851
+          "balanced_accuracy": 0.7
         },
         {
           "threshold": 0.69,
@@ -1742,93 +2821,93 @@
         },
         {
           "threshold": 0.7,
-          "answer_rate": 0.2777777777777778,
+          "answer_rate": 0.2833333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6388888888888888
+          "balanced_accuracy": 0.6416666666666666
         },
         {
           "threshold": 0.71,
-          "answer_rate": 0.25925925925925924,
+          "answer_rate": 0.26666666666666666,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6296296296296297
+          "balanced_accuracy": 0.6333333333333333
         },
         {
           "threshold": 0.72,
-          "answer_rate": 0.2037037037037037,
+          "answer_rate": 0.21666666666666667,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.6018518518518519
+          "balanced_accuracy": 0.6083333333333334
         },
         {
           "threshold": 0.73,
-          "answer_rate": 0.16666666666666666,
+          "answer_rate": 0.18333333333333332,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5833333333333334
+          "balanced_accuracy": 0.5916666666666667
         },
         {
           "threshold": 0.74,
-          "answer_rate": 0.16666666666666666,
+          "answer_rate": 0.18333333333333332,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5833333333333334
+          "balanced_accuracy": 0.5916666666666667
         },
         {
           "threshold": 0.75,
-          "answer_rate": 0.09259259259259259,
+          "answer_rate": 0.11666666666666667,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5462962962962963
+          "balanced_accuracy": 0.5583333333333333
         },
         {
           "threshold": 0.76,
-          "answer_rate": 0.07407407407407407,
+          "answer_rate": 0.1,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.537037037037037
+          "balanced_accuracy": 0.55
         },
         {
           "threshold": 0.77,
-          "answer_rate": 0.07407407407407407,
+          "answer_rate": 0.1,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.537037037037037
+          "balanced_accuracy": 0.55
         },
         {
           "threshold": 0.78,
-          "answer_rate": 0.07407407407407407,
+          "answer_rate": 0.1,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.537037037037037
+          "balanced_accuracy": 0.55
         },
         {
           "threshold": 0.79,
-          "answer_rate": 0.07407407407407407,
+          "answer_rate": 0.1,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.537037037037037
+          "balanced_accuracy": 0.55
         },
         {
           "threshold": 0.8,
-          "answer_rate": 0.07407407407407407,
+          "answer_rate": 0.08333333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.537037037037037
+          "balanced_accuracy": 0.5416666666666666
         },
         {
           "threshold": 0.81,
-          "answer_rate": 0.07407407407407407,
+          "answer_rate": 0.08333333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.537037037037037
+          "balanced_accuracy": 0.5416666666666666
         },
         {
           "threshold": 0.82,
-          "answer_rate": 0.05555555555555555,
+          "answer_rate": 0.05,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5277777777777778
+          "balanced_accuracy": 0.525
         },
         {
           "threshold": 0.83,
-          "answer_rate": 0.037037037037037035,
+          "answer_rate": 0.03333333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5185185185185185
+          "balanced_accuracy": 0.5166666666666667
         },
         {
           "threshold": 0.84,
-          "answer_rate": 0.037037037037037035,
+          "answer_rate": 0.03333333333333333,
           "refusal_rate": 1.0,
-          "balanced_accuracy": 0.5185185185185185
+          "balanced_accuracy": 0.5166666666666667
         },
         {
           "threshold": 0.85,
@@ -1868,15 +2947,15 @@
       "provider": "extractive",
       "model": "sentence-selection",
       "summary": {
-        "answer_rate": 0.7962962962962963,
+        "answer_rate": 0.8166666666666667,
         "correct_refusal_rate": 1.0,
-        "fact_recall": 0.872093023255814,
-        "fact_recall_all": 0.6944444444444444,
+        "fact_recall": 0.8877551020408163,
+        "fact_recall_all": 0.725,
         "citation_accuracy": 1.0,
         "sentence_support": 1.0,
         "token_precision": 1.0,
-        "latency_ms_p50": 139.55,
-        "latency_ms_p95": 191.70499999999998
+        "latency_ms_p50": 116.9,
+        "latency_ms_p95": 178.66
       },
       "rows": [
         {
@@ -1886,7 +2965,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 135.8,
+          "latency_ms": 105.5,
           "citations": []
         },
         {
@@ -1896,7 +2975,7 @@
           "predicted_answerable": true,
           "answer": "Where your manager has approved in advance that you work more than 40 hours in a week, you may record the additional hours as time off in lieu (TOIL). [1]",
           "provider": "extractive",
-          "latency_ms": 130.6,
+          "latency_ms": 110.7,
           "citations": [
             "employee-handbook.pdf p.1"
           ],
@@ -1912,7 +2991,7 @@
           "predicted_answerable": true,
           "answer": "Probation All new employees complete a probationary period of six months. [1]",
           "provider": "extractive",
-          "latency_ms": 129.1,
+          "latency_ms": 103.6,
           "citations": [
             "employee-handbook.pdf p.2"
           ],
@@ -1928,7 +3007,7 @@
           "predicted_answerable": true,
           "answer": "Leaving Halden After probation, the notice period you must give is one month for employees below Senior grade and three months for employees at Senior grade and above. [1] During probation, either party may end employment by giving one week's notice. [2]",
           "provider": "extractive",
-          "latency_ms": 132.3,
+          "latency_ms": 100.9,
           "citations": [
             "employee-handbook.pdf p.5",
             "employee-handbook.pdf p.2"
@@ -1945,7 +3024,7 @@
           "predicted_answerable": true,
           "answer": "Pay and payroll Salaries are paid monthly by bank transfer on the 25th of each month. [1] If the 25th falls on a weekend or bank holiday, you will be paid on the last working day before it. [1]",
           "provider": "extractive",
-          "latency_ms": 128.2,
+          "latency_ms": 101.0,
           "citations": [
             "employee-handbook.pdf p.2"
           ],
@@ -1961,7 +3040,7 @@
           "predicted_answerable": true,
           "answer": "Pension Halden auto-enrols eligible employees into the company pension scheme. [1] Halden pays up to three days of emergency dependant leave per calendar year at full pay; further time off is unpaid. [4]",
           "provider": "extractive",
-          "latency_ms": 139.7,
+          "latency_ms": 112.1,
           "citations": [
             "employee-handbook.pdf p.2",
             "parental-and-family-leave.txt"
@@ -1978,7 +3057,7 @@
           "predicted_answerable": true,
           "answer": "Salaries are reviewed once a year, with any changes taking effect from 1 April. [1] After one year of service this increases to 20 working days of full pay. [2]",
           "provider": "extractive",
-          "latency_ms": 138.8,
+          "latency_ms": 107.5,
           "citations": [
             "employee-handbook.pdf p.2",
             "employee-handbook.pdf p.4"
@@ -1995,7 +3074,7 @@
           "predicted_answerable": true,
           "answer": "Annual leave Full-time employees receive 25 days of annual leave per leave year, plus the eight UK bank holidays. [1] After two full years of service, you receive one additional day of leave for each further full year of service, up to a maximum of 30 days. [1] After one year of service this increases to 20 working days of full pay. [4]",
           "provider": "extractive",
-          "latency_ms": 144.4,
+          "latency_ms": 112.0,
           "citations": [
             "employee-handbook.pdf p.3",
             "employee-handbook.pdf p.4"
@@ -2012,7 +3091,7 @@
           "predicted_answerable": true,
           "answer": "You may carry over up to five unused days into the next leave year; carried-over days must be used by 31 March or they are lost. [1]",
           "provider": "extractive",
-          "latency_ms": 396.7,
+          "latency_ms": 138.8,
           "citations": [
             "employee-handbook.pdf p.3"
           ],
@@ -2028,7 +3107,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 174.0,
+          "latency_ms": 125.8,
           "citations": []
         },
         {
@@ -2038,7 +3117,7 @@
           "predicted_answerable": true,
           "answer": "You may carry over up to five unused days into the next leave year; carried-over days must be used by 31 March or they are lost. [1] Christmas closure The company closes between 24 December and 1 January. [1] Employees should reserve three days of their annual leave entitlement to cover the closure period; the remaining closure days are granted as additional paid leave. [1]",
           "provider": "extractive",
-          "latency_ms": 171.7,
+          "latency_ms": 116.7,
           "citations": [
             "employee-handbook.pdf p.3"
           ],
@@ -2054,7 +3133,7 @@
           "predicted_answerable": true,
           "answer": "Sickness absence If you are unable to work because of illness, you must tell your manager by 09:30 on your first day of absence by phone call or a Slack call. [1]",
           "provider": "extractive",
-          "latency_ms": 139.4,
+          "latency_ms": 107.4,
           "citations": [
             "employee-handbook.pdf p.4"
           ],
@@ -2070,7 +3149,7 @@
           "predicted_answerable": true,
           "answer": "Sickness absence If you are unable to work because of illness, you must tell your manager by 09:30 on your first day of absence by phone call or a Slack call. [1] From the eighth calendar day of absence, you must provide a fit note from a doctor. [1]",
           "provider": "extractive",
-          "latency_ms": 165.2,
+          "latency_ms": 130.3,
           "citations": [
             "employee-handbook.pdf p.4"
           ],
@@ -2086,7 +3165,7 @@
           "predicted_answerable": true,
           "answer": "Company sick pay: during your first year of service you receive full pay for up to 10 working days of sickness in any rolling 12-month period. [1]",
           "provider": "extractive",
-          "latency_ms": 139.2,
+          "latency_ms": 116.7,
           "citations": [
             "employee-handbook.pdf p.4"
           ],
@@ -2102,7 +3181,7 @@
           "predicted_answerable": true,
           "answer": "Performance reviews Performance is reviewed twice a year: a mid-year review in October and an annual review in April. [1]",
           "provider": "extractive",
-          "latency_ms": 116.7,
+          "latency_ms": 104.7,
           "citations": [
             "employee-handbook.pdf p.4"
           ],
@@ -2118,7 +3197,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 133.7,
+          "latency_ms": 112.9,
           "citations": []
         },
         {
@@ -2128,7 +3207,7 @@
           "predicted_answerable": true,
           "answer": "Leaving Halden After probation, the notice period you must give is one month for employees below Senior grade and three months for employees at Senior grade and above. [1]",
           "provider": "extractive",
-          "latency_ms": 145.8,
+          "latency_ms": 105.0,
           "citations": [
             "employee-handbook.pdf p.5"
           ],
@@ -2144,7 +3223,7 @@
           "predicted_answerable": true,
           "answer": "All company equipment, including laptops, security keys and access passes, must be returned within five working days of your last day. [1] After two full years of service, you receive one additional day of leave for each further full year of service, up to a maximum of 30 days. [2] You may carry over up to five unused days into the next leave year; carried-over days must be used by 31 March or they are lost. [2]",
           "provider": "extractive",
-          "latency_ms": 122.9,
+          "latency_ms": 105.9,
           "citations": [
             "employee-handbook.pdf p.5",
             "employee-handbook.pdf p.3"
@@ -2161,7 +3240,7 @@
           "predicted_answerable": true,
           "answer": "Submitting a claim Claims are submitted through the Ledgerly expenses app within 30 days of the expense being incurred. [1] Claims submitted more than 90 days after the expense will not be reimbursed. [1]",
           "provider": "extractive",
-          "latency_ms": 171.8,
+          "latency_ms": 155.8,
           "citations": [
             "expenses-and-travel-policy.pdf p.1"
           ],
@@ -2177,7 +3256,7 @@
           "predicted_answerable": true,
           "answer": "An itemised receipt is required for every expense over \u00a310. [1] If a receipt is lost, complete a missing receipt declaration in Ledgerly; this is permitted at most twice per year. [1]",
           "provider": "extractive",
-          "latency_ms": 185.5,
+          "latency_ms": 193.4,
           "citations": [
             "expenses-and-travel-policy.pdf p.1"
           ],
@@ -2193,7 +3272,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 155.8,
+          "latency_ms": 128.0,
           "citations": []
         },
         {
@@ -2203,7 +3282,7 @@
           "predicted_answerable": true,
           "answer": "Claims submitted more than 90 days after the expense will not be reimbursed. [1] Claims approved by the 15th of the month are reimbursed in that month's payroll. [1] Claims approved after the 15th are paid in the following month's payroll. [1]",
           "provider": "extractive",
-          "latency_ms": 183.0,
+          "latency_ms": 155.9,
           "citations": [
             "expenses-and-travel-policy.pdf p.1"
           ],
@@ -2219,7 +3298,7 @@
           "predicted_answerable": true,
           "answer": "Rail travel is in standard class. [1] First class is permitted only when the fare is cheaper than standard class, or for journeys over four hours with prior approval from a director. [1]",
           "provider": "extractive",
-          "latency_ms": 65.0,
+          "latency_ms": 82.8,
           "citations": [
             "expenses-and-travel-policy.pdf p.2"
           ],
@@ -2235,7 +3314,7 @@
           "predicted_answerable": true,
           "answer": "Premium economy is permitted for flights of six hours or longer. [1]",
           "provider": "extractive",
-          "latency_ms": 164.7,
+          "latency_ms": 145.5,
           "citations": [
             "expenses-and-travel-policy.pdf p.2"
           ],
@@ -2251,7 +3330,7 @@
           "predicted_answerable": true,
           "answer": "The maximum nightly rate, including breakfast, is \u00a3150 in London and \u00a3110 elsewhere in the UK. [1]",
           "provider": "extractive",
-          "latency_ms": 161.2,
+          "latency_ms": 131.2,
           "citations": [
             "expenses-and-travel-policy.pdf p.2"
           ],
@@ -2267,7 +3346,7 @@
           "predicted_answerable": true,
           "answer": "Mileage and taxis If you use your own car for business travel, you can claim 45p per mile for the first 10,000 business miles in a tax year and 25p per mile after that. [1]",
           "provider": "extractive",
-          "latency_ms": 60.3,
+          "latency_ms": 55.8,
           "citations": [
             "expenses-and-travel-policy.pdf p.2"
           ],
@@ -2283,7 +3362,7 @@
           "predicted_answerable": true,
           "answer": "Taxis may be claimed only when no reasonable public transport is available, when travelling with heavy equipment, or for journeys starting after 21:00. [2]",
           "provider": "extractive",
-          "latency_ms": 177.2,
+          "latency_ms": 162.6,
           "citations": [
             "expenses-and-travel-policy.pdf p.2"
           ],
@@ -2299,7 +3378,7 @@
           "predicted_answerable": true,
           "answer": "Meals and subsistence When travelling overnight on business in the UK, you may claim meals up to the following limits: breakfast \u00a310, lunch \u00a312 and dinner \u00a330. [1]",
           "provider": "extractive",
-          "latency_ms": 180.9,
+          "latency_ms": 152.3,
           "citations": [
             "expenses-and-travel-policy.pdf p.3"
           ],
@@ -2315,7 +3394,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 191.9,
+          "latency_ms": 172.6,
           "citations": []
         },
         {
@@ -2325,7 +3404,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 160.1,
+          "latency_ms": 166.9,
           "citations": []
         },
         {
@@ -2335,7 +3414,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 171.8,
+          "latency_ms": 159.8,
           "citations": []
         },
         {
@@ -2345,7 +3424,7 @@
           "predicted_answerable": true,
           "answer": "Office attendance Hybrid employees spend a minimum of two days per week in the office. [1]",
           "provider": "extractive",
-          "latency_ms": 141.2,
+          "latency_ms": 149.4,
           "citations": [
             "remote-work-policy.md"
           ],
@@ -2361,7 +3440,7 @@
           "predicted_answerable": true,
           "answer": "Equipment and allowances > Home office allowance Hybrid and fully remote employees can claim a one-off home office allowance of up to \u00a3300 towards a desk, chair or other ergonomic equipment. [1]",
           "provider": "extractive",
-          "latency_ms": 152.4,
+          "latency_ms": 153.2,
           "citations": [
             "remote-work-policy.md"
           ],
@@ -2377,7 +3456,7 @@
           "predicted_answerable": true,
           "answer": "Hybrid employees are not eligible for the monthly allowance, and home internet costs are not otherwise reimbursed. [1]",
           "provider": "extractive",
-          "latency_ms": 154.2,
+          "latency_ms": 143.9,
           "citations": [
             "remote-work-policy.md"
           ],
@@ -2393,7 +3472,7 @@
           "predicted_answerable": true,
           "answer": "Working from abroad You may work from outside the UK for up to 20 working days in each calendar year. [1]",
           "provider": "extractive",
-          "latency_ms": 107.4,
+          "latency_ms": 121.4,
           "citations": [
             "remote-work-policy.md"
           ],
@@ -2409,7 +3488,7 @@
           "predicted_answerable": true,
           "answer": "Working from abroad You may work from outside the UK for up to 20 working days in each calendar year. [1]",
           "provider": "extractive",
-          "latency_ms": 337.3,
+          "latency_ms": 130.7,
           "citations": [
             "remote-work-policy.md"
           ],
@@ -2423,12 +3502,12 @@
           "question": "How do I book a desk in the office?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "Desks are booked through the DeskFlow app; unbooked desks are first come, first served. [1] Equipment and allowances > Home office allowance Hybrid and fully remote employees can claim a one-off home office allowance of up to \u00a3300 towards a desk, chair or other ergonomic equipment. [2] Physical security Keep a clear desk: lock away papers and devices at the end of each day. [3]",
+          "answer": "Desks are booked through the DeskFlow app; unbooked desks are first come, first served. [1] Office: Manchester; Trained first aiders: 2; First aid kit location: Behind the reception desk. [2] Physical security Keep a clear desk: lock away papers and devices at the end of each day. [4]",
           "provider": "extractive",
-          "latency_ms": 175.8,
+          "latency_ms": 180.1,
           "citations": [
             "remote-work-policy.md",
-            "remote-work-policy.md",
+            "health-and-safety-policy.docx",
             "information-security-policy.md"
           ],
           "fact_recall": 1.0,
@@ -2443,7 +3522,7 @@
           "predicted_answerable": true,
           "answer": "Passwords and authentication Passwords for company accounts must be at least 14 characters long and must not be reused across services. [1]",
           "provider": "extractive",
-          "latency_ms": 190.0,
+          "latency_ms": 182.3,
           "citations": [
             "information-security-policy.md"
           ],
@@ -2459,7 +3538,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 50.5,
+          "latency_ms": 49.2,
           "citations": []
         },
         {
@@ -2467,9 +3546,9 @@
           "question": "How quickly must I report a stolen laptop?",
           "answerable": true,
           "predicted_answerable": true,
-          "answer": "A lost or stolen device must be reported within one hour of discovering the loss, so it can be wiped remotely. [1] All company equipment, including laptops, security keys and access passes, must be returned within five working days of your last day. [5]",
+          "answer": "A lost or stolen device must be reported within one hour of discovering the loss, so it can be wiped remotely. [1] All company equipment, including laptops, security keys and access passes, must be returned within five working days of your last day. [4]",
           "provider": "extractive",
-          "latency_ms": 192.9,
+          "latency_ms": 176.9,
           "citations": [
             "information-security-policy.md",
             "employee-handbook.pdf p.5"
@@ -2486,7 +3565,7 @@
           "predicted_answerable": true,
           "answer": "Personal laptops must never be used to access client data. [1] Restricted data must only be stored and processed in approved client environments and must never be copied to laptops, email or chat. [1]",
           "provider": "extractive",
-          "latency_ms": 190.6,
+          "latency_ms": 173.2,
           "citations": [
             "information-security-policy.md"
           ],
@@ -2502,7 +3581,7 @@
           "predicted_answerable": true,
           "answer": "Confidential or Restricted information must never be entered into tools that are not on the approved list, including online translators, file converters and chatbots. [1]",
           "provider": "extractive",
-          "latency_ms": 94.2,
+          "latency_ms": 74.9,
           "citations": [
             "information-security-policy.md"
           ],
@@ -2518,7 +3597,7 @@
           "predicted_answerable": true,
           "answer": "Training All new joiners must complete security awareness training within 30 days of starting. [1]",
           "provider": "extractive",
-          "latency_ms": 113.6,
+          "latency_ms": 109.4,
           "citations": [
             "information-security-policy.md"
           ],
@@ -2544,7 +3623,7 @@
           "predicted_answerable": true,
           "answer": "Gifts and hospitality You may accept occasional gifts or hospitality worth up to \u00a350 from a client or supplier without approval. [1] You must not accept any gift or hospitality from a supplier taking part in an active tender with Halden. [1]",
           "provider": "extractive",
-          "latency_ms": 166.1,
+          "latency_ms": 160.2,
           "citations": [
             "code-of-conduct.md"
           ],
@@ -2560,7 +3639,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 92.4,
+          "latency_ms": 93.0,
           "citations": []
         },
         {
@@ -2570,7 +3649,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 120.0,
+          "latency_ms": 115.0,
           "citations": []
         },
         {
@@ -2580,7 +3659,7 @@
           "predicted_answerable": true,
           "answer": "Speaking up If you suspect wrongdoing, such as fraud, a safety risk or a breach of law, you can raise it with the Head of Compliance or through the independent Speak Up line, which allows anonymous reports. [1]",
           "provider": "extractive",
-          "latency_ms": 61.6,
+          "latency_ms": 61.4,
           "citations": [
             "code-of-conduct.md"
           ],
@@ -2596,7 +3675,7 @@
           "predicted_answerable": true,
           "answer": "When meeting clients, dress in business attire unless the client has indicated otherwise. [1]",
           "provider": "extractive",
-          "latency_ms": 82.5,
+          "latency_ms": 96.9,
           "citations": [
             "code-of-conduct.md"
           ],
@@ -2612,7 +3691,7 @@
           "predicted_answerable": true,
           "answer": "Halden enhances shared parental pay to match the enhanced maternity pay scheme, so that parents receive the same total enhanced pay whichever parent takes the leave. [1]",
           "provider": "extractive",
-          "latency_ms": 144.3,
+          "latency_ms": 121.7,
           "citations": [
             "parental-and-family-leave.txt"
           ],
@@ -2628,7 +3707,7 @@
           "predicted_answerable": true,
           "answer": "Paternity And Partner Leave Partners are entitled to four weeks of paternity leave at full pay. [1] Paternity leave can be taken as a single block or as two separate blocks of two weeks, and must be completed within 52 weeks of the birth or placement. [1]",
           "provider": "extractive",
-          "latency_ms": 135.7,
+          "latency_ms": 116.8,
           "citations": [
             "parental-and-family-leave.txt"
           ],
@@ -2644,7 +3723,7 @@
           "predicted_answerable": true,
           "answer": "Bereavement Leave Employees can take five days of paid bereavement leave following the death of a close family member, such as a partner, parent, sibling or grandparent. [1] Parents who lose a child, including through stillbirth after 24 weeks of pregnancy, are entitled to two weeks of paid leave. [1] One day of paid leave is available to attend the funeral of another relative or friend. [1]",
           "provider": "extractive",
-          "latency_ms": 154.7,
+          "latency_ms": 145.1,
           "citations": [
             "parental-and-family-leave.txt"
           ],
@@ -2660,7 +3739,7 @@
           "predicted_answerable": true,
           "answer": "Parents who lose a child, including through stillbirth after 24 weeks of pregnancy, are entitled to two weeks of paid leave. [1] You can self-certify sickness for up to seven calendar days. [5] Company sick pay: during your first year of service you receive full pay for up to 10 working days of sickness in any rolling 12-month period. [5]",
           "provider": "extractive",
-          "latency_ms": 122.2,
+          "latency_ms": 125.5,
           "citations": [
             "parental-and-family-leave.txt",
             "employee-handbook.pdf p.4"
@@ -2677,9 +3756,107 @@
           "predicted_answerable": true,
           "answer": "Employees undergoing fertility treatment can take up to five days of paid leave per year for appointments. [1]",
           "provider": "extractive",
-          "latency_ms": 113.3,
+          "latency_ms": 105.5,
           "citations": [
             "parental-and-family-leave.txt"
+          ],
+          "fact_recall": 1.0,
+          "sentence_support": 1.0,
+          "token_precision": 1.0,
+          "citation_correct": true
+        },
+        {
+          "id": "q055",
+          "question": "How soon do I have to report an accident at work?",
+          "answerable": true,
+          "predicted_answerable": true,
+          "answer": "Reporting accidents All accidents, injuries and near misses must be reported in the SafeLog app within 24 hours, even if no one was hurt. [1] All reports are taken seriously, and an investigation will begin within five working days of a formal report. [3] Sickness absence If you are unable to work because of illness, you must tell your manager by 09:30 on your first day of absence by phone call or a Slack call. [5]",
+          "provider": "extractive",
+          "latency_ms": 131.8,
+          "citations": [
+            "health-and-safety-policy.docx",
+            "code-of-conduct.md",
+            "employee-handbook.pdf p.4"
+          ],
+          "fact_recall": 1.0,
+          "sentence_support": 1.0,
+          "token_precision": 1.0,
+          "citation_correct": true
+        },
+        {
+          "id": "q056",
+          "question": "When is the weekly fire alarm test?",
+          "answerable": true,
+          "predicted_answerable": true,
+          "answer": "Fire safety Fire alarms are tested every Wednesday at 11:00. [1]",
+          "provider": "extractive",
+          "latency_ms": 107.4,
+          "citations": [
+            "health-and-safety-policy.docx"
+          ],
+          "fact_recall": 1.0,
+          "sentence_support": 1.0,
+          "token_precision": 1.0,
+          "citation_correct": true
+        },
+        {
+          "id": "q057",
+          "question": "Where do we gather in Leeds if the fire alarm goes off?",
+          "answerable": true,
+          "predicted_answerable": true,
+          "answer": "Fire safety > Assembly points - Leeds: the car park on Wellington Street. - Manchester: the north entrance of Piccadilly Gardens. [1]",
+          "provider": "extractive",
+          "latency_ms": 107.5,
+          "citations": [
+            "health-and-safety-policy.docx"
+          ],
+          "fact_recall": 1.0,
+          "sentence_support": 1.0,
+          "token_precision": 1.0,
+          "citation_correct": true
+        },
+        {
+          "id": "q058",
+          "question": "Will the company pay towards glasses I need for my screen?",
+          "answerable": true,
+          "predicted_answerable": true,
+          "answer": "If the optician confirms you need glasses specifically for screen work, Halden contributes up to \u00a360 towards them. [1]",
+          "provider": "extractive",
+          "latency_ms": 111.8,
+          "citations": [
+            "health-and-safety-policy.docx"
+          ],
+          "fact_recall": 1.0,
+          "sentence_support": 1.0,
+          "token_precision": 1.0,
+          "citation_correct": true
+        },
+        {
+          "id": "q059",
+          "question": "Where is the first aid kit in the Leeds office?",
+          "answerable": true,
+          "predicted_answerable": true,
+          "answer": "Office: Leeds; Trained first aiders: 4; First aid kit location: Kitchen on floor 2. [1]",
+          "provider": "extractive",
+          "latency_ms": 58.3,
+          "citations": [
+            "health-and-safety-policy.docx"
+          ],
+          "fact_recall": 1.0,
+          "sentence_support": 1.0,
+          "token_precision": 1.0,
+          "citation_correct": true
+        },
+        {
+          "id": "q060",
+          "question": "How often must I check in when working alone late in the office?",
+          "answerable": true,
+          "predicted_answerable": true,
+          "answer": "Lone working Anyone working alone in an office outside 07:00 to 19:00 must check in with building security through the LoneSafe app every two hours. [1]",
+          "provider": "extractive",
+          "latency_ms": 107.8,
+          "citations": [
+            "health-and-safety-policy.docx"
           ],
           "fact_recall": 1.0,
           "sentence_support": 1.0,
@@ -2693,7 +3870,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 133.4,
+          "latency_ms": 132.7,
           "citations": []
         },
         {
@@ -2703,7 +3880,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 133.4,
+          "latency_ms": 113.0,
           "citations": []
         },
         {
@@ -2713,7 +3890,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 120.6,
+          "latency_ms": 119.8,
           "citations": []
         },
         {
@@ -2723,7 +3900,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 131.3,
+          "latency_ms": 114.2,
           "citations": []
         },
         {
@@ -2733,7 +3910,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 152.4,
+          "latency_ms": 189.4,
           "citations": []
         },
         {
@@ -2743,7 +3920,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 130.2,
+          "latency_ms": 143.8,
           "citations": []
         },
         {
@@ -2753,7 +3930,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 124.5,
+          "latency_ms": 117.0,
           "citations": []
         },
         {
@@ -2763,7 +3940,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 87.8,
+          "latency_ms": 75.0,
           "citations": []
         },
         {
@@ -2773,7 +3950,7 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 168.7,
+          "latency_ms": 142.5,
           "citations": []
         },
         {
@@ -2783,10 +3960,168 @@
           "predicted_answerable": false,
           "answer": "I couldn't find this in the provided policy documents.",
           "provider": "extractive",
-          "latency_ms": 161.1,
+          "latency_ms": 149.0,
           "citations": []
         }
       ]
     }
-  ]
+  ],
+  "followups": {
+    "without_history": {
+      "recall@1": 0.4,
+      "recall@5": 0.8,
+      "answer_rate": 0.2,
+      "fact_recall": 0.1,
+      "rows": [
+        {
+          "id": "f001",
+          "question": "And elsewhere in the UK?",
+          "search_query": "And elsewhere in the UK?",
+          "answerable": false,
+          "answer": "I couldn't find this in the provided policy documents."
+        },
+        {
+          "id": "f002",
+          "question": "Is it paid?",
+          "search_query": "Is it paid?",
+          "answerable": false,
+          "answer": "I couldn't find this in the provided policy documents."
+        },
+        {
+          "id": "f003",
+          "question": "What about during probation?",
+          "search_query": "What about during probation?",
+          "answerable": true,
+          "answer": "Probation All new employees complete a probationary period of six months. [1] Probation may be extended once, by up to three months, if more time is needed to assess performance. [1] During probation, either party may end employment by giving one week's notice. [1]"
+        },
+        {
+          "id": "f004",
+          "question": "And after 10,000 miles?",
+          "search_query": "And after 10,000 miles?",
+          "answerable": false,
+          "answer": "I couldn't find this in the provided policy documents."
+        },
+        {
+          "id": "f005",
+          "question": "And in Manchester?",
+          "search_query": "And in Manchester?",
+          "answerable": false,
+          "answer": "I couldn't find this in the provided policy documents."
+        },
+        {
+          "id": "f006",
+          "question": "What about Manchester?",
+          "search_query": "What about Manchester?",
+          "answerable": false,
+          "answer": "I couldn't find this in the provided policy documents."
+        },
+        {
+          "id": "f007",
+          "question": "Does that apply to adoption too?",
+          "search_query": "Does that apply to adoption too?",
+          "answerable": true,
+          "answer": "Adoption Leave Adoption leave and pay mirror the maternity provisions above, including enhanced pay, for the primary adopter. [1] The secondary adopter is entitled to paternity leave. [1]"
+        },
+        {
+          "id": "f008",
+          "question": "What if it's worth more than that?",
+          "search_query": "What if it's worth more than that?",
+          "answerable": false,
+          "answer": "I couldn't find this in the provided policy documents."
+        },
+        {
+          "id": "f009",
+          "question": "Can I carry any over?",
+          "search_query": "Can I carry any over?",
+          "answerable": false,
+          "answer": "I couldn't find this in the provided policy documents."
+        },
+        {
+          "id": "f010",
+          "question": "Who do I tell?",
+          "search_query": "Who do I tell?",
+          "answerable": false,
+          "answer": "I couldn't find this in the provided policy documents."
+        }
+      ]
+    },
+    "with_history": {
+      "recall@1": 0.8,
+      "recall@5": 1.0,
+      "answer_rate": 1.0,
+      "fact_recall": 0.8,
+      "rows": [
+        {
+          "id": "f001",
+          "question": "And elsewhere in the UK?",
+          "search_query": "What's the maximum hotel rate in London? And elsewhere in the UK?",
+          "answerable": true,
+          "answer": "The maximum nightly rate, including breakfast, is \u00a3150 in London and \u00a3110 elsewhere in the UK. [1]"
+        },
+        {
+          "id": "f002",
+          "question": "Is it paid?",
+          "search_query": "How long is paternity leave? Is it paid?",
+          "answerable": true,
+          "answer": "Paternity And Partner Leave Partners are entitled to four weeks of paternity leave at full pay. [1] Paternity leave can be taken as a single block or as two separate blocks of two weeks, and must be completed within 52 weeks of the birth or placement. [1] The secondary adopter is entitled to paternity leave. [2]"
+        },
+        {
+          "id": "f003",
+          "question": "What about during probation?",
+          "search_query": "How many days a week do I need to be in the office? What about during probation?",
+          "answerable": true,
+          "answer": "During probation, new starters are expected to work from the office at least three days per week so they can get to know their team. [2]"
+        },
+        {
+          "id": "f004",
+          "question": "And after 10,000 miles?",
+          "search_query": "What is the mileage rate for using my own car? And after 10,000 miles?",
+          "answerable": true,
+          "answer": "Mileage and taxis If you use your own car for business travel, you can claim 45p per mile for the first 10,000 business miles in a tax year and 25p per mile after that. [1]"
+        },
+        {
+          "id": "f005",
+          "question": "And in Manchester?",
+          "search_query": "Where do we gather in Leeds if the fire alarm goes off? And in Manchester?",
+          "answerable": true,
+          "answer": "Fire safety > Assembly points - Leeds: the car park on Wellington Street. - Manchester: the north entrance of Piccadilly Gardens. [1]"
+        },
+        {
+          "id": "f006",
+          "question": "What about Manchester?",
+          "search_query": "Where is the first aid kit in the Leeds office? What about Manchester?",
+          "answerable": true,
+          "answer": "Office: Leeds; Trained first aiders: 4; First aid kit location: Kitchen on floor 2. [1] Office: Manchester; Trained first aiders: 2; First aid kit location: Behind the reception desk. [1]"
+        },
+        {
+          "id": "f007",
+          "question": "Does that apply to adoption too?",
+          "search_query": "How much maternity pay does Halden offer? Does that apply to adoption too?",
+          "answerable": true,
+          "answer": "Halden enhances shared parental pay to match the enhanced maternity pay scheme, so that parents receive the same total enhanced pay whichever parent takes the leave. [1] Adoption Leave Adoption leave and pay mirror the maternity provisions above, including enhanced pay, for the primary adopter. [1]"
+        },
+        {
+          "id": "f008",
+          "question": "What if it's worth more than that?",
+          "search_query": "Can I accept a \u00a340 gift from a supplier? What if it's worth more than that?",
+          "answerable": true,
+          "answer": "Gifts and hospitality You may accept occasional gifts or hospitality worth up to \u00a350 from a client or supplier without approval. [1]"
+        },
+        {
+          "id": "f009",
+          "question": "Can I carry any over?",
+          "search_query": "How many holiday days do full-time staff get? Can I carry any over?",
+          "answerable": true,
+          "answer": "Annual leave Full-time employees receive 25 days of annual leave per leave year, plus the eight UK bank holidays. [1] After two full years of service, you receive one additional day of leave for each further full year of service, up to a maximum of 30 days. [1] You may carry over up to five unused days into the next leave year; carried-over days must be used by 31 March or they are lost. [1]"
+        },
+        {
+          "id": "f010",
+          "question": "Who do I tell?",
+          "search_query": "How quickly must I report a stolen laptop? Who do I tell?",
+          "answerable": true,
+          "answer": "A lost or stolen device must be reported within one hour of discovering the loss, so it can be wiped remotely. [1]"
+        }
+      ]
+    }
+  }
 }
