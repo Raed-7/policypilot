@@ -5,6 +5,7 @@ from pathlib import Path
 
 from policypilot.chunking import chunk_document
 from policypilot.config import Settings, get_settings
+from policypilot.conversation import contextualise
 from policypilot.embeddings import Embedder, SentenceTransformerEmbedder
 from policypilot.generation import ExtractiveGenerator, LLMGenerator, extract_citations, is_refusal
 from policypilot.ingestion import load_directory
@@ -34,6 +35,7 @@ class Citation:
 @dataclass
 class Answer:
     question: str
+    search_query: str
     answer: str
     answerable: bool
     citations: list[Citation]
@@ -130,13 +132,16 @@ class PolicyPilot:
         threshold: float | None = None,
         mode: Mode | None = None,
         evidence_threshold: float | None = None,
+        history: list[str] | None = None,
     ) -> Answer:
         started = time.perf_counter()
-        contexts = self.search(question, top_k, threshold, mode)
+        rewriter = self.llm_generator.provider if self.llm_generator else None
+        query = contextualise(question, history, rewriter)
+        contexts = self.search(query, top_k, threshold, mode)
         retrieved_at = time.perf_counter()
         warnings: list[str] = []
 
-        analysis = self.extractive.analyse(question, contexts) if contexts else None
+        analysis = self.extractive.analyse(query, contexts) if contexts else None
         evidence = analysis.best_similarity if analysis else 0.0
         min_evidence = self.settings.evidence_threshold if evidence_threshold is None else evidence_threshold
 
@@ -144,14 +149,14 @@ class PolicyPilot:
             text, provider, model = REFUSAL, self.provider_name, self.model_name
         elif self.llm_generator:
             try:
-                result = self.llm_generator.generate(question, contexts)
+                result = self.llm_generator.generate(query, contexts)
             except LLMError as exc:
                 logger.warning("LLM generation failed, using extractive answer: %s", exc)
                 warnings.append(f"{self.llm_generator.provider.name} unavailable ({exc}); showing extractive answer.")
-                result = self.extractive.generate(question, contexts, analysis)
+                result = self.extractive.generate(query, contexts, analysis)
             text, provider, model = result.text, result.provider, result.model
         else:
-            result = self.extractive.generate(question, contexts, analysis)
+            result = self.extractive.generate(query, contexts, analysis)
             text, provider, model = result.text, result.provider, result.model
 
         answerable = bool(contexts) and not is_refusal(text)
@@ -171,6 +176,7 @@ class PolicyPilot:
         finished = time.perf_counter()
         return Answer(
             question=question,
+            search_query=query,
             answer=text,
             answerable=answerable,
             citations=citations,

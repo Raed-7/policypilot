@@ -5,6 +5,7 @@ from pydantic import BaseModel, Field
 
 class AskRequest(BaseModel):
     question: str = Field(..., min_length=1, max_length=2000)
+    history: list[str] = Field(default_factory=list, max_length=20, description="Earlier questions in this conversation, oldest first.")
     top_k: int | None = Field(None, ge=1, le=20)
     threshold: float | None = Field(None, ge=-1.0, le=1.0)
     mode: Literal["dense", "hybrid"] | None = None
@@ -33,6 +34,7 @@ class SourceOut(BaseModel):
 
 class AskResponse(BaseModel):
     question: str
+    search_query: str
     answer: str
     answerable: bool
     confidence: float

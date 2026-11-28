@@ -124,11 +124,12 @@ def create_app(pipeline: PolicyPilot | None = None) -> FastAPI:
 
     @app.post("/ask", response_model=AskResponse)
     def ask(req: AskRequest, pp: PolicyPilot = Depends(get_pipeline)):
-        answer = pp.ask(req.question, req.top_k, req.threshold, req.mode)
+        answer = pp.ask(req.question, req.top_k, req.threshold, req.mode, history=req.history)
         cited = {c.index for c in answer.citations}
         sources = [_source(i, ctx, i in cited) for i, ctx in enumerate(answer.contexts, start=1)]
         return AskResponse(
             question=answer.question,
+            search_query=answer.search_query,
             answer=answer.answer,
             answerable=answer.answerable,
             confidence=answer.confidence,
