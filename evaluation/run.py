@@ -23,6 +23,7 @@ from evaluation.metrics import (
     recall_at_k,
 )
 from evaluation.report import write_report
+from policypilot.conversation import contextualise
 from policypilot.chunking import chunk_document
 from policypilot.config import ROOT_DIR, Settings
 from policypilot.embeddings import SentenceTransformerEmbedder
@@ -30,16 +31,20 @@ from policypilot.generation import ExtractiveGenerator
 from policypilot.ingestion import load_directory
 from policypilot.llm import build_provider
 from policypilot.pipeline import PolicyPilot
-from policypilot.retrieval import Retriever
+from policypilot.retrieval import CrossEncoderReranker, Retriever
 from policypilot.vectorstore import VectorStore
 
 DATASET = Path(__file__).parent / "dataset.jsonl"
+FOLLOWUPS = Path(__file__).parent / "followups.jsonl"
 RESULTS = Path(__file__).parent / "results"
 EMBEDDING_MODELS = ["BAAI/bge-small-en-v1.5", "sentence-transformers/all-MiniLM-L6-v2"]
 STRATEGIES = ["section", "fixed"]
 CHUNK_SIZES = [64, 128, 256]
 OVERLAP_RATIOS = [0.0, 0.25]
 MODES = ["dense", "hybrid"]
+FAST_RERANKER = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+LARGE_RERANKER = "BAAI/bge-reranker-base"
+LARGE_RERANKER_TOP_CONFIGS = 6
 RETRIEVE_DEPTH = 10
 
 
@@ -59,7 +64,7 @@ def evaluate_retrieval(retriever: Retriever, examples: list[dict], mode: str) ->
     ranks, latencies = [], []
     for ex in examples:
         started = time.perf_counter()
-        hits = retriever.retrieve(ex["question"], k=RETRIEVE_DEPTH, threshold=-1.0, mode=mode)
+        hits = retriever.retrieve(ex["question"], k=RETRIEVE_DEPTH, threshold=-1.0, mode=mode, rerank=retriever.reranker is not None)
         latencies.append((time.perf_counter() - started) * 1000)
         ranks.append(first_relevant_rank([h.chunk for h in hits], ex))
     return {
@@ -159,6 +164,31 @@ def evaluate_answers(pipeline: PolicyPilot, examples: list[dict], judge_embedder
     }
 
 
+def evaluate_followups(pipeline: PolicyPilot, examples: list[dict]) -> dict:
+    """Compare follow-up questions answered on their own against answers that use the conversation history."""
+    out = {}
+    for label, use_history in (("without_history", False), ("with_history", True)):
+        ranks, facts, answered, rows = [], [], 0, []
+        for ex in examples:
+            history = ex["history"] if use_history else None
+            query = contextualise(ex["question"], history)
+            hits = pipeline.retriever.retrieve(query, k=RETRIEVE_DEPTH, threshold=-1.0, mode=pipeline.settings.retrieval_mode)
+            ranks.append(first_relevant_rank([h.chunk for h in hits], ex))
+            answer = pipeline.ask(ex["question"], history=history)
+            answered += answer.answerable
+            facts.append(fact_recall(answer.answer, ex["expected_facts"]) if answer.answerable else 0.0)
+            rows.append({"id": ex["id"], "question": ex["question"], "search_query": answer.search_query,
+                         "answerable": answer.answerable, "answer": answer.answer})
+        out[label] = {
+            "recall@1": recall_at_k(ranks, 1),
+            "recall@5": recall_at_k(ranks, 5),
+            "answer_rate": answered / len(examples),
+            "fact_recall": float(np.mean(facts)),
+            "rows": rows,
+        }
+    return out
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--quick", action="store_true", help="evaluate only the default embedding model")
@@ -175,27 +205,55 @@ def main() -> None:
 
     grid = []
     embedders = {}
+    fast_reranker = CrossEncoderReranker(FAST_RERANKER)
+    retrievers = {}
+
+    def record(model, strategy, size, overlap, mode, reranker, retriever, n_chunks, index_s):
+        retriever.reranker = reranker
+        metrics = evaluate_retrieval(retriever, answerable, mode)
+        retriever.reranker = None
+        grid.append({
+            "embedding_model": model, "strategy": strategy, "chunk_size": size, "overlap": overlap, "mode": mode,
+            "reranker": reranker.name if reranker else "none", "chunks": n_chunks, "index_seconds": round(index_s, 2), **metrics,
+        })
+        print(f"{model.split('/')[-1]:>18} {strategy:>7} size={size:<4} overlap={overlap:<3} {mode:>6} "
+              f"rerank={(reranker.name.split('/')[-1] if reranker else 'none'):<24} "
+              f"R@1={metrics['recall@1']:.3f} R@3={metrics['recall@3']:.3f} R@5={metrics['recall@5']:.3f} MRR={metrics['mrr@10']:.3f}")
+
     for model in models:
         embedders[model] = embedder = SentenceTransformerEmbedder(model)
         for strategy, size, ratio in itertools.product(STRATEGIES, CHUNK_SIZES, OVERLAP_RATIOS):
             overlap = int(size * ratio)
             retriever, n_chunks, index_s = build_index(documents, embedder, strategy, size, overlap)
+            retrievers[(model, strategy, size, overlap)] = (retriever, n_chunks, index_s)
             for mode in MODES:
-                metrics = evaluate_retrieval(retriever, answerable, mode)
-                grid.append({
-                    "embedding_model": model, "strategy": strategy, "chunk_size": size, "overlap": overlap,
-                    "mode": mode, "chunks": n_chunks, "index_seconds": round(index_s, 2), **metrics,
-                })
-                print(f"{model.split('/')[-1]:>18} {strategy:>7} size={size:<4} overlap={overlap:<3} {mode:>6}  "
-                      f"R@1={metrics['recall@1']:.3f} R@3={metrics['recall@3']:.3f} R@5={metrics['recall@5']:.3f} "
-                      f"MRR={metrics['mrr@10']:.3f}")
+                for reranker in (None, fast_reranker):
+                    record(model, strategy, size, overlap, mode, reranker, retriever, n_chunks, index_s)
 
-    best = max(grid, key=lambda r: (round(r["mrr@10"], 4), r["recall@5"], -r["chunks"]))
+    if not args.quick:
+        large_reranker = CrossEncoderReranker(LARGE_RERANKER)
+        top = sorted(grid, key=lambda r: -r["mrr@10"])
+        seen = []
+        for r in top:
+            key = (r["embedding_model"], r["strategy"], r["chunk_size"], r["overlap"], r["mode"])
+            if key not in seen:
+                seen.append(key)
+            if len(seen) == LARGE_RERANKER_TOP_CONFIGS:
+                break
+        for model, strategy, size, overlap, mode in seen:
+            retriever, n_chunks, index_s = retrievers[(model, strategy, size, overlap)]
+            record(model, strategy, size, overlap, mode, large_reranker, retriever, n_chunks, index_s)
+
+    best = max(grid, key=lambda r: (round(r["mrr@10"], 4), r["recall@5"], r["reranker"] == "none", -r["chunks"]))
     print(f"\nBest configuration: {best['embedding_model']} {best['strategy']} size={best['chunk_size']} "
-          f"overlap={best['overlap']} {best['mode']}")
+          f"overlap={best['overlap']} {best['mode']} reranker={best['reranker']}")
 
     embedder = embedders[best["embedding_model"]]
+    best_reranker = None
+    if best["reranker"] != "none":
+        best_reranker = fast_reranker if best["reranker"] == FAST_RERANKER else large_reranker
     retriever, _, _ = build_index(documents, embedder, best["strategy"], best["chunk_size"], best["overlap"])
+    retriever.reranker = best_reranker
     calibration = calibrate_threshold(retriever, examples, best["mode"], ExtractiveGenerator(embedder), settings.top_k)
     threshold = calibration["sentence"]["best"]["threshold"]
     for name, cal in calibration.items():
@@ -205,6 +263,7 @@ def main() -> None:
     run_settings = settings.model_copy(update={
         "embedding_model": best["embedding_model"], "chunk_size": best["chunk_size"], "chunk_overlap": best["overlap"],
         "retrieval_mode": best["mode"], "evidence_threshold": threshold, "chunk_strategy": best["strategy"],
+        "reranker_model": "" if best["reranker"] == "none" else best["reranker"],
     })
     end_to_end = []
     generators = [None]
@@ -213,11 +272,16 @@ def main() -> None:
         generators.append(llm)
     for provider in generators:
         store = VectorStore(None, collection_name=f"e2e-{time.time_ns()}")
-        pipeline = PolicyPilot(run_settings, embedder=embedder, store=store, llm=provider)
+        pipeline = PolicyPilot(run_settings, embedder=embedder, store=store, llm=provider, reranker=best_reranker)
         for doc in documents:
             pipeline.ingest(doc, refresh=False)
         pipeline.retriever.refresh()
         result = evaluate_answers(pipeline, examples, embedders[EMBEDDING_MODELS[0]])
+        if provider is None:
+            followups = evaluate_followups(pipeline, load_dataset(FOLLOWUPS))
+            f = followups["with_history"]
+            print(f"follow-ups: R@5 {followups['without_history']['recall@5']:.2f} -> {f['recall@5']:.2f}, "
+                  f"fact recall {followups['without_history']['fact_recall']:.2f} -> {f['fact_recall']:.2f}")
         end_to_end.append(result)
         s = result["summary"]
         print(f"[{result['provider']}] answer rate {s['answer_rate']:.3f}, correct refusals {s['correct_refusal_rate']:.3f}, "
@@ -229,9 +293,10 @@ def main() -> None:
         "environment": {"python": platform.python_version(), "machine": platform.machine(), "processor": platform.processor() or "unknown"},
         "dataset": {"questions": len(examples), "answerable": len(answerable), "unanswerable": len(examples) - len(answerable), "documents": len(documents)},
         "retrieval_grid": grid,
-        "best_config": {k: best[k] for k in ("embedding_model", "strategy", "chunk_size", "overlap", "mode")},
+        "best_config": {k: best[k] for k in ("embedding_model", "strategy", "chunk_size", "overlap", "mode", "reranker")},
         "threshold_calibration": calibration,
         "end_to_end": end_to_end,
+        "followups": followups,
     }
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "latest.json").write_text(json.dumps(results, indent=2))

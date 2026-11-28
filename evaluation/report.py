@@ -22,13 +22,14 @@ def write_report(results: dict, path: Path) -> None:
         "Recall@k is the share of answerable questions whose labelled evidence appears in the top k chunks; "
         "MRR@10 is the mean reciprocal rank of the first relevant chunk.",
         "",
-        "| Embedding model | Chunking | Size | Overlap | Mode | Chunks | Recall@1 | Recall@3 | Recall@5 | MRR@10 |",
-        "|---|---|---:|---:|---|---:|---:|---:|---:|---:|",
+        "| Embedding model | Chunking | Size | Overlap | Mode | Reranker | Chunks | Recall@1 | Recall@3 | Recall@5 | MRR@10 |",
+        "|---|---|---:|---:|---|---|---:|---:|---:|---:|---:|",
     ]
     for r in sorted(results["retrieval_grid"], key=lambda r: -r["mrr@10"]):
-        marker = " **(selected)**" if all(r[k] == best[k] for k in ("embedding_model", "strategy", "chunk_size", "overlap", "mode")) else ""
+        marker = " **(selected)**" if all(r[k] == best[k] for k in best) else ""
         lines.append(
             f"| {r['embedding_model'].split('/')[-1]}{marker} | {r['strategy']} | {r['chunk_size']} | {r['overlap']} | {r['mode']} | "
+            f"{r['reranker'].split('/')[-1]} | "
             f"{r['chunks']} | {_pct(r['recall@1'])} | {_pct(r['recall@3'])} | {_pct(r['recall@5'])} | {r['mrr@10']:.3f} |"
         )
     sent, chunk = cal["sentence"], cal["chunk"]
@@ -71,4 +72,19 @@ def write_report(results: dict, path: Path) -> None:
         "- **Token precision**: answer content words that occur in the retrieved excerpts.",
         "",
     ]
+    if "followups" in results:
+        fu = results["followups"]
+        a, b = fu["without_history"], fu["with_history"]
+        lines += [
+            "## Follow-up questions",
+            "",
+            f"{len(b['rows'])} two-turn conversations where the second question only makes sense with the first "
+            "(for example \"What's the maximum hotel rate in London?\" followed by \"And elsewhere in the UK?\").",
+            "",
+            "| Follow-up handling | Recall@1 | Recall@5 | Answer rate | Fact recall |",
+            "|---|---:|---:|---:|---:|",
+            f"| Question on its own | {_pct(a['recall@1'])} | {_pct(a['recall@5'])} | {_pct(a['answer_rate'])} | {_pct(a['fact_recall'])} |",
+            f"| With conversation history | {_pct(b['recall@1'])} | {_pct(b['recall@5'])} | {_pct(b['answer_rate'])} | {_pct(b['fact_recall'])} |",
+            "",
+        ]
     path.write_text("\n".join(lines))
