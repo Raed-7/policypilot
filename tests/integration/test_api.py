@@ -36,6 +36,17 @@ def test_ask_returns_answer_with_citations(client):
     assert len(body["sources"]) >= len(body["citations"])
 
 
+def test_ask_uses_history_for_follow_ups(client):
+    first = "How many days of annual leave do full-time employees get?"
+    r = client.post("/ask", json={"question": "What about part-time staff?", "history": [first]})
+    assert r.status_code == 200
+    body = r.json()
+    assert first in body["search_query"]
+    assert client.post("/ask", json={"question": "What about part-time staff?"}).json()["search_query"] == (
+        "What about part-time staff?"
+    )
+
+
 def test_ask_validates_input(client):
     assert client.post("/ask", json={"question": ""}).status_code == 422
     assert client.post("/ask", json={"question": "x", "top_k": 100}).status_code == 422
