@@ -98,6 +98,8 @@ def source_card(src: dict, query: str, answer: str = "") -> str:
 
 
 def render_response(res: dict):
+    if res.get("search_query") and res["search_query"] != res.get("question"):
+        st.caption(f"Follow-up understood as: *{res['search_query']}*")
     if res["answerable"]:
         st.markdown(f'<div class="answer">{render_answer_text(res["answer"])}</div>', unsafe_allow_html=True)
     else:
@@ -225,13 +227,14 @@ with tab_ask:
                 render_response(m["response"])
 
     if question:
+        history = [m["content"] for m in st.session_state.messages if m["role"] == "user"][-5:]
         st.session_state.messages.append({"role": "user", "content": question})
         with chat_box.chat_message("user", avatar="🧑"):
             st.markdown(question)
         with chat_box.chat_message("assistant", avatar="🧭"):
             with st.spinner("Searching your policies…"):
                 try:
-                    response = api.ask(question, top_k=top_k, mode=mode)
+                    response = api.ask(question, top_k=top_k, mode=mode, history=history or None)
                 except api.APIError as exc:
                     st.error(str(exc))
                     st.stop()
@@ -263,7 +266,7 @@ with tab_eval:
         e2e = ev["end_to_end"][0]["summary"]
         best = ev["best_config"]
         best_row = next(
-            r for r in ev["retrieval_grid"] if all(r[k] == best[k] for k in ("embedding_model", "strategy", "chunk_size", "overlap", "mode"))
+            r for r in ev["retrieval_grid"] if all(r.get(k, "none") == v for k, v in best.items())
         )
         ds = ev["dataset"]
         st.caption(
@@ -278,12 +281,20 @@ with tab_eval:
         k[4].metric("Fact recall", f"{e2e['fact_recall']:.0%}")
         st.caption(
             f"Selected configuration: `{best['embedding_model'].split('/')[-1]}`, {best['strategy']} chunks of {best['chunk_size']} words "
-            f"with {best['overlap']} overlap, {best['mode']} retrieval."
+            f"with {best['overlap']} overlap, {best['mode']} retrieval"
+            + ("." if best.get("reranker", "none") == "none" else f", re-ranked by `{best['reranker'].split('/')[-1]}`.")
         )
 
         grid = pd.DataFrame(ev["retrieval_grid"])
         grid["model"] = grid["embedding_model"].str.split("/").str[-1]
-        grid["config"] = grid.apply(lambda r: f"{r['model']} · {r['strategy']} · {r['chunk_size']}/{r['overlap']} · {r['mode']}", axis=1)
+        if "reranker" not in grid:
+            grid["reranker"] = "none"
+        grid["rerank"] = grid["reranker"].str.split("/").str[-1]
+        grid["config"] = grid.apply(
+            lambda r: f"{r['model']} · {r['strategy']} · {r['chunk_size']}/{r['overlap']} · {r['mode']}"
+            + ("" if r["rerank"] == "none" else f" · rerank: {r['rerank']}"),
+            axis=1,
+        )
         st.markdown("##### Top retrieval configurations")
         c1, c2 = st.columns(2)
         model_filter = c1.multiselect("Embedding model", sorted(grid["model"].unique()), default=sorted(grid["model"].unique()))
@@ -303,7 +314,7 @@ with tab_eval:
         )
         with st.expander("Full results table"):
             st.dataframe(
-                grid[["model", "strategy", "chunk_size", "overlap", "mode", "chunks", "recall@1", "recall@3", "recall@5", "mrr@10"]]
+                grid[["model", "strategy", "chunk_size", "overlap", "mode", "rerank", "chunks", "recall@1", "recall@3", "recall@5", "mrr@10"]]
                 .sort_values("mrr@10", ascending=False),
                 hide_index=True, use_container_width=True,
             )
