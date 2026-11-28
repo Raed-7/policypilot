@@ -30,6 +30,8 @@ class Settings(BaseSettings):
     score_threshold: float = 0.2
     evidence_threshold: float = 0.54
     retrieval_mode: Literal["dense", "hybrid"] = "hybrid"
+    reranker_model: str = ""
+    rerank_depth: int = 20
 
     chroma_dir: Path = ROOT_DIR / "data" / "chroma"
     collection_name: str = "policies"

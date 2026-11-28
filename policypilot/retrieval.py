@@ -1,4 +1,5 @@
-from typing import Literal
+from dataclasses import replace
+from typing import Literal, Protocol
 
 import numpy as np
 
@@ -18,6 +19,29 @@ def reciprocal_rank_fusion(rankings: list[list[str]], k: int = 60) -> dict[str, 
     return scores
 
 
+class Reranker(Protocol):
+    name: str
+
+    def score(self, query: str, texts: list[str]) -> list[float]: ...
+
+
+class CrossEncoderReranker:
+    """Scores (question, passage) pairs jointly, which is slower but more precise than comparing embeddings."""
+
+    def __init__(self, model_name: str, batch_size: int = 32):
+        from sentence_transformers import CrossEncoder
+
+        self.name = model_name
+        self._model = CrossEncoder(model_name)
+        self._batch_size = batch_size
+
+    def score(self, query: str, texts: list[str]) -> list[float]:
+        if not texts:
+            return []
+        scores = self._model.predict([(query, t) for t in texts], batch_size=self._batch_size, show_progress_bar=False)
+        return [float(s) for s in np.atleast_1d(scores)]
+
+
 class Retriever:
     """Dense retrieval over ChromaDB, optionally fused with BM25 via reciprocal rank fusion.
 
@@ -25,10 +49,19 @@ class Retriever:
     calibrated across queries, unlike BM25 or RRF scores.
     """
 
-    def __init__(self, store: VectorStore, embedder: Embedder, candidate_multiplier: int = 4):
+    def __init__(
+        self,
+        store: VectorStore,
+        embedder: Embedder,
+        candidate_multiplier: int = 4,
+        reranker: Reranker | None = None,
+        rerank_depth: int = 20,
+    ):
         self.store = store
         self.embedder = embedder
         self.candidate_multiplier = candidate_multiplier
+        self.reranker = reranker
+        self.rerank_depth = rerank_depth
         self._bm25 = BM25Index()
         self._chunks: dict[str, Chunk] = {}
         self.refresh()
@@ -39,7 +72,7 @@ class Retriever:
         self._bm25.build([(c.chunk_id, c.text) for c in chunks])
 
     def retrieve(
-        self, query: str, k: int = 5, threshold: float = 0.0, mode: Mode = "hybrid"
+        self, query: str, k: int = 5, threshold: float = 0.0, mode: Mode = "hybrid", rerank: bool = True
     ) -> list[RetrievedChunk]:
         if not query.strip() or self.store.count() == 0:
             return []
@@ -70,4 +103,10 @@ class Retriever:
                 if cid in chunks
             ]
 
-        return [r for r in results if r.dense_score >= threshold][:k]
+        results = [r for r in results if r.dense_score >= threshold]
+        if rerank and self.reranker is not None and len(results) > 1:
+            pool = results[: max(self.rerank_depth, k)]
+            scores = self.reranker.score(query, [r.chunk.text for r in pool])
+            pool = [replace(r, rerank_score=s) for r, s in zip(pool, scores)]
+            results = sorted(pool, key=lambda r: r.rerank_score, reverse=True)
+        return results[:k]

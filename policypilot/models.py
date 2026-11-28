@@ -71,3 +71,4 @@ class RetrievedChunk:
     score: float
     dense_score: float
     lexical_score: float = 0.0
+    rerank_score: float | None = None

@@ -93,3 +93,33 @@ def test_hashing_embedder_is_deterministic_and_normalised(embedder):
     assert np.allclose(a, b)
     assert np.isclose(np.linalg.norm(a), 1.0)
     assert embedder.embed_documents([]).shape == (0, embedder.dimension)
+
+
+class KeywordReranker:
+    name = "keyword"
+
+    def __init__(self, keyword: str):
+        self.keyword = keyword
+        self.calls = 0
+
+    def score(self, query, texts):
+        self.calls += 1
+        return [1.0 if self.keyword in t else 0.0 for t in texts]
+
+
+def test_reranker_reorders_candidates(store, embedder):
+    retriever = _retriever(store, embedder)
+    retriever.reranker = KeywordReranker("Passwords")
+    hits = retriever.retrieve("hotel London £150", k=2, mode="hybrid")
+    assert hits[0].chunk.chunk_id == "c2"
+    assert hits[0].rerank_score == 1.0
+    assert retriever.reranker.calls == 1
+
+
+def test_reranking_can_be_disabled_per_call(store, embedder):
+    retriever = _retriever(store, embedder)
+    retriever.reranker = KeywordReranker("Passwords")
+    hits = retriever.retrieve("hotel London £150", k=2, mode="hybrid", rerank=False)
+    assert hits[0].chunk.chunk_id == "c3"
+    assert hits[0].rerank_score is None
+    assert retriever.reranker.calls == 0

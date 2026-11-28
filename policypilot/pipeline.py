@@ -12,7 +12,7 @@ from policypilot.ingestion.loaders import load_bytes
 from policypilot.llm import LLMError, LLMProvider, build_provider
 from policypilot.models import Document, RetrievedChunk
 from policypilot.prompts import REFUSAL
-from policypilot.retrieval import Mode, Retriever
+from policypilot.retrieval import CrossEncoderReranker, Mode, Reranker, Retriever
 from policypilot.vectorstore import VectorStore
 
 logger = logging.getLogger(__name__)
@@ -61,13 +61,16 @@ class PolicyPilot:
         embedder: Embedder | None = None,
         store: VectorStore | None = None,
         llm: LLMProvider | None | str = "from_settings",
+        reranker: Reranker | None | str = "from_settings",
     ):
         self.settings = settings or get_settings()
         self.embedder = embedder or SentenceTransformerEmbedder(
             self.settings.embedding_model, batch_size=self.settings.embedding_batch_size
         )
         self.store = store or VectorStore(self.settings.chroma_dir, self.settings.collection_name)
-        self.retriever = Retriever(self.store, self.embedder)
+        if reranker == "from_settings":
+            reranker = CrossEncoderReranker(self.settings.reranker_model) if self.settings.reranker_model else None
+        self.retriever = Retriever(self.store, self.embedder, reranker=reranker, rerank_depth=self.settings.rerank_depth)
         provider = build_provider(self.settings) if llm == "from_settings" else llm
         self.llm_generator = LLMGenerator(provider) if provider else None
         self.extractive = ExtractiveGenerator(self.embedder)
