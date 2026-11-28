@@ -343,3 +343,15 @@ with tab_eval:
             f"Sentence-level evidence separates answerable from unanswerable questions better than whole-chunk similarity "
             f"(ROC AUC {cal['auc']:.2f} vs {ev['threshold_calibration']['chunk']['auc']:.2f})."
         )
+
+        if ev.get("followups"):
+            st.markdown("##### Follow-up questions")
+            fu = ev["followups"]
+            cols = st.columns(3)
+            for col, (label, key) in zip(cols, [("Answer rate", "answer_rate"), ("Recall@5", "recall@5"), ("Fact recall", "fact_recall")]):
+                before, after = fu["without_history"][key], fu["with_history"][key]
+                col.metric(label, f"{after:.0%}", f"{(after - before) * 100:+.0f} pts with history")
+            st.caption(
+                f"{len(fu['with_history']['rows'])} two-turn conversations, each second question asked on its own and then with the "
+                "first question as context."
+            )
