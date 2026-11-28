@@ -6,9 +6,10 @@ from pathlib import Path
 from pypdf import PdfReader
 
 from policypilot.ingestion.cleaning import clean_text
+from policypilot.ingestion.structured import load_docx, load_html
 from policypilot.models import Document, Section
 
-SUPPORTED_EXTENSIONS = {".pdf", ".md", ".markdown", ".txt"}
+SUPPORTED_EXTENSIONS = {".pdf", ".md", ".markdown", ".txt", ".docx", ".html", ".htm"}
 _MD_HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*#*\s*$")
 _DIGITS = re.compile(r"\d+")
 _TXT_HEADING = re.compile(r"^(?:\d+(?:\.\d+)*[.)]?\s+)?[A-Z][A-Za-z0-9 ,&'()/-]{2,80}$")
@@ -152,6 +153,12 @@ def load_bytes(data: bytes, filename: str) -> Document:
     if ext == ".pdf":
         sections, title = _load_pdf(data)
         file_type = "pdf"
+    elif ext == ".docx":
+        sections, title = load_docx(data)
+        file_type = "docx"
+    elif ext in {".html", ".htm"}:
+        sections, title = load_html(data)
+        file_type = "html"
     else:
         text = data.decode("utf-8", errors="replace")
         if ext in {".md", ".markdown"}:

@@ -159,7 +159,7 @@ with st.sidebar:
     st.divider()
     st.markdown("**Add documents**")
     uploads = st.file_uploader(
-        "PDF, Markdown or text", type=["pdf", "md", "markdown", "txt"], accept_multiple_files=True, label_visibility="collapsed"
+        "PDF, Word, Markdown, text or HTML", type=["pdf", "docx", "md", "markdown", "txt", "html", "htm"], accept_multiple_files=True, label_visibility="collapsed"
     )
     if uploads and st.button("Index files", type="primary", use_container_width=True):
         with st.spinner("Reading, chunking and embedding…"):
