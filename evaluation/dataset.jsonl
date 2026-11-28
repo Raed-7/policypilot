@@ -52,6 +52,12 @@
 {"id": "q052", "question": "How much paid time off is there if a close relative dies?", "answerable": true, "source": "parental-and-family-leave.txt", "page": null, "evidence": "five days of paid bereavement leave", "expected_facts": ["five days"]}
 {"id": "q053", "question": "How many paid days do I get when my child is suddenly ill?", "answerable": true, "source": "parental-and-family-leave.txt", "page": null, "evidence": "up to three days of emergency dependant leave", "expected_facts": ["three days"]}
 {"id": "q054", "question": "Is there leave for fertility treatment?", "answerable": true, "source": "parental-and-family-leave.txt", "page": null, "evidence": "up to five days of paid leave per year", "expected_facts": ["five days"]}
+{"id": "q055", "question": "How soon do I have to report an accident at work?", "answerable": true, "source": "health-and-safety-policy.docx", "page": null, "evidence": "reported in the SafeLog app within 24 hours", "expected_facts": ["24 hours"]}
+{"id": "q056", "question": "When is the weekly fire alarm test?", "answerable": true, "source": "health-and-safety-policy.docx", "page": null, "evidence": "tested every Wednesday at 11:00", "expected_facts": ["Wednesday", "11:00"]}
+{"id": "q057", "question": "Where do we gather in Leeds if the fire alarm goes off?", "answerable": true, "source": "health-and-safety-policy.docx", "page": null, "evidence": "the car park on Wellington Street", "expected_facts": ["Wellington Street"]}
+{"id": "q058", "question": "Will the company pay towards glasses I need for my screen?", "answerable": true, "source": "health-and-safety-policy.docx", "page": null, "evidence": "contributes up to \u00a360", "expected_facts": ["\u00a360"]}
+{"id": "q059", "question": "Where is the first aid kit in the Leeds office?", "answerable": true, "source": "health-and-safety-policy.docx", "page": null, "evidence": "First aid kit location: Kitchen on floor 2", "expected_facts": ["Kitchen on floor 2"]}
+{"id": "q060", "question": "How often must I check in when working alone late in the office?", "answerable": true, "source": "health-and-safety-policy.docx", "page": null, "evidence": "every two hours", "expected_facts": ["two hours"]}
 {"id": "u001", "question": "What is the vesting schedule for employee stock options?", "answerable": false}
 {"id": "u002", "question": "Can I bring my dog to the office?", "answerable": false}
 {"id": "u003", "question": "Does Halden provide a company car?", "answerable": false}
